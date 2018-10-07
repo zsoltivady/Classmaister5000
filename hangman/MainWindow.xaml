@@ -1,0 +1,21 @@
+﻿<Window x:Class="hangman.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="MainWindow" Height="350" Width="525" x:Name="win" Loaded="win_Loaded">
+    <StackPanel>
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+            <Label Content="Word: " Margin="0 0 20 0"/>
+            <PasswordBox x:Name="pwb" MinWidth="50"  Margin="0 0 20 0"/>
+            <Button x:Name="btnOK" Height="30" Width="30" Content="OK" Click="btnOK_Click"/>
+        </StackPanel>
+        <StackPanel x:Name="stpLabels" Orientation="Horizontal" HorizontalAlignment="Center"/>
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+            <StackPanel>
+                <TextBox x:Name="tbLot" Margin="0 0 0 20"/>
+                <Button x:Name="btnGuess" Content="Guess" Margin="0 0 0 20" Click="btnGuess_Click"/>
+                <Label x:Name="lblResult" />
+            </StackPanel>
+            <Canvas x:Name="canvasHang" Background="Yellow" Width="200" Height="200"/>
+        </StackPanel>
+    </StackPanel>
+</Window>

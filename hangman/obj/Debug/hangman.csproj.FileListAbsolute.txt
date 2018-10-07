@@ -1,0 +1,13 @@
+D:\kovasz\hangman\hangman\bin\Debug\hangman.exe.config
+D:\kovasz\hangman\hangman\bin\Debug\hangman.exe
+D:\kovasz\hangman\hangman\bin\Debug\hangman.pdb
+D:\kovasz\hangman\hangman\obj\Debug\hangman.csprojResolveAssemblyReference.cache
+D:\kovasz\hangman\hangman\obj\Debug\MainWindow.baml
+D:\kovasz\hangman\hangman\obj\Debug\MainWindow.g.cs
+D:\kovasz\hangman\hangman\obj\Debug\App.g.cs
+D:\kovasz\hangman\hangman\obj\Debug\hangman_MarkupCompile.cache
+D:\kovasz\hangman\hangman\obj\Debug\hangman.g.resources
+D:\kovasz\hangman\hangman\obj\Debug\hangman.Properties.Resources.resources
+D:\kovasz\hangman\hangman\obj\Debug\hangman.csproj.GenerateResource.Cache
+D:\kovasz\hangman\hangman\obj\Debug\hangman.exe
+D:\kovasz\hangman\hangman\obj\Debug\hangman.pdb
