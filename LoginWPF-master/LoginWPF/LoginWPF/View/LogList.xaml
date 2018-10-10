@@ -1,0 +1,27 @@
+﻿<Window x:Class="LoginWPF.View.LogList"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:LoginWPF.View"
+        xmlns:vm="clr-namespace:LoginWPF.ViewModel"
+        mc:Ignorable="d"
+        Title="LogList" Height="400" Width="400">
+    
+    <Window.DataContext>
+        <vm:LogListViewModel/>
+    </Window.DataContext>
+    
+    <Grid>
+        <DataGrid AutoGenerateColumns="True" ItemsSource="{Binding LogList}" />
+        <!--<DataGrid AutoGenerateColumns="False" ItemsSource="{Binding LogList}">
+            <DataGrid.Columns>
+                <DataGridTextColumn Binding="{Binding DateTime}"></DataGridTextColumn>
+                <DataGridTextColumn Binding="{Binding User.UserId}"></DataGridTextColumn>
+                <DataGridTextColumn Binding="{Binding User.UserName}"></DataGridTextColumn>
+                <DataGridTextColumn Binding="{Binding User.FirstName}"></DataGridTextColumn>
+                <DataGridTextColumn Binding="{Binding User.LastName}"></DataGridTextColumn>
+            </DataGrid.Columns>
+        </DataGrid>-->
+    </Grid>
+</Window>

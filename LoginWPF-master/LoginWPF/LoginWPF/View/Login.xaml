@@ -1,0 +1,97 @@
+﻿<Window x:Name="LoginWindow" x:Class="LoginWPF.View.Login"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:LoginWPF.View"
+        xmlns:vm="clr-namespace:LoginWPF.ViewModel"
+        xmlns:ui="clr-namespace:LoginWPF.UI"
+        mc:Ignorable="d"
+        Title="Login" Height="300" Width="300">
+
+    <Window.DataContext>
+        <vm:LoginViewModel/>
+    </Window.DataContext>
+    <Window.Resources>
+        <BooleanToVisibilityConverter x:Key="booleanToVisibilityConverter" />
+
+        <Style TargetType="{x:Type TextBox}">
+            <Setter Property="Margin" Value="0,0,0,20"/>
+            <Setter Property="Validation.ErrorTemplate">
+                <Setter.Value>
+                    <ControlTemplate>
+                        <DockPanel>
+                            <TextBlock DockPanel.Dock="Right" Margin="5,0,0,0" Foreground="Red" FontWeight="Bold">*</TextBlock>
+                            <TextBlock Text="{Binding ErrorContent}" DockPanel.Dock="Bottom" Foreground="Red"/>
+                            <Border BorderBrush="Red" BorderThickness="1">
+                                <AdornedElementPlaceholder/>
+                            </Border>
+                        </DockPanel>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+            <Style.Triggers>
+                <Trigger Property="Validation.HasError" Value="True">
+                    <Setter Property="ToolTip"
+                        Value="{Binding RelativeSource={x:Static RelativeSource.Self},
+                    Path=(Validation.Errors)[0].ErrorContent}"/>
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+
+        <Style TargetType="{x:Type PasswordBox}">
+            <Setter Property="Margin" Value="0,0,0,20"/>
+            <Setter Property="Validation.ErrorTemplate">
+                <Setter.Value>
+                    <ControlTemplate>
+                        <DockPanel>
+                            <TextBlock DockPanel.Dock="Right" Margin="5,0,0,0" Foreground="Red" FontWeight="Bold">*</TextBlock>
+                            <TextBlock Text="{Binding ErrorContent}" DockPanel.Dock="Bottom" Foreground="Red"/>
+                            <Border BorderBrush="Red" BorderThickness="1">
+                                <AdornedElementPlaceholder/>
+                            </Border>
+                        </DockPanel>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+            <Style.Triggers>
+                <Trigger Property="Validation.HasError" Value="True">
+                    <Setter Property="ToolTip"
+                        Value="{Binding RelativeSource={x:Static RelativeSource.Self},
+                    Path=(Validation.Errors)[0].ErrorContent}"/>
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+    </Window.Resources>
+    
+    <Grid>
+        <StackPanel Margin="20" Orientation="Vertical">
+            <TextBlock>Felhasználónév</TextBlock>
+            <TextBox>
+                <Binding Path="UserName">
+                    <Binding.ValidationRules>
+                        <NotifyDataErrorValidationRule  ValidatesOnTargetUpdated="False"></NotifyDataErrorValidationRule>
+                    </Binding.ValidationRules>
+                </Binding>
+            </TextBox>
+            <TextBlock>Jelszó</TextBlock>
+            <PasswordBox Name="Password">
+                <ui:BoundPasswordBox.BoundPassword>
+                    <Binding Path="Password" UpdateSourceTrigger="PropertyChanged" Mode="TwoWay">
+                        <Binding.ValidationRules>
+                            <NotifyDataErrorValidationRule  ValidatesOnTargetUpdated="False"></NotifyDataErrorValidationRule>
+                        </Binding.ValidationRules>
+                    </Binding>
+                </ui:BoundPasswordBox.BoundPassword>
+            </PasswordBox>
+
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                <Button Command="{Binding DoLogin}">Bejelentkezés</Button>
+                <Button Command="{Binding ShowRegistration}" CommandParameter="{Binding ElementName=LoginWindow}">Regisztráció</Button>
+            </StackPanel>
+            <TextBlock TextWrapping="Wrap" Margin="0,10,0,0" Text="{Binding Message}" Visibility="{Binding MsgVisible, 
+                    Converter={StaticResource booleanToVisibilityConverter}}"></TextBlock>
+            
+        </StackPanel>
+    </Grid>
+</Window>
