@@ -1,0 +1,15 @@
+C:\programok\Orarend_osszerako\Orarend_osszerako\bin\Debug\Orarend_osszerako.exe.config
+C:\programok\Orarend_osszerako\Orarend_osszerako\bin\Debug\Orarend_osszerako.exe
+C:\programok\Orarend_osszerako\Orarend_osszerako\bin\Debug\Orarend_osszerako.pdb
+C:\programok\Orarend_osszerako\Orarend_osszerako\obj\Debug\Orarend_osszerako.csprojAssemblyReference.cache
+C:\programok\Orarend_osszerako\Orarend_osszerako\obj\Debug\MainWindow.g.cs
+C:\programok\Orarend_osszerako\Orarend_osszerako\obj\Debug\App.g.cs
+C:\programok\Orarend_osszerako\Orarend_osszerako\obj\Debug\Orarend_osszerako_MarkupCompile.cache
+C:\programok\Orarend_osszerako\Orarend_osszerako\obj\Debug\Orarend_osszerako_MarkupCompile.lref
+C:\programok\Orarend_osszerako\Orarend_osszerako\obj\Debug\MainWindow.baml
+C:\programok\Orarend_osszerako\Orarend_osszerako\obj\Debug\Orarend_osszerako.g.resources
+C:\programok\Orarend_osszerako\Orarend_osszerako\obj\Debug\Orarend_osszerako.Properties.Resources.resources
+C:\programok\Orarend_osszerako\Orarend_osszerako\obj\Debug\Orarend_osszerako.csproj.GenerateResource.cache
+C:\programok\Orarend_osszerako\Orarend_osszerako\obj\Debug\Orarend_osszerako.csproj.CoreCompileInputs.cache
+C:\programok\Orarend_osszerako\Orarend_osszerako\obj\Debug\Orarend_osszerako.exe
+C:\programok\Orarend_osszerako\Orarend_osszerako\obj\Debug\Orarend_osszerako.pdb
