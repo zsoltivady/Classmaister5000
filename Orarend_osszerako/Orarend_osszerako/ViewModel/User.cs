@@ -45,9 +45,9 @@ namespace Orarend_osszerako
             }
         }
 
-        private List<User> RegisteredUsers = new List<User>();
-        private bool UserIsRegistered = false;
-        public bool userIsRegistered
+        private List<User> RegisteredUsers = new List<User>(); //miért minden egyes új user példányban tárolod el a usereket? + minden egyes user osztályban csak 1 user példány lenne benne
+        private bool UserIsRegistered = false;                 //legalább static lenne, de inkább vidd ki egy konténer osztályba, jobb lesz mindenkinek
+        public bool userIsRegistered                           
         {
             set
             {
