@@ -6,15 +6,22 @@ using System.Threading.Tasks;
 
 namespace Orarend_osszerako.Model
 {
-    class CourseModel : SubjectModel
+    class CourseModel
     {
-        public CourseModel(SubjectModel Subject, int CourseId, string Room, string Teacher, DateTime From, DateTime To) : base(Subject.SubjectId, Subject.SubjectName, Subject.IsLecture)
+        public CourseModel(SubjectModel Subject, int CourseId, string Room, string Teacher, DateTime From, DateTime To)
         {
+            this.Subject = Subject;
             this.CourseId = CourseId;
             this.Room = Room;
             this.Teacher = Teacher;
             this.From = From;
             this.To = To;
+        }
+        private SubjectModel subject;
+        public SubjectModel Subject
+        {
+            get { return subject; }
+            set { subject = value; }
         }
         private int courseId;
         public int CourseId

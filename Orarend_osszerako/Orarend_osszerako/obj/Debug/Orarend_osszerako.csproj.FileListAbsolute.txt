@@ -13,3 +13,6 @@ C:\programok\Orarend_osszerako\Orarend_osszerako\obj\Debug\Orarend_osszerako.csp
 C:\programok\Orarend_osszerako\Orarend_osszerako\obj\Debug\Orarend_osszerako.csproj.CoreCompileInputs.cache
 C:\programok\Orarend_osszerako\Orarend_osszerako\obj\Debug\Orarend_osszerako.exe
 C:\programok\Orarend_osszerako\Orarend_osszerako\obj\Debug\Orarend_osszerako.pdb
+C:\Users\user\Documents\GitHub\Classmaister5000\Orarend_osszerako\Orarend_osszerako\bin\Debug\Orarend_osszerako.exe.config
+C:\Users\user\Documents\GitHub\Classmaister5000\Orarend_osszerako\Orarend_osszerako\obj\Debug\Orarend_osszerako.exe
+C:\Users\user\Documents\GitHub\Classmaister5000\Orarend_osszerako\Orarend_osszerako\obj\Debug\Orarend_osszerako.pdb

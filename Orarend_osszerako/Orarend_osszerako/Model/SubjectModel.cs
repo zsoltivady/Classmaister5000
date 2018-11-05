@@ -10,6 +10,7 @@ namespace Orarend_osszerako.Model
     {
         public SubjectModel(int Id, string SubjectName, bool IsLecture)
         {
+            this.Courses = new List<CourseModel>();
             this.SubjectId = subjectId;
             this.SubjectName = SubjectName;
             this.IsLecture = IsLecture;
@@ -32,5 +33,6 @@ namespace Orarend_osszerako.Model
             get { return isLecture; }
             protected set { isLecture = value; }
         }
+        public List<CourseModel> Courses { get; set; }
     }
 }
