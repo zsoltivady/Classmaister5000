@@ -9,7 +9,7 @@
         Title="Time Table" Height="492.293" Width="818.609">
     <Grid>
         <Button x:Name="Button_Register" Height="40" Margin="280,263,280,116" Content="Register"
-                Click="Button_Register_Click"/>
+                />
         <Button x:Name="Button_Login" Height="40" Margin="280,308,280,71" Content="Log in"/>
         <TextBox x:Name="TextBox_Username" HorizontalAlignment="Left" Height="23" Margin="280,159,0,0" 
                  VerticalAlignment="Top" Width="251"/>

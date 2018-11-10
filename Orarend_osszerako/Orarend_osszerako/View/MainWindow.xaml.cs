@@ -25,13 +25,6 @@ namespace Orarend_osszerako
             InitializeComponent();
         }
 
-        private void Button_Register_Click(object sender, RoutedEventArgs e)
-        {
-            if (TextBox_Username.Text != null && PasswordBox_Password != null)
-            {
-               // Register(); hogy tudom elérni a User.cs-t innen?
-
-            }
-        }
+       
     }
 }
