@@ -1,0 +1,50 @@
+﻿<Window x:Class="Orarend_osszerako.TimeTableWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Orarend_osszerako"
+        mc:Ignorable="d"
+        Title="TimeTableWindow" Height="494.118" Width="950">
+    <Grid>
+
+        <DataGrid Name="TimeTableXAML" HorizontalAlignment="Center" Height="400" Margin="145,10,23,0" VerticalAlignment="Top" Width="774">
+            <DataGrid.Resources>
+                <Style TargetType="{x:Type DataGridColumnHeader}">
+                    <Setter Property="Background" Value="LightGray"/>
+                    <Setter Property="HorizontalContentAlignment" Value="Center"/>
+                    <Setter Property="BorderBrush" Value="Black"/>
+                    <Setter Property="BorderThickness" Value="0,0,1,1"/>
+                </Style>
+            </DataGrid.Resources>
+
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Idő"        Width="30"  Binding="{Binding }"/>
+                <DataGridTextColumn Header="Hétfő"      Width="*"   Binding="{Binding }"/>
+                <DataGridTextColumn Header="Kedd"       Width="*"   Binding="{Binding }"/>
+                <DataGridTextColumn Header="Szerda"     Width="*"   Binding="{Binding }"/>
+                <DataGridTextColumn Header="Csütörtök"  Width="*"   Binding="{Binding }"/>
+                <DataGridTextColumn Header="Péntek"     Width="*"   Binding="{Binding }"/>
+                <DataGridTextColumn Header="Szombat"    Width="*"   Binding="{Binding }"/>
+                <DataGridTextColumn Header="Vasárnap"   Width="*"   Binding="{Binding }"/>
+            </DataGrid.Columns>
+        </DataGrid>
+
+        <ListBox HorizontalAlignment="Left" Height="400" Margin="10,10,0,0" Padding="2,5,0,0" VerticalAlignment="Top" Width="130" Background="LightGray" Name="Tárgyak">
+            <!--
+            <ListBox.Resources>                
+                <Style TargetType="{x:Type ListBox}">
+                    <Setter Property="BorderBrush" Value="Black"/>
+                </Style>                
+            </ListBox.Resources> 
+            -->            
+                <ComboBox HorizontalAlignment="Left" Width="120"/>
+                <ComboBox HorizontalAlignment="Left" Width="120"/>
+                <ComboBox HorizontalAlignment="Left" Width="120"/>
+            
+
+        </ListBox>
+
+
+    </Grid>
+</Window>
