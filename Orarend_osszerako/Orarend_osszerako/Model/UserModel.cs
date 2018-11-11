@@ -56,17 +56,73 @@ namespace Orarend_osszerako.Model
             get { return userId; }
             set { userId = value; }
         }
+
+        public string FirstLetterToUpper(string str)
+        {
+            if (str == null)
+                return null;
+
+            if (str.Length > 1)
+                return char.ToUpper(str[0]) + str.Substring(1);
+
+            return str.ToUpper();
+        }
         private string firstName;
         public string FirstName
         {
             get { return firstName; }
-            set { firstName = value; }
+            set
+            {
+                                
+                var hasNumber = new Regex(@"[0-9]+");
+                var hasSymbols = new Regex(@"[!@#$%^&*()_+=\[{\]};:<>|./?,-]");                
+                
+                if (string.IsNullOrWhiteSpace(value))
+                {
+                    throw new Exception("A keresztnevet meg kell adni!");
+                }               
+
+                else if (hasNumber.IsMatch(value))
+                {
+                    throw new Exception("A keresztnév nem tartalmazhat számokat!");  
+                }
+                else if (hasSymbols.IsMatch(value))
+                {
+                    throw new Exception("A keresztnév nem tartalmazhat szimbólumokat!");
+                }
+                else 
+                {
+                    firstName = FirstLetterToUpper(value);
+                }
+            }
         }
         private string lastName;
         public string LastName
         {
             get { return lastName; }
-            set { lastName = value; }
+            set
+            {
+                var hasNumber = new Regex(@"[0-9]+");
+                var hasSymbols = new Regex(@"[!@#$%^&*()_+=\[{\]};:<>|./?,-]");
+
+                if (string.IsNullOrWhiteSpace(value))
+                {
+                    throw new Exception("A vezetéknevet meg kell adni!");
+                }
+
+                else if (hasNumber.IsMatch(value))
+                {
+                    throw new Exception("A vezetéknév nem tartalmazhat számokat!");
+                }
+                else if (hasSymbols.IsMatch(value))
+                {
+                    throw new Exception("A vezetéknév nem tartalmazhat szimbólumokat!");
+                }
+                else
+                {
+                    lastName = FirstLetterToUpper(value);
+                }
+            }
         }
         private string userName;
         public string UserName
@@ -84,7 +140,7 @@ namespace Orarend_osszerako.Model
 
                 if (string.IsNullOrWhiteSpace(value))
                 {
-                    throw new Exception("Password should not be empty");
+                    throw new Exception("A jelszót meg kell adni!");
                 }
 
                 var hasNumber = new Regex(@"[0-9]+");
