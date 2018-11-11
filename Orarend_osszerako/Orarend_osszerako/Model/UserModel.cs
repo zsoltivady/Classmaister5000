@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 
 namespace Orarend_osszerako.Model
@@ -77,7 +78,55 @@ namespace Orarend_osszerako.Model
         public string Password
         {
             get { return password; }
-            set { password = value; }
+            set
+            {  
+                
+
+                if (string.IsNullOrWhiteSpace(value))
+                {
+                    throw new Exception("Password should not be empty");
+                }
+
+                var hasNumber = new Regex(@"[0-9]+");
+                var hasUpperChar = new Regex(@"[A-Z]+");
+                var hasMiniMaxChars = new Regex(@".{5,10}");
+                var hasLowerChar = new Regex(@"[a-z]+");
+                var hasSymbols = new Regex(@"[!@#$%^&*()_+=\[{\]};:<>|./?,-]");
+
+                if (!hasLowerChar.IsMatch(value))
+                {
+                    throw new Exception("A jelszónak tartalmaznia kell legalább 1 kisbetűt!");
+                   
+                }
+                else if (!hasUpperChar.IsMatch(value))
+                {
+                    throw new Exception("A jelszónak tartalmaznia kell legalább 1 nagybetűt");
+                    
+                }
+                else if (!hasMiniMaxChars.IsMatch(value))
+                {
+                    throw new Exception("A jelszó legalább 5, maxiumum 10 karakter hosszú lehet!");
+                    
+                }
+                else if (!hasNumber.IsMatch(value))
+                {
+                    throw new Exception("A jelszónak tartalmaznia kell legalább 1 számot!");
+                    
+                }
+
+                else if (!hasSymbols.IsMatch(value))
+                {
+                    throw new Exception("A jelszónak tartalmaznia kell legalább 1 speciális karaktert!");
+                    
+                }
+                else
+                {
+                    password = value;
+                }
+            }
+                
         }
+        
+        
     }
 }
