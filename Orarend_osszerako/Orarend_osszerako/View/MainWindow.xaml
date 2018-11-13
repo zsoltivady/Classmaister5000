@@ -14,8 +14,8 @@
         Title="Login" Height="550" Width="500" ResizeMode="NoResize">
     <Grid>
         <StackPanel Orientation="Horizontal" Height="40" VerticalAlignment="Top">
-            <Button Style="{StaticResource MaterialDesignFlatButton}" Content="Sign-In" Width="247"  Click="SignIn_Click"/>
-            <Button Style="{StaticResource MaterialDesignFlatButton}" Content="Sign-Up" Width="247" Click="SignUp_Click"/>
+            <Button x:Name="signin" Content="Sign-In" Width="247"  Click="SignIn_Click"/>
+            <Button x:Name="signup" Content="Sign-Up" Width="247" Click="SignUp_Click"/>
         </StackPanel>
         <Frame x:Name="Main" Margin="0 40 0 0" NavigationUIVisibility="Hidden"/>
     </Grid>
