@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Orarend_osszerako.View;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -25,6 +26,14 @@ namespace Orarend_osszerako
             InitializeComponent();
         }
 
-       
+        private void SignIn_Click(object sender, RoutedEventArgs e)
+        {
+            Main.Content = new LoginPage();
+        }
+
+        private void SignUp_Click(object sender, RoutedEventArgs e)
+        {
+            Main.Content = new RegisterPage();
+        }
     }
 }

@@ -6,19 +6,12 @@
         xmlns:local="clr-namespace:Orarend_osszerako"
         mc:Ignorable="d"
         x:Name="Window_Login"
-        Title="Time Table" Height="492.293" Width="818.609">
+        Title="Login" Height="300" Width="300">
     <Grid>
-        <Button x:Name="Button_Register" Height="40" Margin="280,263,280,116" Content="Register"
-                />
-        <Button x:Name="Button_Login" Height="40" Margin="280,308,280,71" Content="Log in"/>
-        <TextBox x:Name="TextBox_Username" HorizontalAlignment="Left" Height="23" Margin="280,159,0,0" 
-                 VerticalAlignment="Top" Width="251"/>
-        <TextBlock HorizontalAlignment="Left" Height="20" Margin="376,134,0,0" 
-                   Text="Username" VerticalAlignment="Top" Width="55"/>
-        <PasswordBox x:Name="PasswordBox_Password" HorizontalAlignment="Left" Height="23" Margin="280,239,0,0" 
-            VerticalAlignment="Top" Width="251"/>
-        <TextBlock HorizontalAlignment="Left" Height="20" Margin="376,214,0,0" 
-            Text="Password" VerticalAlignment="Top" Width="55"/>
-
+        <StackPanel Orientation="Horizontal" Height="30" VerticalAlignment="Top">
+            <Button Content="Sign-In" Width="146" Click="SignIn_Click"/>
+            <Button Content="Sign-Up" Width="146" Click="SignUp_Click" Background="#FF494949" Foreground="#FFF7F7F7" />
+        </StackPanel>
+        <Frame x:Name="Main" Margin="0 30 0 0" NavigationUIVisibility="Hidden"/>
     </Grid>
 </Window>
