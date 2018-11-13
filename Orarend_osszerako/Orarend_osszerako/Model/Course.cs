@@ -17,18 +17,20 @@ namespace Orarend_osszerako.Model
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public Course()
         {
-            this.Timetable = new HashSet<Timetable>();
+            this.Timetables = new HashSet<Timetable>();
         }
     
         public int Id { get; set; }
         public string Room { get; set; }
         public string Teacher { get; set; }
-        public System.TimeSpan From { get; set; }
-        public System.TimeSpan To { get; set; }
+        public System.DateTime From { get; set; }
+        public System.DateTime To { get; set; }
+        public int Day_Id { get; set; }
         public int Subject_Id { get; set; }
     
-        public virtual Subject Subject { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Timetable> Timetable { get; set; }
+        public virtual ICollection<Timetable> Timetables { get; set; }
+        public virtual Day Day { get; set; }
+        public virtual Subject Subject { get; set; }
     }
 }

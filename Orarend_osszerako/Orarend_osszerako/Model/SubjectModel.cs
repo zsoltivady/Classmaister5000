@@ -10,10 +10,14 @@ namespace Orarend_osszerako.Model
     {
         public SubjectModel(int Id, string SubjectName, bool IsLecture)
         {
-            this.Courses = new List<CourseModel>();
+            this.Courses = new HashSet<CourseModel>();
             this.SubjectId = subjectId;
             this.SubjectName = SubjectName;
             this.IsLecture = IsLecture;
+        }
+        public SubjectModel()
+        {
+            this.Courses = new HashSet<CourseModel>();
         }
         private int subjectId;
         public int SubjectId
@@ -33,6 +37,7 @@ namespace Orarend_osszerako.Model
             get { return isLecture; }
             protected set { isLecture = value; }
         }
-        public List<CourseModel> Courses { get; set; }
+        public HashSet<CourseModel> Courses { get; set; }
+        public virtual UserModel User { get; set; }
     }
 }

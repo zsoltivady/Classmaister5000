@@ -17,14 +17,16 @@ namespace Orarend_osszerako.Model
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public Subject()
         {
-            this.Course = new HashSet<Course>();
+            this.Courses = new HashSet<Course>();
         }
     
         public int Id { get; set; }
         public string SubjectName { get; set; }
-        public int IsLecture { get; set; }
+        public byte IsLecture { get; set; }
+        public int User_Id { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Course> Course { get; set; }
+        public virtual ICollection<Course> Courses { get; set; }
+        public virtual User User { get; set; }
     }
 }

@@ -14,6 +14,10 @@ namespace Orarend_osszerako.Model
             this.CourseId = CourseObject.CourseId;
             this.UserId = UserObject.UserId;
         }
+        public TimetableModel()
+        {
+
+        }
         private int id;
         public int Id
         {
@@ -32,5 +36,7 @@ namespace Orarend_osszerako.Model
             get { return userId; }
             set { userId = value; }
         }
+        public virtual CourseModel Course { get; set; }
+        public virtual UserModel User { get; set; }
     }
 }

@@ -17,7 +17,8 @@ namespace Orarend_osszerako.Model
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public User()
         {
-            this.Timetable = new HashSet<Timetable>();
+            this.Subjects = new HashSet<Subject>();
+            this.Timetables = new HashSet<Timetable>();
         }
     
         public int Id { get; set; }
@@ -25,9 +26,11 @@ namespace Orarend_osszerako.Model
         public string LastName { get; set; }
         public string UserName { get; set; }
         public string Password { get; set; }
+        public Nullable<System.DateTime> LastLogin { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Timetable> Timetable { get; set; }
-
+        public virtual ICollection<Subject> Subjects { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Timetable> Timetables { get; set; }
     }
 }

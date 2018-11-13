@@ -92,9 +92,13 @@
     </ApplicationDefinition>
     <Compile Include="BusinessLogic\Login.cs" />
     <Compile Include="Model\Course.cs">
-      <DependentUpon>EntityModel.tt</DependentUpon>
+      <DependentUpon>FinalEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="Model\CourseModel.cs" />
+    <Compile Include="Model\Day.cs">
+      <DependentUpon>FinalEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\DayEnum.cs" />
     <Compile Include="Model\EntityModel.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -110,16 +114,31 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>EntityModel.edmx</DependentUpon>
     </Compile>
+    <Compile Include="Model\FinalEntities.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FinalEntities.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\FinalEntities.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FinalEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\FinalEntities.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FinalEntities.edmx</DependentUpon>
+    </Compile>
     <Compile Include="Model\Subject.cs">
-      <DependentUpon>EntityModel.tt</DependentUpon>
+      <DependentUpon>FinalEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="Model\SubjectModel.cs" />
     <Compile Include="Model\Timetable.cs">
-      <DependentUpon>EntityModel.tt</DependentUpon>
+      <DependentUpon>FinalEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="Model\TimetableModel.cs" />
     <Compile Include="Model\User.cs">
-      <DependentUpon>EntityModel.tt</DependentUpon>
+      <DependentUpon>FinalEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="Model\UserModel.cs" />
     <Compile Include="Validation\RequiredValidation.cs" />
@@ -205,6 +224,13 @@
     <None Include="Model\EntityModel.edmx.diagram">
       <DependentUpon>EntityModel.edmx</DependentUpon>
     </None>
+    <EntityDeploy Include="Model\FinalEntities.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>FinalEntities.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="Model\FinalEntities.edmx.diagram">
+      <DependentUpon>FinalEntities.edmx</DependentUpon>
+    </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -239,6 +265,16 @@
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>EntityModel.edmx</DependentUpon>
       <LastGenOutput>EntityModel.cs</LastGenOutput>
+    </Content>
+    <Content Include="Model\FinalEntities.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>FinalEntities.edmx</DependentUpon>
+      <LastGenOutput>FinalEntities.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Model\FinalEntities.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>FinalEntities.edmx</DependentUpon>
+      <LastGenOutput>FinalEntities.cs</LastGenOutput>
     </Content>
   </ItemGroup>
   <ItemGroup>

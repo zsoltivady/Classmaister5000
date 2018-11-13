@@ -16,18 +16,20 @@ namespace Orarend_osszerako.Model
             this.Teacher = Teacher;
             this.From = From;
             this.To = To;
+            this.Timetables = new HashSet<TimetableModel>();
         }
-        private SubjectModel subject;
-        public SubjectModel Subject
+        public CourseModel()
         {
-            get { return subject; }
-            set { subject = value; }
+            this.Timetables = new HashSet<TimetableModel>();
         }
-        private int courseId;
+        public virtual ICollection<TimetableModel> Timetables { get; set; }
+        public virtual DayEnum Day { get; set; }
+        public virtual SubjectModel Subject {get;set;}
+        private int Id;
         public int CourseId
         {
-            get { return courseId; }
-            set { courseId = value; }
+            get { return Id; }
+            set { Id = value; }
         }
         private string room;
         public string Room
@@ -53,5 +55,7 @@ namespace Orarend_osszerako.Model
             get { return to; }
             set { to = value; }
         }
+        public int Day_Id { get; set; }
+        public int Subject_Id { get; set; }
     }
 }
