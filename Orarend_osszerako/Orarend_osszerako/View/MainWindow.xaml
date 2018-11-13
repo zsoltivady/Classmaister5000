@@ -11,12 +11,12 @@
         TextElement.FontWeight="Medium"
         TextElement.FontSize="14"
         FontFamily="pack://application:,,,/MaterialDesignThemes.Wpf;component/Resources/Roboto/#Roboto"
-        Title="Login" Height="450" Width="500" ResizeMode="NoResize">
+        Title="Login" Height="550" Width="500" ResizeMode="NoResize">
     <Grid>
-        <StackPanel Orientation="Horizontal" Height="30" VerticalAlignment="Top">
-            <Button Content="Sign-In" Width="146" Click="SignIn_Click"/>
-            <Button Content="Sign-Up" Width="146" Click="SignUp_Click"/>
+        <StackPanel Orientation="Horizontal" Height="40" VerticalAlignment="Top">
+            <Button Style="{StaticResource MaterialDesignFlatButton}" Content="Sign-In" Width="247"  Click="SignIn_Click"/>
+            <Button Style="{StaticResource MaterialDesignFlatButton}" Content="Sign-Up" Width="247" Click="SignUp_Click"/>
         </StackPanel>
-        <Frame x:Name="Main" Margin="0 30 0 0" NavigationUIVisibility="Hidden"/>
+        <Frame x:Name="Main" Margin="0 40 0 0" NavigationUIVisibility="Hidden"/>
     </Grid>
 </Window>

@@ -14,8 +14,19 @@
       Title="RegisterPage">
 
     <Grid>
-        <StackPanel Width="200" HorizontalAlignment="center">
-            <TextBlock Text="Register" FontWeight="Bold" HorizontalAlignment="Center" Margin="20" FontSize="20"/>
+        <StackPanel Width="250" HorizontalAlignment="center" VerticalAlignment="Center" Height="430">
+            <TextBlock Text="Register" HorizontalAlignment="Center" Margin="0 0 0 20" FontSize="24"/>
+            <TextBlock Text="First Name" Margin="5 0 5 0"/>
+            <TextBox x:Name="firstname" MinWidth="240" HorizontalAlignment="center" Margin="5 0 5 20"/>
+            <TextBlock Text="Last Name" Margin="5 0 5 0"/>
+            <TextBox x:Name="lastname" MinWidth="240" HorizontalAlignment="center" Margin="5 0 5 20"/>
+            <TextBlock Text="User Name" Margin="5 0 5 0"/>
+            <TextBox x:Name="username" MinWidth="240" HorizontalAlignment="center" Margin="5 0 5 20"/>
+            <TextBlock Text="Password" Margin="5 0 5 0"/>
+            <PasswordBox x:Name="userPassword" MinWidth="240" HorizontalAlignment="center" Margin="5 0 5 20"/>
+            <TextBlock Text="Retry Password" Margin="5 0 5 0"/>
+            <PasswordBox x:Name="retryPassword" MinWidth="240" HorizontalAlignment="center" Margin="5 0 5 20"/>
+            <Button Content="Register" Margin="5 10 5 10"/>
         </StackPanel>
         
     </Grid>
