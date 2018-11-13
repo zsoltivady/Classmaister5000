@@ -90,6 +90,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="BusinessLogic\Login.cs" />
     <Compile Include="Model\Course.cs">
       <DependentUpon>EntityModel.tt</DependentUpon>
     </Compile>
@@ -121,6 +122,9 @@
       <DependentUpon>EntityModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Model\UserModel.cs" />
+    <Compile Include="Validation\RequiredValidation.cs" />
+    <Compile Include="ViewModel\LoginViewModel.cs" />
+    <Compile Include="ViewModel\RegistrationViewModel.cs" />
     <Compile Include="View\Beallitas.xaml.cs">
       <DependentUpon>Beallitas.xaml</DependentUpon>
     </Compile>
@@ -210,9 +214,7 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="ViewModel\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <Content Include="Data.mdf">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>

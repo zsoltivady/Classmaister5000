@@ -26,6 +26,7 @@ namespace Orarend_osszerako.View
             InitializeComponent();
         }
 
+        //                         Majd a LoginViewModel.cs-ben!!
         private void Login_Click(object sender, RoutedEventArgs e)
         {
             new TimeTableWindow().Show();

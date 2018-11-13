@@ -60,5 +60,10 @@ namespace Orarend_osszerako
             new MainWindow().Show();
             this.Close();
         }
+
+        private void Main_Navigated(object sender, System.Windows.Navigation.NavigationEventArgs e)
+        {
+
+        }
     }
 }
