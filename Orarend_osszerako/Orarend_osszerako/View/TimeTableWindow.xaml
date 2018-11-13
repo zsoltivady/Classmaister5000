@@ -10,15 +10,20 @@
         TextElement.FontWeight="Medium"
         TextElement.FontSize="14"
         FontFamily="pack://application:,,,/MaterialDesignThemes.Wpf;component/Resources/Roboto/#Roboto"
-        Title="TimeTableWindow" Height="500" Width="908">
+        Title="Classmaister5000" Height="500" Width="908" MinWidth="700" MinHeight="500">
     <Grid>
-        <Grid>
-            <StackPanel Orientation="Horizontal" Height="35" VerticalAlignment="Top" Background="LightGray" Width="Auto">
-                <Button x:Name="orarend" Height="37" HorizontalAlignment="Center" Content="Órarend" Width="300" Panel.ZIndex="1" Click="orarend_Click"/>
-                <Button x:Name="beallitasok" Height="37" HorizontalAlignment="Center" Content="Beállítások" Width="300" Panel.ZIndex="1" Click="beallitasok_Click"/>
-                <Button x:Name="profil" Height="37" HorizontalAlignment="Center" Content="Profil" Width="300" Panel.ZIndex="1" Click="profil_Click"/>
-            </StackPanel>
+        <Grid Height="35" HorizontalAlignment="Stretch" VerticalAlignment="Top">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="1*" />
+                    <ColumnDefinition Width="1*" />
+                    <ColumnDefinition Width="1*" />
+                    <ColumnDefinition Width="85" />
+            </Grid.ColumnDefinitions>
+                <Button  Grid.Column="0" x:Name="orarend" Height="37" Content="Órarend" Click="orarend_Click"/>
+                <Button  Grid.Column="1" x:Name="beallitasok" Height="37" Content="Beállítások" Click="beallitasok_Click"/>
+                <Button Grid.Column="2" x:Name="profil" Height="37" Content="Profil" Click="profil_Click"/>
+                <Button Grid.Column="3" Style="{StaticResource MaterialDesignFlatButton}" x:Name="logout" Height="37" Content="Log Out" Click="logout_Click"/>
+        </Grid>
             <Frame x:Name="Main" Margin="0 35 0 0" NavigationUIVisibility="Hidden"/>
         </Grid>
-    </Grid>
 </Window>

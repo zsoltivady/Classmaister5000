@@ -55,7 +55,10 @@ namespace Orarend_osszerako
             ChangeTab(profil, beallitasok, orarend);
         }
 
-
-        
+        private void logout_Click(object sender, RoutedEventArgs e)
+        {
+            new MainWindow().Show();
+            this.Close();
+        }
     }
 }
