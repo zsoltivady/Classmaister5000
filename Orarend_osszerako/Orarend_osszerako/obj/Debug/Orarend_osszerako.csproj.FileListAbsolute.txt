@@ -101,3 +101,9 @@ C:\Classmaister5000\Orarend_osszerako\Orarend_osszerako\bin\Debug\ShowMeTheXAML.
 C:\Classmaister5000\Orarend_osszerako\Orarend_osszerako\bin\Debug\MaterialDesignThemes.Wpf.pdb
 C:\Classmaister5000\Orarend_osszerako\Orarend_osszerako\bin\Debug\MaterialDesignThemes.Wpf.xml
 C:\Classmaister5000\Orarend_osszerako\Orarend_osszerako\obj\Debug\View\App.baml
+C:\Classmaister5000\Orarend_osszerako\Orarend_osszerako\obj\Debug\View\Orarend.g.cs
+C:\Classmaister5000\Orarend_osszerako\Orarend_osszerako\obj\Debug\View\Orarend.baml
+C:\Classmaister5000\Orarend_osszerako\Orarend_osszerako\obj\Debug\View\Beallitas.g.cs
+C:\Classmaister5000\Orarend_osszerako\Orarend_osszerako\obj\Debug\View\Profil.g.cs
+C:\Classmaister5000\Orarend_osszerako\Orarend_osszerako\obj\Debug\View\Beallitas.baml
+C:\Classmaister5000\Orarend_osszerako\Orarend_osszerako\obj\Debug\View\Profil.baml

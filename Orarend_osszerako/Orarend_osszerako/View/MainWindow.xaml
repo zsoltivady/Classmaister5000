@@ -13,10 +13,10 @@
         FontFamily="pack://application:,,,/MaterialDesignThemes.Wpf;component/Resources/Roboto/#Roboto"
         Title="Login" Height="550" Width="500" ResizeMode="NoResize">
     <Grid>
-        <StackPanel Orientation="Horizontal" Height="40" VerticalAlignment="Top">
-            <Button x:Name="signin" Content="Sign-In" Width="247"  Click="SignIn_Click"/>
-            <Button x:Name="signup" Content="Sign-Up" Width="247" Click="SignUp_Click"/>
+        <StackPanel Orientation="Horizontal" Height="35" VerticalAlignment="Top">
+            <Button x:Name="signin" Height="37" Content="Sign-In" Width="247"  Click="SignIn_Click" Panel.ZIndex="1"/>
+            <Button x:Name="signup" Height="37" Content="Sign-Up" Width="247" Click="SignUp_Click" Panel.ZIndex="1"/>
         </StackPanel>
-        <Frame x:Name="Main" Margin="0 40 0 0" NavigationUIVisibility="Hidden"/>
+        <Frame x:Name="Main" Margin="0 35 0 0" NavigationUIVisibility="Hidden"/>
     </Grid>
 </Window>

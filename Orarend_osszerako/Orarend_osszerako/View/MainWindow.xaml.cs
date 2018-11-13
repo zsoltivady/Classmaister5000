@@ -23,7 +23,7 @@ namespace Orarend_osszerako
     public partial class MainWindow : Window
     {
         Style Primary = Application.Current.FindResource("MaterialDesignRaisedButton") as Style;
-        Style Secondary = Application.Current.FindResource("MaterialDesignFlatButton") as Style;
+        Style Secondary = Application.Current.FindResource("MaterialDesignRaisedDarkButton") as Style;
         public MainWindow()
         {
             InitializeComponent();
