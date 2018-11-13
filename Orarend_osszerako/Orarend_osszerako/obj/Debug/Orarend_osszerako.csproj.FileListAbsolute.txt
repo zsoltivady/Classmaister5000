@@ -95,3 +95,9 @@ C:\Classmaister5000\Orarend_osszerako\Orarend_osszerako\obj\Debug\View\LoginPage
 C:\Classmaister5000\Orarend_osszerako\Orarend_osszerako\obj\Debug\View\RegisterPage.g.cs
 C:\Classmaister5000\Orarend_osszerako\Orarend_osszerako\obj\Debug\View\LoginPage.baml
 C:\Classmaister5000\Orarend_osszerako\Orarend_osszerako\obj\Debug\View\RegisterPage.baml
+C:\Classmaister5000\Orarend_osszerako\Orarend_osszerako\bin\Debug\MaterialDesignColors.dll
+C:\Classmaister5000\Orarend_osszerako\Orarend_osszerako\bin\Debug\MaterialDesignThemes.Wpf.dll
+C:\Classmaister5000\Orarend_osszerako\Orarend_osszerako\bin\Debug\ShowMeTheXAML.dll
+C:\Classmaister5000\Orarend_osszerako\Orarend_osszerako\bin\Debug\MaterialDesignThemes.Wpf.pdb
+C:\Classmaister5000\Orarend_osszerako\Orarend_osszerako\bin\Debug\MaterialDesignThemes.Wpf.xml
+C:\Classmaister5000\Orarend_osszerako\Orarend_osszerako\obj\Debug\View\App.baml

@@ -6,35 +6,17 @@
         xmlns:local="clr-namespace:Orarend_osszerako"
         mc:Ignorable="d"
         x:Name="Window_Login"
-        Title="Login" Height="300" Width="300">
+        TextElement.Foreground="{DynamicResource MaterialDesignBody}"
+        Background="{DynamicResource MaterialDesignPaper}"
+        TextElement.FontWeight="Medium"
+        TextElement.FontSize="14"
+        FontFamily="pack://application:,,,/MaterialDesignThemes.Wpf;component/Resources/Roboto/#Roboto"
+        Title="Login" Height="450" Width="500" ResizeMode="NoResize">
     <Grid>
         <StackPanel Orientation="Horizontal" Height="30" VerticalAlignment="Top">
-            <Button Content="Sign-In" Width="146" Click="SignIn_Click" Background="#FF494949"/>
+            <Button Content="Sign-In" Width="146" Click="SignIn_Click"/>
             <Button Content="Sign-Up" Width="146" Click="SignUp_Click"/>
         </StackPanel>
         <Frame x:Name="Main" Margin="0 30 0 0" NavigationUIVisibility="Hidden"/>
     </Grid>
-    <Window.Resources>
-        <Style TargetType="Button">
-            <Setter Property="HorizontalAlignment" Value="Center" />
-            <Setter Property="FontSize" Value="14"/>
-            <Setter Property="Background" Value="#FF494949"/>
-            <Setter Property="Foreground" Value="#FFF7F7F7"/>
-            <Setter Property="Template">
-            <Setter.Value>
-                <ControlTemplate TargetType="{x:Type Button}">
-                    <Border Background="{TemplateBinding Background}" BorderBrush="Black" BorderThickness="1">
-                        <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
-                    </Border>
-                </ControlTemplate>
-            </Setter.Value>
-            </Setter>
-            <Style.Triggers>
-                <Trigger Property="IsMouseOver" Value="True">
-                    <Setter Property="Background" Value="#FFFFFF"/>
-                    <Setter Property="Foreground" Value="#000000"/>
-                </Trigger>
-            </Style.Triggers>
-        </Style>
-    </Window.Resources>
 </Window>
