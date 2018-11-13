@@ -8,6 +8,8 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("classmaister5000.mdf")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("classmaister5000_log.ldf")]
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("data.mdf")]
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("data_log.ldf")]
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("model/entitymodel.context.tt")]
