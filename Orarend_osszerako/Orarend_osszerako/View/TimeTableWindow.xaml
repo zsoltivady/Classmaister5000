@@ -5,17 +5,22 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Orarend_osszerako"
         mc:Ignorable="d"
+        TextElement.Foreground="{DynamicResource MaterialDesignBody}"
+        Background="{DynamicResource MaterialDesignPaper}"
+        TextElement.FontWeight="Medium"
+        TextElement.FontSize="14"
+        FontFamily="pack://application:,,,/MaterialDesignThemes.Wpf;component/Resources/Roboto/#Roboto"
         Title="TimeTableWindow" Height="494.118" Width="950">
     <Grid>
 
         <DataGrid Name="TimeTableXAML" HorizontalAlignment="Center" Height="400" Margin="145,10,23,0" VerticalAlignment="Top" Width="774">
             <DataGrid.Resources>
-                <Style TargetType="{x:Type DataGridColumnHeader}">
+                <!--<Style TargetType="{x:Type DataGridColumnHeader}">
                     <Setter Property="Background" Value="LightGray"/>
                     <Setter Property="HorizontalContentAlignment" Value="Center"/>
                     <Setter Property="BorderBrush" Value="Black"/>
                     <Setter Property="BorderThickness" Value="0,0,1,1"/>
-                </Style>
+                </Style> MARTIN KOMMENTELTE KI -->
             </DataGrid.Resources>
 
             <DataGrid.Columns>
@@ -30,7 +35,7 @@
             </DataGrid.Columns>
         </DataGrid>
 
-        <ListBox HorizontalAlignment="Left" Height="400" Margin="10,10,0,0" Padding="2,5,0,0" VerticalAlignment="Top" Width="130" Background="LightGray" Name="Tárgyak">
+        <ListBox HorizontalAlignment="Left" Height="400" Margin="10,10,0,0" Padding="2,5,0,0" VerticalAlignment="Top" Width="130"  Name="Tárgyak">
             <!--
             <ListBox.Resources>                
                 <Style TargetType="{x:Type ListBox}">

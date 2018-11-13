@@ -30,6 +30,7 @@ namespace Orarend_osszerako.View
         {
             new TimeTableWindow().Show();
             Window.GetWindow(this).Close();
+            // TODO Itt kell csekkolni a login adatokat és validálni!!!!!
         }
     }
 }
