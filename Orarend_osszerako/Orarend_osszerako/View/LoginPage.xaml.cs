@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using Orarend_osszerako;
 
 namespace Orarend_osszerako.View
 {
@@ -23,6 +24,12 @@ namespace Orarend_osszerako.View
         public LoginPage()
         {
             InitializeComponent();
+        }
+
+        private void Login_Click(object sender, RoutedEventArgs e)
+        {
+            new TimeTableWindow().Show();
+            Window.GetWindow(this).Close();
         }
     }
 }

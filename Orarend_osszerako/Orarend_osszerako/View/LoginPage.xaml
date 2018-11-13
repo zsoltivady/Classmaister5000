@@ -21,7 +21,7 @@
             <TextBox x:Name="userName" MinWidth="240" HorizontalAlignment="center" Margin="5 0 5 20"/>
             <TextBlock Text="Password" Margin="5 0 5 0"/>
             <PasswordBox x:Name="userPassword" MinWidth="240" HorizontalAlignment="center" Margin="5 0 5 20"/>
-            <Button Content="Log in" Margin="5 10 5 10"/>
+            <Button Content="Log in" Margin="5 10 5 10" Click="Login_Click"/>
         </StackPanel>
     </Grid>
 </Page>
