@@ -9,9 +9,32 @@
         Title="Login" Height="300" Width="300">
     <Grid>
         <StackPanel Orientation="Horizontal" Height="30" VerticalAlignment="Top">
-            <Button Content="Sign-In" Width="146" Click="SignIn_Click"/>
-            <Button Content="Sign-Up" Width="146" Click="SignUp_Click" Background="#FF494949" Foreground="#FFF7F7F7" />
+            <Button Content="Sign-In" Width="146" Click="SignIn_Click" Background="#FF494949"/>
+            <Button Content="Sign-Up" Width="146" Click="SignUp_Click"/>
         </StackPanel>
         <Frame x:Name="Main" Margin="0 30 0 0" NavigationUIVisibility="Hidden"/>
     </Grid>
+    <Window.Resources>
+        <Style TargetType="Button">
+            <Setter Property="HorizontalAlignment" Value="Center" />
+            <Setter Property="FontSize" Value="14"/>
+            <Setter Property="Background" Value="#FF494949"/>
+            <Setter Property="Foreground" Value="#FFF7F7F7"/>
+            <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type Button}">
+                    <Border Background="{TemplateBinding Background}" BorderBrush="Black" BorderThickness="1">
+                        <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                    </Border>
+                </ControlTemplate>
+            </Setter.Value>
+            </Setter>
+            <Style.Triggers>
+                <Trigger Property="IsMouseOver" Value="True">
+                    <Setter Property="Background" Value="#FFFFFF"/>
+                    <Setter Property="Foreground" Value="#000000"/>
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+    </Window.Resources>
 </Window>
