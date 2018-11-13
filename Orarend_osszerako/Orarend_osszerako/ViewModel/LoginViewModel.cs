@@ -8,6 +8,6 @@ namespace Orarend_osszerako.ViewModel
 {
     class LoginViewModel
     {
-        //LoginDBEntities db = new LoginDBEntities();
+        
     }
 }

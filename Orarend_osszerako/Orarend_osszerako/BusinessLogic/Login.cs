@@ -10,14 +10,13 @@ using System.Windows.Input;
 
 namespace Orarend_osszerako.BusinessLogic
 {
-    class Login
+    public class Login
     {
-        //public void Log_in()
-        //{
-        //    new TimeTableWindow().Show();
-        //    Window.GetWindow(this).Close();// nem jó a this valamiért.
 
+        public void Log_in()
+        {
+            new TimeTableWindow().Show();
 
-        //}
+        }
     }
 }

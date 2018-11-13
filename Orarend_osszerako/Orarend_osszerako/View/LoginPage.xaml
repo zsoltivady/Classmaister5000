@@ -12,7 +12,8 @@
         TextElement.FontWeight="Medium"
         TextElement.FontSize="14"
         FontFamily="pack://application:,,,/MaterialDesignThemes.Wpf;component/Resources/Roboto/#Roboto"
-      Title="LoginPage">
+      Title="LoginPage"
+      x:Name="Login_Page">
 
     <Grid>
         <StackPanel Width="250" HorizontalAlignment="center" VerticalAlignment="center" Height="270">
