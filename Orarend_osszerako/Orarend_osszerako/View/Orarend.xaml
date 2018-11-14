@@ -42,24 +42,19 @@
                 BorderBrush="{DynamicResource PrimaryHueDarkBrush}" BorderThickness="2"> -->
         <GroupBox Header="Tárgyak" Margin="10">
             <StackPanel>
+                <!-- Gombok -->
                 <materialDesign:PopupBox Style="{StaticResource MaterialDesignMultiFloatingActionPopupBox}"
-                PlacementMode="RightAndAlignMiddles"
-                ToolTipService.Placement="Right"
-                ToolTip="PopupBox, Style MaterialDesignMultiFloatingActionPopupBox">
-
+                PlacementMode="RightAndAlignMiddles" Width="35" Height="35"
+                                         materialDesign:ShadowAssist.ShadowDepth="Depth0">
                     <StackPanel Orientation="Horizontal">
-                        <Button ToolTip="Tárgy hozzáadása">
-                            <Path
-                            Data="M19,13H13V19H11V13H5V11H11V5H13V11H19V13Z"
-                            Stretch="Uniform"
-                            Width="15"
-                            Height="15"
-                            Fill="{Binding RelativeSource={RelativeSource AncestorType=Button}, 
-                            Path=Foreground}" />
+                        <Button ToolTip="Tárgy hozzáadása" ToolTipService.Placement="Right" 
+                                Width="30" Height="30" materialDesign:ShadowAssist.ShadowDepth="Depth0">
+                            <materialDesign:PackIcon Kind="PlaylistAdd" />
                         </Button>
-                        
                     </StackPanel>
                 </materialDesign:PopupBox>
+                
+                <!-- Lecseréltem az eddigi Listbox-os változatot TreeView-ra -->
                 <TreeView MinWidth="200">
                     <TreeViewItem Header="PéldaTárgy1">
                         <TreeViewItem Header="PéldaKurzus1 (ToolTip-el)">
@@ -80,7 +75,7 @@
                     </TreeViewItem>
                 </TreeView>
             </StackPanel>
-            <!-- Lecseréltem az eddigi Listbox-os változatot TreeView-ra -->
+            
         </GroupBox>
         <!--</Border>-->
     </Grid>
