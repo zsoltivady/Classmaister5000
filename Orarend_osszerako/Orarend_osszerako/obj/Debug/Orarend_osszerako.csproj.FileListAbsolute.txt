@@ -190,3 +190,46 @@ E:\Iskolai Projekt\Classmaister5000\Orarend_osszerako\Orarend_osszerako\obj\Debu
 E:\Iskolai Projekt\Classmaister5000\Orarend_osszerako\Orarend_osszerako\obj\Debug\Orarend_osszerako.csproj.CoreCompileInputs.cache
 E:\Iskolai Projekt\Classmaister5000\Orarend_osszerako\Orarend_osszerako\obj\Debug\Orarend_osszerako.exe
 E:\Iskolai Projekt\Classmaister5000\Orarend_osszerako\Orarend_osszerako\obj\Debug\Orarend_osszerako.pdb
+C:\GitHub\Classmaister5000\Orarend_osszerako\Orarend_osszerako\bin\Debug\Classmaister5000.mdf
+C:\GitHub\Classmaister5000\Orarend_osszerako\Orarend_osszerako\bin\Debug\Classmaister5000_log.ldf
+C:\GitHub\Classmaister5000\Orarend_osszerako\Orarend_osszerako\bin\Debug\Data.mdf
+C:\GitHub\Classmaister5000\Orarend_osszerako\Orarend_osszerako\bin\Debug\Data_log.ldf
+C:\GitHub\Classmaister5000\Orarend_osszerako\Orarend_osszerako\bin\Debug\Orarend_osszerako.exe.config
+C:\GitHub\Classmaister5000\Orarend_osszerako\Orarend_osszerako\bin\Debug\Orarend_osszerako.exe
+C:\GitHub\Classmaister5000\Orarend_osszerako\Orarend_osszerako\bin\Debug\Orarend_osszerako.pdb
+C:\GitHub\Classmaister5000\Orarend_osszerako\Orarend_osszerako\bin\Debug\EntityFramework.dll
+C:\GitHub\Classmaister5000\Orarend_osszerako\Orarend_osszerako\bin\Debug\EntityFramework.SqlServer.dll
+C:\GitHub\Classmaister5000\Orarend_osszerako\Orarend_osszerako\bin\Debug\MaterialDesignColors.dll
+C:\GitHub\Classmaister5000\Orarend_osszerako\Orarend_osszerako\bin\Debug\MaterialDesignThemes.Wpf.dll
+C:\GitHub\Classmaister5000\Orarend_osszerako\Orarend_osszerako\bin\Debug\ShowMeTheXAML.dll
+C:\GitHub\Classmaister5000\Orarend_osszerako\Orarend_osszerako\bin\Debug\EntityFramework.xml
+C:\GitHub\Classmaister5000\Orarend_osszerako\Orarend_osszerako\bin\Debug\EntityFramework.SqlServer.xml
+C:\GitHub\Classmaister5000\Orarend_osszerako\Orarend_osszerako\bin\Debug\MaterialDesignThemes.Wpf.pdb
+C:\GitHub\Classmaister5000\Orarend_osszerako\Orarend_osszerako\bin\Debug\MaterialDesignThemes.Wpf.xml
+C:\GitHub\Classmaister5000\Orarend_osszerako\Orarend_osszerako\obj\Debug\Orarend_osszerako.csprojAssemblyReference.cache
+C:\GitHub\Classmaister5000\Orarend_osszerako\Orarend_osszerako\obj\Debug\View\Beallitas.g.cs
+C:\GitHub\Classmaister5000\Orarend_osszerako\Orarend_osszerako\obj\Debug\View\LoginPage.g.cs
+C:\GitHub\Classmaister5000\Orarend_osszerako\Orarend_osszerako\obj\Debug\View\MainWindow.g.cs
+C:\GitHub\Classmaister5000\Orarend_osszerako\Orarend_osszerako\obj\Debug\View\Orarend.g.cs
+C:\GitHub\Classmaister5000\Orarend_osszerako\Orarend_osszerako\obj\Debug\View\Profil.g.cs
+C:\GitHub\Classmaister5000\Orarend_osszerako\Orarend_osszerako\obj\Debug\View\RegisterPage.g.cs
+C:\GitHub\Classmaister5000\Orarend_osszerako\Orarend_osszerako\obj\Debug\View\TimeTableWindow.g.cs
+C:\GitHub\Classmaister5000\Orarend_osszerako\Orarend_osszerako\obj\Debug\View\App.g.cs
+C:\GitHub\Classmaister5000\Orarend_osszerako\Orarend_osszerako\obj\Debug\Orarend_osszerako_Content.g.cs
+C:\GitHub\Classmaister5000\Orarend_osszerako\Orarend_osszerako\obj\Debug\Orarend_osszerako_MarkupCompile.cache
+C:\GitHub\Classmaister5000\Orarend_osszerako\Orarend_osszerako\obj\Debug\Orarend_osszerako_MarkupCompile.lref
+C:\GitHub\Classmaister5000\Orarend_osszerako\Orarend_osszerako\obj\Debug\View\App.baml
+C:\GitHub\Classmaister5000\Orarend_osszerako\Orarend_osszerako\obj\Debug\View\Beallitas.baml
+C:\GitHub\Classmaister5000\Orarend_osszerako\Orarend_osszerako\obj\Debug\View\LoginPage.baml
+C:\GitHub\Classmaister5000\Orarend_osszerako\Orarend_osszerako\obj\Debug\View\MainWindow.baml
+C:\GitHub\Classmaister5000\Orarend_osszerako\Orarend_osszerako\obj\Debug\View\Orarend.baml
+C:\GitHub\Classmaister5000\Orarend_osszerako\Orarend_osszerako\obj\Debug\View\Profil.baml
+C:\GitHub\Classmaister5000\Orarend_osszerako\Orarend_osszerako\obj\Debug\View\RegisterPage.baml
+C:\GitHub\Classmaister5000\Orarend_osszerako\Orarend_osszerako\obj\Debug\View\TimeTableWindow.baml
+C:\GitHub\Classmaister5000\Orarend_osszerako\Orarend_osszerako\obj\Debug\Orarend_osszerako.g.resources
+C:\GitHub\Classmaister5000\Orarend_osszerako\Orarend_osszerako\obj\Debug\Orarend_osszerako.Properties.Resources.resources
+C:\GitHub\Classmaister5000\Orarend_osszerako\Orarend_osszerako\obj\Debug\Orarend_osszerako.csproj.GenerateResource.cache
+C:\GitHub\Classmaister5000\Orarend_osszerako\Orarend_osszerako\obj\Debug\Orarend_osszerako.csproj.CoreCompileInputs.cache
+C:\GitHub\Classmaister5000\Orarend_osszerako\Orarend_osszerako\obj\Debug\Orarend_osszerako.csproj.CopyComplete
+C:\GitHub\Classmaister5000\Orarend_osszerako\Orarend_osszerako\obj\Debug\Orarend_osszerako.exe
+C:\GitHub\Classmaister5000\Orarend_osszerako\Orarend_osszerako\obj\Debug\Orarend_osszerako.pdb
