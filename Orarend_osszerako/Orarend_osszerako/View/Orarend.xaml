@@ -6,9 +6,18 @@
       xmlns:local="clr-namespace:Orarend_osszerako.View"
       xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
       mc:Ignorable="d" 
+      TextElement.Foreground="{DynamicResource MaterialDesignBody}"
+        Background="{DynamicResource MaterialDesignPaper}"
+        TextElement.FontWeight="Medium"
+        TextElement.FontSize="14"
+        FontFamily="pack://application:,,,/MaterialDesignThemes.Wpf;component/Resources/Roboto/#Roboto"
       d:DesignHeight="450" d:DesignWidth="800"
       Title="Orarend">
-    <Grid>
+    <Page.Resources>
+        <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.PopupBox.xaml" />
+    </Page.Resources>
+    
+            <Grid>
         <!-- Oldal szerkezete megcsinálva normálisabbra -->
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="2*"/>
@@ -32,27 +41,46 @@
         <!--<Border Grid.Column="0"  Padding="2,5,0,0" Margin="10" CornerRadius="3"
                 BorderBrush="{DynamicResource PrimaryHueDarkBrush}" BorderThickness="2"> -->
         <GroupBox Header="Tárgyak" Margin="10">
+            <StackPanel>
+                <materialDesign:PopupBox Style="{StaticResource MaterialDesignMultiFloatingActionPopupBox}"
+                PlacementMode="RightAndAlignMiddles"
+                ToolTipService.Placement="Right"
+                ToolTip="PopupBox, Style MaterialDesignMultiFloatingActionPopupBox">
 
-            <!-- Lecseréltem az eddigi Listbox-os változatot TreeView-ra -->
-            <TreeView MinWidth="200">
-                <TreeViewItem Header="PéldaTárgy1">
-                    <TreeViewItem Header="PéldaKurzus1 (ToolTip-el)">
-                        <!-- Lehetnének így tooltip-ben a kurzus további adatai (persze Binding-al)-->
-                        <TreeViewItem.ToolTip>
-                            <StackPanel>
-                                <TextBlock>Tanár: Valaki</TextBlock>
-                                <TextBlock>Kód: ASD</TextBlock>
-                                <TextBlock>Ettől-eddig</TextBlock>
-                            </StackPanel>
-                        </TreeViewItem.ToolTip>
+                    <StackPanel Orientation="Horizontal">
+                        <Button ToolTip="Tárgy hozzáadása">
+                            <Path
+                            Data="M19,13H13V19H11V13H5V11H11V5H13V11H19V13Z"
+                            Stretch="Uniform"
+                            Width="15"
+                            Height="15"
+                            Fill="{Binding RelativeSource={RelativeSource AncestorType=Button}, 
+                            Path=Foreground}" />
+                        </Button>
+                        
+                    </StackPanel>
+                </materialDesign:PopupBox>
+                <TreeView MinWidth="200">
+                    <TreeViewItem Header="PéldaTárgy1">
+                        <TreeViewItem Header="PéldaKurzus1 (ToolTip-el)">
+                            <!-- Lehetnének így tooltip-ben a kurzus további adatai (persze Binding-al)-->
+                            <TreeViewItem.ToolTip>
+                                <StackPanel>
+                                    <TextBlock>Tanár: Valaki</TextBlock>
+                                    <TextBlock>Kód: ASD</TextBlock>
+                                    <TextBlock>Ettől-eddig</TextBlock>
+                                </StackPanel>
+                            </TreeViewItem.ToolTip>
+                        </TreeViewItem>
+                        <TreeViewItem Header="PéldaKurzus2" />
                     </TreeViewItem>
-                    <TreeViewItem Header="PéldaKurzus2" />
-                </TreeViewItem>
-                <TreeViewItem Header="PéldaTárgy2">
-                    <TreeViewItem Header="PéldaKurzus3" />
-                    <TreeViewItem Header="PéldaKurzus4" />
-                </TreeViewItem>
-            </TreeView>
+                    <TreeViewItem Header="PéldaTárgy2">
+                        <TreeViewItem Header="PéldaKurzus3" />
+                        <TreeViewItem Header="PéldaKurzus4" />
+                    </TreeViewItem>
+                </TreeView>
+            </StackPanel>
+            <!-- Lecseréltem az eddigi Listbox-os változatot TreeView-ra -->
         </GroupBox>
         <!--</Border>-->
     </Grid>
