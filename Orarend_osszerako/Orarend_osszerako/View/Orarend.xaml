@@ -55,7 +55,7 @@
                 </materialDesign:PopupBox>
                 
                 <!-- Lecseréltem az eddigi Listbox-os változatot TreeView-ra -->
-                <TreeView MinWidth="200">
+                <TreeView MinWidth="200" FontSize="12">
                     <TreeViewItem Header="PéldaTárgy1">
                         <TreeViewItem Header="PéldaKurzus1 (ToolTip-el)">
                             <!-- Lehetnének így tooltip-ben a kurzus további adatai (persze Binding-al)-->
