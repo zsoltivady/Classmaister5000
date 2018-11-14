@@ -90,7 +90,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="BusinessLogic\Login.cs" />
+    <Compile Include="BusinessLogic\LoginLogout.cs" />
     <Compile Include="BusinessLogic\Registration.cs" />
     <Compile Include="Mapper\CourseMapper.cs" />
     <Compile Include="Mapper\DayMapper.cs" />

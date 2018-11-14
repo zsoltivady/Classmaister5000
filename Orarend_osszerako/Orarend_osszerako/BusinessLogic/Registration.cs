@@ -42,13 +42,6 @@ namespace Orarend_osszerako.BusinessLogic
                     }
                 }
             }
-            //db-ből lekérni a következő user id-ját
-            
-
-            //db-be beszúrás
-
-
-
         }
     }
 }

@@ -148,49 +148,47 @@ namespace Orarend_osszerako.Model
             get { return password; }
             set
             {  
-                
+                //if (string.IsNullOrWhiteSpace(value))
+                //{
+                //    throw new Exception("A jelszót meg kell adni!");
+                //}
 
-                if (string.IsNullOrWhiteSpace(value))
-                {
-                    throw new Exception("A jelszót meg kell adni!");
-                }
+                //var hasNumber = new Regex(@"[0-9]+");
+                //var hasUpperChar = new Regex(@"[A-Z]+");
+                //var hasMiniMaxChars = new Regex(@".{5,10}");
+                //var hasLowerChar = new Regex(@"[a-z]+");
+                //var hasSymbols = new Regex(@"[!@#$%^&*()_+=\[{\]};:<>|./?,-]");
 
-                var hasNumber = new Regex(@"[0-9]+");
-                var hasUpperChar = new Regex(@"[A-Z]+");
-                var hasMiniMaxChars = new Regex(@".{5,10}");
-                var hasLowerChar = new Regex(@"[a-z]+");
-                var hasSymbols = new Regex(@"[!@#$%^&*()_+=\[{\]};:<>|./?,-]");
-
-                if (!hasLowerChar.IsMatch(value))
-                {
-                    throw new Exception("A jelszónak tartalmaznia kell legalább 1 kisbetűt!");
+                //if (!hasLowerChar.IsMatch(value))
+                //{
+                //    throw new Exception("A jelszónak tartalmaznia kell legalább 1 kisbetűt!");
                    
-                }
-                else if (!hasUpperChar.IsMatch(value))
-                {
-                    throw new Exception("A jelszónak tartalmaznia kell legalább 1 nagybetűt");
+                //}
+                //else if (!hasUpperChar.IsMatch(value))
+                //{
+                //    throw new Exception("A jelszónak tartalmaznia kell legalább 1 nagybetűt");
                     
-                }
-                else if (!hasMiniMaxChars.IsMatch(value))
-                {
-                    throw new Exception("A jelszó legalább 5, maxiumum 10 karakter hosszú lehet!");
+                //}
+                //else if (!hasMiniMaxChars.IsMatch(value))
+                //{
+                //    throw new Exception("A jelszó legalább 5, maxiumum 10 karakter hosszú lehet!");
                     
-                }
-                else if (!hasNumber.IsMatch(value))
-                {
-                    throw new Exception("A jelszónak tartalmaznia kell legalább 1 számot!");
+                //}
+                //else if (!hasNumber.IsMatch(value))
+                //{
+                //    throw new Exception("A jelszónak tartalmaznia kell legalább 1 számot!");
                     
-                }
+                //}
 
-                else if (!hasSymbols.IsMatch(value))
-                {
-                    throw new Exception("A jelszónak tartalmaznia kell legalább 1 speciális karaktert!");
+                //else if (!hasSymbols.IsMatch(value))
+                //{
+                //    throw new Exception("A jelszónak tartalmaznia kell legalább 1 speciális karaktert!");
                     
-                }
-                else
-                {
+                //}
+                //else
+                //{
                     password = value;
-                }
+                //}
             }
                 
         }
