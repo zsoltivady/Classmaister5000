@@ -148,10 +148,6 @@ C:\Users\levi1\OneDrive\Dokumentumok\GitHub\Classmaister5000\Orarend_osszerako\O
 C:\Users\levi1\OneDrive\Dokumentumok\GitHub\Classmaister5000\Orarend_osszerako\Orarend_osszerako\obj\Debug\Orarend_osszerako.csproj.CopyComplete
 C:\Users\levi1\OneDrive\Dokumentumok\GitHub\Classmaister5000\Orarend_osszerako\Orarend_osszerako\obj\Debug\Orarend_osszerako.exe
 C:\Users\levi1\OneDrive\Dokumentumok\GitHub\Classmaister5000\Orarend_osszerako\Orarend_osszerako\obj\Debug\Orarend_osszerako.pdb
-E:\Iskolai Projekt\Classmaister5000\Orarend_osszerako\Orarend_osszerako\bin\Debug\Classmaister5000.mdf
-E:\Iskolai Projekt\Classmaister5000\Orarend_osszerako\Orarend_osszerako\bin\Debug\Classmaister5000_log.ldf
-E:\Iskolai Projekt\Classmaister5000\Orarend_osszerako\Orarend_osszerako\bin\Debug\Data.mdf
-E:\Iskolai Projekt\Classmaister5000\Orarend_osszerako\Orarend_osszerako\bin\Debug\Data_log.ldf
 E:\Iskolai Projekt\Classmaister5000\Orarend_osszerako\Orarend_osszerako\bin\Debug\Orarend_osszerako.exe.config
 E:\Iskolai Projekt\Classmaister5000\Orarend_osszerako\Orarend_osszerako\bin\Debug\Orarend_osszerako.exe
 E:\Iskolai Projekt\Classmaister5000\Orarend_osszerako\Orarend_osszerako\bin\Debug\Orarend_osszerako.pdb

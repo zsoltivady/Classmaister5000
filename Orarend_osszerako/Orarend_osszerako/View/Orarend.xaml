@@ -29,8 +29,9 @@
         </DataGrid>
 
         <!-- Kis szépítés -->
-        <Border Grid.Column="0"  Padding="2,5,0,0" Margin="10" CornerRadius="3"
-                BorderBrush="{DynamicResource PrimaryHueDarkBrush}" BorderThickness="2">
+        <!--<Border Grid.Column="0"  Padding="2,5,0,0" Margin="10" CornerRadius="3"
+                BorderBrush="{DynamicResource PrimaryHueDarkBrush}" BorderThickness="2"> -->
+        <GroupBox Header="Tárgyak" Margin="10">
 
             <!-- Lecseréltem az eddigi Listbox-os változatot TreeView-ra -->
             <TreeView MinWidth="200">
@@ -52,6 +53,7 @@
                     <TreeViewItem Header="PéldaKurzus4" />
                 </TreeViewItem>
             </TreeView>
-        </Border>
+        </GroupBox>
+        <!--</Border>-->
     </Grid>
 </Page>
