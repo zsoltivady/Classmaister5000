@@ -4,47 +4,54 @@
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:Orarend_osszerako.View"
+      xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
       Title="Orarend">
     <Grid>
-        <DataGrid Name="TimeTableXAML" HorizontalAlignment="Center" Height="400" Margin="145,10,23,0" VerticalAlignment="Top" Width="774">
-        <DataGrid.Resources>
-            <!--<Style TargetType="{x:Type DataGridColumnHeader}">
-                    <Setter Property="Background" Value="LightGray"/>
-                    <Setter Property="HorizontalContentAlignment" Value="Center"/>
-                    <Setter Property="BorderBrush" Value="Black"/>
-                    <Setter Property="BorderThickness" Value="0,0,1,1"/>
-                </Style> MARTIN KOMMENTELTE KI -->
-        </DataGrid.Resources>
+        <!-- Oldal szerkezete megcsinálva normálisabbra -->
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="2*"/>
+            <ColumnDefinition Width="5*"/>
+        </Grid.ColumnDefinitions>
 
-        <DataGrid.Columns>
-            <DataGridTextColumn Header="Idő"        Width="30"  Binding="{Binding }"/>
-            <DataGridTextColumn Header="Hétfő"      Width="*"   Binding="{Binding }"/>
-            <DataGridTextColumn Header="Kedd"       Width="*"   Binding="{Binding }"/>
-            <DataGridTextColumn Header="Szerda"     Width="*"   Binding="{Binding }"/>
-            <DataGridTextColumn Header="Csütörtök"  Width="*"   Binding="{Binding }"/>
-            <DataGridTextColumn Header="Péntek"     Width="*"   Binding="{Binding }"/>
-            <DataGridTextColumn Header="Szombat"    Width="*"   Binding="{Binding }"/>
-            <DataGridTextColumn Header="Vasárnap"   Width="*"   Binding="{Binding }"/>
-        </DataGrid.Columns>
-    </DataGrid>
+        <DataGrid Grid.Column="1" Name="TimeTableXAML" VerticalAlignment="Top">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Idő"        Width="0.6*" Binding="{Binding }"/>
+                <DataGridTextColumn Header="Hétfő"      Width="*"    Binding="{Binding }"/>
+                <DataGridTextColumn Header="Kedd"       Width="*"    Binding="{Binding }"/>
+                <DataGridTextColumn Header="Szerda"     Width="*"    Binding="{Binding }"/>
+                <DataGridTextColumn Header="Csütörtök"  Width="1.1*"    Binding="{Binding }"/>
+                <DataGridTextColumn Header="Péntek"     Width="*"    Binding="{Binding }"/>
+                <DataGridTextColumn Header="Szombat"    Width="*"    Binding="{Binding }"/>
+                <DataGridTextColumn Header="Vasárnap"   Width="*"    Binding="{Binding }"/>
+            </DataGrid.Columns>
+        </DataGrid>
 
-    <ListBox HorizontalAlignment="Left" Height="400" Margin="10,10,0,0" Padding="2,5,0,0" VerticalAlignment="Top" Width="130"  Name="Tárgyak">
-        <!--
-            <ListBox.Resources>                
-                <Style TargetType="{x:Type ListBox}">
-                    <Setter Property="BorderBrush" Value="Black"/>
-                </Style>                
-            </ListBox.Resources> 
-            -->
-        <ComboBox HorizontalAlignment="Left" Width="120"/>
-        <ComboBox HorizontalAlignment="Left" Width="120"/>
-        <ComboBox HorizontalAlignment="Left" Width="120"/>
+        <!-- Kis szépítés -->
+        <Border Grid.Column="0"  Padding="2,5,0,0" Margin="10" CornerRadius="3"
+                BorderBrush="{DynamicResource PrimaryHueDarkBrush}" BorderThickness="2">
 
-
-    </ListBox>
-
-
+            <!-- Lecseréltem az eddigi Listbox-os változatot TreeView-ra -->
+            <TreeView MinWidth="200">
+                <TreeViewItem Header="PéldaTárgy1">
+                    <TreeViewItem Header="PéldaKurzus1 (ToolTip-el)">
+                        <!-- Lehetnének így tooltip-ben a kurzus további adatai (persze Binding-al)-->
+                        <TreeViewItem.ToolTip>
+                            <StackPanel>
+                                <TextBlock>Tanár: Valaki</TextBlock>
+                                <TextBlock>Kód: ASD</TextBlock>
+                                <TextBlock>Ettől-eddig</TextBlock>
+                            </StackPanel>
+                        </TreeViewItem.ToolTip>
+                    </TreeViewItem>
+                    <TreeViewItem Header="PéldaKurzus2" />
+                </TreeViewItem>
+                <TreeViewItem Header="PéldaTárgy2">
+                    <TreeViewItem Header="PéldaKurzus3" />
+                    <TreeViewItem Header="PéldaKurzus4" />
+                </TreeViewItem>
+            </TreeView>
+        </Border>
     </Grid>
 </Page>

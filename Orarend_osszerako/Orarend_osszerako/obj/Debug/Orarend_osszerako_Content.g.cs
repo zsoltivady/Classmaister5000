@@ -14,5 +14,7 @@
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("data_log.ldf")]
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("model/entitymodel.context.tt")]
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("model/entitymodel.tt")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("model/finalentities.context.tt")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("model/finalentities.tt")]
 
 

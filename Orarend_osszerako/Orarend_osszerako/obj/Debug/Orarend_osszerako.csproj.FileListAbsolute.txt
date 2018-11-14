@@ -148,3 +148,45 @@ C:\Users\levi1\OneDrive\Dokumentumok\GitHub\Classmaister5000\Orarend_osszerako\O
 C:\Users\levi1\OneDrive\Dokumentumok\GitHub\Classmaister5000\Orarend_osszerako\Orarend_osszerako\obj\Debug\Orarend_osszerako.csproj.CopyComplete
 C:\Users\levi1\OneDrive\Dokumentumok\GitHub\Classmaister5000\Orarend_osszerako\Orarend_osszerako\obj\Debug\Orarend_osszerako.exe
 C:\Users\levi1\OneDrive\Dokumentumok\GitHub\Classmaister5000\Orarend_osszerako\Orarend_osszerako\obj\Debug\Orarend_osszerako.pdb
+E:\Iskolai Projekt\Classmaister5000\Orarend_osszerako\Orarend_osszerako\bin\Debug\Classmaister5000.mdf
+E:\Iskolai Projekt\Classmaister5000\Orarend_osszerako\Orarend_osszerako\bin\Debug\Classmaister5000_log.ldf
+E:\Iskolai Projekt\Classmaister5000\Orarend_osszerako\Orarend_osszerako\bin\Debug\Data.mdf
+E:\Iskolai Projekt\Classmaister5000\Orarend_osszerako\Orarend_osszerako\bin\Debug\Data_log.ldf
+E:\Iskolai Projekt\Classmaister5000\Orarend_osszerako\Orarend_osszerako\bin\Debug\Orarend_osszerako.exe.config
+E:\Iskolai Projekt\Classmaister5000\Orarend_osszerako\Orarend_osszerako\bin\Debug\Orarend_osszerako.exe
+E:\Iskolai Projekt\Classmaister5000\Orarend_osszerako\Orarend_osszerako\bin\Debug\Orarend_osszerako.pdb
+E:\Iskolai Projekt\Classmaister5000\Orarend_osszerako\Orarend_osszerako\bin\Debug\EntityFramework.dll
+E:\Iskolai Projekt\Classmaister5000\Orarend_osszerako\Orarend_osszerako\bin\Debug\EntityFramework.SqlServer.dll
+E:\Iskolai Projekt\Classmaister5000\Orarend_osszerako\Orarend_osszerako\bin\Debug\MaterialDesignColors.dll
+E:\Iskolai Projekt\Classmaister5000\Orarend_osszerako\Orarend_osszerako\bin\Debug\MaterialDesignThemes.Wpf.dll
+E:\Iskolai Projekt\Classmaister5000\Orarend_osszerako\Orarend_osszerako\bin\Debug\ShowMeTheXAML.dll
+E:\Iskolai Projekt\Classmaister5000\Orarend_osszerako\Orarend_osszerako\bin\Debug\EntityFramework.xml
+E:\Iskolai Projekt\Classmaister5000\Orarend_osszerako\Orarend_osszerako\bin\Debug\EntityFramework.SqlServer.xml
+E:\Iskolai Projekt\Classmaister5000\Orarend_osszerako\Orarend_osszerako\bin\Debug\MaterialDesignThemes.Wpf.pdb
+E:\Iskolai Projekt\Classmaister5000\Orarend_osszerako\Orarend_osszerako\bin\Debug\MaterialDesignThemes.Wpf.xml
+E:\Iskolai Projekt\Classmaister5000\Orarend_osszerako\Orarend_osszerako\obj\Debug\Orarend_osszerako.csprojResolveAssemblyReference.cache
+E:\Iskolai Projekt\Classmaister5000\Orarend_osszerako\Orarend_osszerako\obj\Debug\View\Beallitas.g.cs
+E:\Iskolai Projekt\Classmaister5000\Orarend_osszerako\Orarend_osszerako\obj\Debug\View\LoginPage.g.cs
+E:\Iskolai Projekt\Classmaister5000\Orarend_osszerako\Orarend_osszerako\obj\Debug\View\MainWindow.g.cs
+E:\Iskolai Projekt\Classmaister5000\Orarend_osszerako\Orarend_osszerako\obj\Debug\View\Orarend.g.cs
+E:\Iskolai Projekt\Classmaister5000\Orarend_osszerako\Orarend_osszerako\obj\Debug\View\Profil.g.cs
+E:\Iskolai Projekt\Classmaister5000\Orarend_osszerako\Orarend_osszerako\obj\Debug\View\RegisterPage.g.cs
+E:\Iskolai Projekt\Classmaister5000\Orarend_osszerako\Orarend_osszerako\obj\Debug\View\TimeTableWindow.g.cs
+E:\Iskolai Projekt\Classmaister5000\Orarend_osszerako\Orarend_osszerako\obj\Debug\View\App.g.cs
+E:\Iskolai Projekt\Classmaister5000\Orarend_osszerako\Orarend_osszerako\obj\Debug\Orarend_osszerako_Content.g.cs
+E:\Iskolai Projekt\Classmaister5000\Orarend_osszerako\Orarend_osszerako\obj\Debug\Orarend_osszerako_MarkupCompile.cache
+E:\Iskolai Projekt\Classmaister5000\Orarend_osszerako\Orarend_osszerako\obj\Debug\Orarend_osszerako_MarkupCompile.lref
+E:\Iskolai Projekt\Classmaister5000\Orarend_osszerako\Orarend_osszerako\obj\Debug\View\App.baml
+E:\Iskolai Projekt\Classmaister5000\Orarend_osszerako\Orarend_osszerako\obj\Debug\View\Beallitas.baml
+E:\Iskolai Projekt\Classmaister5000\Orarend_osszerako\Orarend_osszerako\obj\Debug\View\LoginPage.baml
+E:\Iskolai Projekt\Classmaister5000\Orarend_osszerako\Orarend_osszerako\obj\Debug\View\MainWindow.baml
+E:\Iskolai Projekt\Classmaister5000\Orarend_osszerako\Orarend_osszerako\obj\Debug\View\Orarend.baml
+E:\Iskolai Projekt\Classmaister5000\Orarend_osszerako\Orarend_osszerako\obj\Debug\View\Profil.baml
+E:\Iskolai Projekt\Classmaister5000\Orarend_osszerako\Orarend_osszerako\obj\Debug\View\RegisterPage.baml
+E:\Iskolai Projekt\Classmaister5000\Orarend_osszerako\Orarend_osszerako\obj\Debug\View\TimeTableWindow.baml
+E:\Iskolai Projekt\Classmaister5000\Orarend_osszerako\Orarend_osszerako\obj\Debug\Orarend_osszerako.g.resources
+E:\Iskolai Projekt\Classmaister5000\Orarend_osszerako\Orarend_osszerako\obj\Debug\Orarend_osszerako.Properties.Resources.resources
+E:\Iskolai Projekt\Classmaister5000\Orarend_osszerako\Orarend_osszerako\obj\Debug\Orarend_osszerako.csproj.GenerateResource.Cache
+E:\Iskolai Projekt\Classmaister5000\Orarend_osszerako\Orarend_osszerako\obj\Debug\Orarend_osszerako.csproj.CoreCompileInputs.cache
+E:\Iskolai Projekt\Classmaister5000\Orarend_osszerako\Orarend_osszerako\obj\Debug\Orarend_osszerako.exe
+E:\Iskolai Projekt\Classmaister5000\Orarend_osszerako\Orarend_osszerako\obj\Debug\Orarend_osszerako.pdb
