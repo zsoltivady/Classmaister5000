@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Orarend_osszerako.Model
 {
-    class CourseModel
+    public class CourseModel
     {
         public CourseModel(SubjectModel Subject, int CourseId, string Room, string Teacher, DateTime From, DateTime To)
         {
@@ -23,7 +23,7 @@ namespace Orarend_osszerako.Model
             this.Timetables = new HashSet<TimetableModel>();
         }
         public virtual ICollection<TimetableModel> Timetables { get; set; }
-        public virtual DayEnum Day { get; set; }
+        public virtual DayModel Day { get; set; }
         public virtual SubjectModel Subject {get;set;}
         private int Id;
         public int CourseId

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Orarend_osszerako.Model
 {
-    class TimetableModel
+    public class TimetableModel
     {
         public TimetableModel(int Id, CourseModel CourseObject, UserModel UserObject)
         {

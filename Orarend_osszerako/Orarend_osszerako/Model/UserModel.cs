@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Orarend_osszerako.Model
 {
-    class UserModel 
+    public class UserModel 
     {
         public UserModel(int UserId, string FirstName, string LastName, string UserName, string Password)
         {
@@ -186,6 +186,7 @@ namespace Orarend_osszerako.Model
             }
                 
         }
+        public DateTime? LastLogin { get; set; }
         public virtual ICollection<SubjectModel> Subjects { get; set; }
         public virtual ICollection<TimetableModel> Timetables { get; set; }
 

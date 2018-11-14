@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Orarend_osszerako.Model
 {
-    enum DayEnum
+    public enum DayEnum
     {
         Monday,
         Tuesday,

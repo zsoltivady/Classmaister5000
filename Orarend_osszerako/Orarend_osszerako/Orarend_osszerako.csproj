@@ -91,6 +91,11 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="BusinessLogic\Login.cs" />
+    <Compile Include="Mapper\CourseMapper.cs" />
+    <Compile Include="Mapper\DayMapper.cs" />
+    <Compile Include="Mapper\SubjectMapper.cs" />
+    <Compile Include="Mapper\TimetableMapper.cs" />
+    <Compile Include="Mapper\UserMapper.cs" />
     <Compile Include="Model\Course.cs">
       <DependentUpon>FinalEntities.tt</DependentUpon>
     </Compile>
@@ -99,6 +104,7 @@
       <DependentUpon>FinalEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="Model\DayEnum.cs" />
+    <Compile Include="Model\DayModel.cs" />
     <Compile Include="Model\EntityModel.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
