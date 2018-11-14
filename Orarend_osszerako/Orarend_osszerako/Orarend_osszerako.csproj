@@ -91,6 +91,7 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="BusinessLogic\Login.cs" />
+    <Compile Include="BusinessLogic\Registration.cs" />
     <Compile Include="Mapper\CourseMapper.cs" />
     <Compile Include="Mapper\DayMapper.cs" />
     <Compile Include="Mapper\SubjectMapper.cs" />

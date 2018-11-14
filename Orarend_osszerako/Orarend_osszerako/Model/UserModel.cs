@@ -22,6 +22,14 @@ namespace Orarend_osszerako.Model
             this.Subjects = new HashSet<SubjectModel>();
             this.Timetables = new HashSet<TimetableModel>();
         }
+        public UserModel(string FirstName, string LastName, string UserName, string Password) 
+            :this()
+        {
+            this.FirstName = FirstName;
+            this.LastName = LastName;
+            this.UserName = UserName;
+            this.Password = Password;
+        }
         //User Id alapján példány létrehozás, esetleg tesztelés céljából
         //public UserModel(int id)
         //{
