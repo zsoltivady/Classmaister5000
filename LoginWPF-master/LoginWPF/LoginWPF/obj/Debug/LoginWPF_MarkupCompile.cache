@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-C:\Users\EKE\Documents\Visual Studio 2015\Projects\LoginWPF\LoginWPF\obj\Debug\
+C:\Users\Levente\Documents\GitHub\Classmaister5000\LoginWPF-master\LoginWPF\LoginWPF\obj\Debug\
 LoginWPF
 none
 false
 DEBUG;TRACE
-C:\Users\EKE\Documents\Visual Studio 2015\Projects\LoginWPF\LoginWPF\App.xaml
+C:\Users\Levente\Documents\GitHub\Classmaister5000\LoginWPF-master\LoginWPF\LoginWPF\App.xaml
 4949467565
 4-913055588
-19-1572802049
-18-1242863107
+23-1179770663
+182011644675
 MainWindow.xaml;View\Login.xaml;View\LogList.xaml;View\Registration.xaml;
 
-False
+True
 

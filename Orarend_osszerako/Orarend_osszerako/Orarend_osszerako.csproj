@@ -92,6 +92,7 @@
     </ApplicationDefinition>
     <Compile Include="BusinessLogic\LoginLogout.cs" />
     <Compile Include="BusinessLogic\Registration.cs" />
+    <Compile Include="Command\RelayCommand.cs" />
     <Compile Include="Mapper\CourseMapper.cs" />
     <Compile Include="Mapper\DayMapper.cs" />
     <Compile Include="Mapper\SubjectMapper.cs" />
