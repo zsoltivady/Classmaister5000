@@ -8,7 +8,7 @@ namespace Orarend_osszerako.Model
 {
     public class CourseModel
     {
-        public CourseModel(SubjectModel Subject, int CourseId, string Room, string Teacher, DateTime From, DateTime To)
+        public CourseModel(SubjectModel Subject, int CourseId, string Room, string Teacher, DateTime From, DateTime To) : this()
         {
             this.Subject = Subject;
             this.CourseId = CourseId;
@@ -16,7 +16,6 @@ namespace Orarend_osszerako.Model
             this.Teacher = Teacher;
             this.From = From;
             this.To = To;
-            this.Timetables = new HashSet<TimetableModel>();
         }
         public CourseModel()
         {

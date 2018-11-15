@@ -8,9 +8,8 @@ namespace Orarend_osszerako.Model
 {
     public class TimetableModel
     {
-        public TimetableModel(int Id, CourseModel CourseObject, UserModel UserObject)
+        public TimetableModel(CourseModel CourseObject, UserModel UserObject) : this()
         {
-            this.Id = Id;
             this.CourseId = CourseObject.CourseId;
             this.UserId = UserObject.UserId;
         }

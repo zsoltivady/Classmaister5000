@@ -8,12 +8,13 @@ namespace Orarend_osszerako.Model
 {
     public class SubjectModel
     {
-        public SubjectModel(int Id, string SubjectName, bool IsLecture)
+        public SubjectModel(int Id, string SubjectName, bool IsLecture, int User_Id, UserModel User) : this()
         {
-            this.Courses = new HashSet<CourseModel>();
             this.SubjectId = subjectId;
             this.SubjectName = SubjectName;
             this.IsLecture = IsLecture;
+            this.User_Id = User_Id;
+            this.User = User;
         }
         public SubjectModel()
         {

@@ -12,7 +12,10 @@ namespace Orarend_osszerako.Model
         {
             this.Courses = new HashSet<CourseModel>();
         }
-
+        public DayModel(DayEnum Day1) : this()
+        {
+            this.Day1 = Day1;
+        }
         public int Id { get; set; }
         public DayEnum Day1 { get; set; }
 
