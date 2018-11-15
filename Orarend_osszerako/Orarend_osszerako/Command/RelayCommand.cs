@@ -85,4 +85,4 @@ namespace Orarend_osszerako.Command
         }
     }
 }
-}
+

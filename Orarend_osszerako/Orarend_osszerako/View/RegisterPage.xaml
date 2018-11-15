@@ -3,7 +3,8 @@
       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
-      xmlns:local="clr-namespace:Orarend_osszerako.View"
+      xmlns:local="clr-namespace:Orarend_osszerako.View" 
+      xmlns:vm="clr-namespace:Orarend_osszerako.ViewModel"
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
       TextElement.Foreground="{DynamicResource MaterialDesignBody}"
@@ -12,7 +13,9 @@
         TextElement.FontSize="14"
         FontFamily="pack://application:,,,/MaterialDesignThemes.Wpf;component/Resources/Roboto/#Roboto"
       Title="RegisterPage">
-
+    <Page.DataContext>
+        <vm:RegistrationViewModel/>
+    </Page.DataContext>
     <Grid>
         <StackPanel Width="250" HorizontalAlignment="center" VerticalAlignment="Center" Height="430">
             <TextBlock Text="Register" HorizontalAlignment="Center" Margin="0 0 0 20" FontSize="24"/>
@@ -26,7 +29,7 @@
             <PasswordBox x:Name="userPassword" MinWidth="240" HorizontalAlignment="center" Margin="5 0 5 20"/>
             <TextBlock Text="Retry Password" Margin="5 0 5 0"/>
             <PasswordBox x:Name="retryPassword" MinWidth="240" HorizontalAlignment="center" Margin="5 0 5 20"/>
-            <Button Content="Register" Margin="5 10 5 10"/>
+            <Button Content="{Binding RegisterButtonContent}" Margin="5 10 5 10"/>
         </StackPanel>
         
     </Grid>
