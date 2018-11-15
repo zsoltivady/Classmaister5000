@@ -188,8 +188,6 @@ E:\Iskolai Projekt\Classmaister5000\Orarend_osszerako\Orarend_osszerako\obj\Debu
 E:\Iskolai Projekt\Classmaister5000\Orarend_osszerako\Orarend_osszerako\obj\Debug\Orarend_osszerako.pdb
 C:\GitHub\Classmaister5000\Orarend_osszerako\Orarend_osszerako\bin\Debug\Classmaister5000.mdf
 C:\GitHub\Classmaister5000\Orarend_osszerako\Orarend_osszerako\bin\Debug\Classmaister5000_log.ldf
-C:\GitHub\Classmaister5000\Orarend_osszerako\Orarend_osszerako\bin\Debug\Data.mdf
-C:\GitHub\Classmaister5000\Orarend_osszerako\Orarend_osszerako\bin\Debug\Data_log.ldf
 C:\GitHub\Classmaister5000\Orarend_osszerako\Orarend_osszerako\bin\Debug\Orarend_osszerako.exe.config
 C:\GitHub\Classmaister5000\Orarend_osszerako\Orarend_osszerako\bin\Debug\Orarend_osszerako.exe
 C:\GitHub\Classmaister5000\Orarend_osszerako\Orarend_osszerako\bin\Debug\Orarend_osszerako.pdb

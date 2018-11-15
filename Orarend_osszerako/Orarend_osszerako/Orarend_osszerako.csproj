@@ -227,9 +227,12 @@
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
-    <Content Include="Classmaister5000.mdf" />
+    <Content Include="Classmaister5000.mdf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <Content Include="Classmaister5000_log.ldf">
       <DependentUpon>Classmaister5000.mdf</DependentUpon>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Model\FinalEntities.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
