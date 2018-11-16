@@ -106,6 +106,7 @@ namespace Orarend_osszerako.ViewModel
         public void RegisterUser(string username, string password, string RetryPassowrd,
             string FirstName, string LastName)
         {
+            
             using (var context = new Classmaister5000Entities())
             {
                 Validate();

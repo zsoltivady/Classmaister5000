@@ -24,7 +24,7 @@ namespace Orarend_osszerako.Mapper
             newEntityCourse.To = course.To;
             newEntityCourse.Day_Id = course.Day_Id;
             newEntityCourse.Subject_Id = course.Subject_Id;
-            newEntityCourse.Timetables = TimetableMapper.ModelCollectionToEntityCollection(course.Timetables);
+            //newEntityCourse.Timetables = TimetableMapper.ModelCollectionToEntityCollection(course.Timetables);
             newEntityCourse.Day = DayMapper.ModelToEntity(course.Day);
             newEntityCourse.Subject = SubjectMapper.ModelToEntity(course.Subject);
             return newEntityCourse;
@@ -44,7 +44,7 @@ namespace Orarend_osszerako.Mapper
             newModelCourse.To = course.To;
             newModelCourse.Day_Id = course.Day_Id;
             newModelCourse.Subject_Id = course.Subject_Id;
-            newModelCourse.Timetables = TimetableMapper.EntityCollectionToModelCollection(course.Timetables);
+            //newModelCourse.Timetables = TimetableMapper.EntityCollectionToModelCollection(course.Timetables);
             newModelCourse.Day = DayMapper.EntityToModel(course.Day);
             newModelCourse.Subject = SubjectMapper.EntityToModel(course.Subject);
             return newModelCourse;

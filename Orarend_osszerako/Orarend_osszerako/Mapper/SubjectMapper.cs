@@ -21,7 +21,7 @@ namespace Orarend_osszerako.Mapper
             newEntitySubject.SubjectName = subject.SubjectName;
             newEntitySubject.IsLecture = (subject.IsLecture == false ? Convert.ToByte(0) : Convert.ToByte(1));
             newEntitySubject.User_Id = subject.User_Id;
-            newEntitySubject.Courses = CourseMapper.ModelCollectionToEntityCollection(subject.Courses);
+            //newEntitySubject.Courses = CourseMapper.ModelCollectionToEntityCollection(subject.Courses);
             newEntitySubject.User = UserMapper.ModelToEntity(subject.User);
             return newEntitySubject;
         }
@@ -39,7 +39,7 @@ namespace Orarend_osszerako.Mapper
             newSubject.SubjectName = subject.SubjectName;
             newSubject.IsLecture = (subject.IsLecture == 0 ? false : true);
             newSubject.User_Id = subject.User_Id;
-            newSubject.Courses = CourseMapper.EntityCollectionToModelCollection(subject.Courses);
+            //newSubject.Courses = CourseMapper.EntityCollectionToModelCollection(subject.Courses);
             newSubject.User = UserMapper.EntityToModel(subject.User);
             return newSubject;
         }

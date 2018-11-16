@@ -39,7 +39,7 @@ namespace Orarend_osszerako.Model
             set { isLecture = value; }
         }
         public int User_Id { get; set; }
-        public ICollection<CourseModel> Courses { get; set; }
+        public virtual ICollection<CourseModel> Courses { get; set; }
         public virtual UserModel User { get; set; }
     }
 }

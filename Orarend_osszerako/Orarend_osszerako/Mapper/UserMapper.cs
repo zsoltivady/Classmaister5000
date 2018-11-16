@@ -23,8 +23,8 @@ namespace Orarend_osszerako.Mapper
             newEntityUser.UserName = user.UserName;
             newEntityUser.Password = user.Password;
             newEntityUser.LastLogin = user.LastLogin;
-            newEntityUser.Subjects = SubjectMapper.ModelCollectionToEntityCollection(user.Subjects);
-            newEntityUser.Timetables = TimetableMapper.ModelCollectionToEntityCollection(user.Timetables);
+            //newEntityUser.Subjects = SubjectMapper.ModelCollectionToEntityCollection(user.Subjects);
+            //newEntityUser.Timetables = TimetableMapper.ModelCollectionToEntityCollection(user.Timetables);
             return newEntityUser;
         }
         /// <summary>
@@ -41,8 +41,8 @@ namespace Orarend_osszerako.Mapper
             newModelUser.UserName = user.UserName;
             newModelUser.Password = user.Password;
             newModelUser.LastLogin = user.LastLogin;
-            newModelUser.Subjects = SubjectMapper.EntityCollectionToModelCollection(user.Subjects);
-            newModelUser.Timetables = TimetableMapper.EntityCollectionToModelCollection(user.Timetables);
+            //newModelUser.Subjects = SubjectMapper.EntityCollectionToModelCollection(user.Subjects);
+            //newModelUser.Timetables = TimetableMapper.EntityCollectionToModelCollection(user.Timetables);
             return newModelUser;
         }
         /// <summary>

@@ -17,7 +17,7 @@ namespace Orarend_osszerako.Mapper
         public static Day ModelToEntity(DayModel day)
         {
             Day newDay = new Day();
-            newDay.Courses = CourseMapper.ModelCollectionToEntityCollection(day.Courses);
+            //newDay.Courses = CourseMapper.ModelCollectionToEntityCollection(day.Courses);
             newDay.Id = day.Id;
             newDay.Day1 = day.Day1.ToString();
             return newDay;
@@ -31,7 +31,7 @@ namespace Orarend_osszerako.Mapper
         {
             DayModel newDayModel = new DayModel();
             newDayModel.Id = day.Id;
-            newDayModel.Courses = CourseMapper.EntityCollectionToModelCollection(day.Courses);
+            //newDayModel.Courses = CourseMapper.EntityCollectionToModelCollection(day.Courses);
             switch (day.Day1)
             {
                 case "Monday" : newDayModel.Day1 = DayEnum.Monday; break;
