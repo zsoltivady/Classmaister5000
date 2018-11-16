@@ -15,7 +15,7 @@
       Title="Profil">
 
     <Grid>
-        <TextBlock Text="Profil" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="36"/>
+        <TextBlock Text="Profil dolgai ide" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="36"/>
         
     </Grid>
 </Page>

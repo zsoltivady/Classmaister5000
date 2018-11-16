@@ -26,28 +26,28 @@
 
         <DataGrid Grid.Column="1" Name="TimeTableXAML" VerticalAlignment="Top">
             <DataGrid.Columns>
-                <DataGridTextColumn Header="Idő"        Width="0.6*" Binding="{Binding }"/>
-                <DataGridTextColumn Header="Hétfő"      Width="*"    Binding="{Binding }"/>
-                <DataGridTextColumn Header="Kedd"       Width="*"    Binding="{Binding }"/>
-                <DataGridTextColumn Header="Szerda"     Width="*"    Binding="{Binding }"/>
-                <DataGridTextColumn Header="Csütörtök"  Width="1.1*"    Binding="{Binding }"/>
-                <DataGridTextColumn Header="Péntek"     Width="*"    Binding="{Binding }"/>
-                <DataGridTextColumn Header="Szombat"    Width="*"    Binding="{Binding }"/>
-                <DataGridTextColumn Header="Vasárnap"   Width="*"    Binding="{Binding }"/>
+                <DataGridTextColumn Header="Time"       Width="0.8*" Binding="{Binding }"/>
+                <DataGridTextColumn Header="Monday"     Width="*"    Binding="{Binding }"/>
+                <DataGridTextColumn Header="Tuesday"    Width="*"    Binding="{Binding }"/>
+                <DataGridTextColumn Header="Wednesday"  Width="1.2*" Binding="{Binding }"/>
+                <DataGridTextColumn Header="Thursday"   Width="1.1*" Binding="{Binding }"/>
+                <DataGridTextColumn Header="Firday"     Width="*"    Binding="{Binding }"/>
+                <DataGridTextColumn Header="Saturday"   Width="1.1*" Binding="{Binding }"/>
+                <DataGridTextColumn Header="Sunday"     Width="*"    Binding="{Binding }"/>
             </DataGrid.Columns>
         </DataGrid>
 
         <!-- Kis szépítés -->
         <!--<Border Grid.Column="0"  Padding="2,5,0,0" Margin="10" CornerRadius="3"
                 BorderBrush="{DynamicResource PrimaryHueDarkBrush}" BorderThickness="2"> -->
-        <GroupBox Header="Tárgyak" Margin="10">
+        <GroupBox Header="Subjects" Margin="10">
             <StackPanel>
                 <!-- Gombok -->
                 <materialDesign:PopupBox Style="{StaticResource MaterialDesignMultiFloatingActionPopupBox}"
                 PlacementMode="RightAndAlignMiddles" Width="35" Height="35"
                                          materialDesign:ShadowAssist.ShadowDepth="Depth0">
                     <StackPanel Orientation="Horizontal">
-                        <Button ToolTip="Tárgy hozzáadása" ToolTipService.Placement="Right" 
+                        <Button ToolTip="Add new subject" ToolTipService.Placement="Right" 
                                 Width="30" Height="30" materialDesign:ShadowAssist.ShadowDepth="Depth0">
                             <materialDesign:PackIcon Kind="PlaylistAdd" />
                         </Button>

@@ -14,6 +14,6 @@
       Title="Beallitas">
 
     <Grid>
-        <TextBlock Text="Beállítások" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="36"/>
+        <TextBlock Text="Beállítások ide" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="36"/>
     </Grid>
 </Page>

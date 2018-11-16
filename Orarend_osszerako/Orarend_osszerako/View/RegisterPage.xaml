@@ -29,7 +29,7 @@
             <TextBox x:Name="lastname" MinWidth="240" HorizontalAlignment="center" Margin="5 0 5 20">
                 <Binding Path="LastName"/>
             </TextBox>
-            <TextBlock Text="User Name" Margin="5 0 5 0"/>
+            <TextBlock Text="Username" Margin="5 0 5 0"/>
             <TextBox x:Name="username" MinWidth="240" HorizontalAlignment="center" Margin="5 0 5 20">
                 <Binding Path="UserName"/>
             </TextBox>
@@ -40,7 +40,7 @@
                     <Binding Path="UserPassword" UpdateSourceTrigger="PropertyChanged" Mode="TwoWay"/>
                 </ui:BoundPasswordBox.BoundPassword>
             </PasswordBox>
-            <TextBlock Text="Retry Password" Margin="5 0 5 0"/>
+            <TextBlock Text="Confirm Password" Margin="5 0 5 0"/>
             <PasswordBox x:Name="retryPassword" MinWidth="240" HorizontalAlignment="center" Margin="5 0 5 20">
                 <ui:BoundPasswordBox.BoundPassword>
                     <Binding Path="RetryPassword" UpdateSourceTrigger="PropertyChanged" Mode="TwoWay"/> 
