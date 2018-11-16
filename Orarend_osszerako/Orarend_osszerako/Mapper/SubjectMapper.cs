@@ -19,7 +19,7 @@ namespace Orarend_osszerako.Mapper
             Subject newEntitySubject = new Subject();
             newEntitySubject.Id = subject.SubjectId;
             newEntitySubject.SubjectName = subject.SubjectName;
-            newEntitySubject.IsLecture = (subject.IsLecture ? Convert.ToByte(1) : Convert.ToByte(2));
+            newEntitySubject.IsLecture = (subject.IsLecture == false ? Convert.ToByte(0) : Convert.ToByte(1));
             newEntitySubject.User_Id = subject.User_Id;
             newEntitySubject.Courses = CourseMapper.ModelCollectionToEntityCollection(subject.Courses);
             newEntitySubject.User = UserMapper.ModelToEntity(subject.User);
