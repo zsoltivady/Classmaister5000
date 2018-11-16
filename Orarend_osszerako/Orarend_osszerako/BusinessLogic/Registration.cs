@@ -5,11 +5,13 @@ using System.Text;
 using System.Threading.Tasks;
 using Orarend_osszerako.Mapper;
 using Orarend_osszerako.Model;
+using Orarend_osszerako.BusinessLogic.Exceptions;
 
 namespace Orarend_osszerako.BusinessLogic
 {
     public static class Registration
     {
+        /* egyébként kérdéses a BusinessLogic végiggondolva, és tesztelve, ugyanis odakint nem tudom elkapni az exceptiont (!), amiket ezek a metódusok dobhatnak, így a ViewModel kódja jóval nagyobbra fog nőlni, de jelenleg nem tudok más megoldást egyes hibák ellenőrzésére */
         public static bool HasUserName(string username) //van-e ilyen nevű user a db-ben?????
         {
             using (var context = new Classmaister5000Entities())
@@ -23,9 +25,10 @@ namespace Orarend_osszerako.BusinessLogic
         {
             using (var context = new Classmaister5000Entities())
             {
+
                 if (HasUserName(username))
                 {
-                    throw new Exception("Van már ilyen felhasználónév."); //ideiglenes megoldás
+                    throw new UsernameAlreadyExists("Van már ilyen felhasználónév."); //ideiglenes megoldás
                 }
                 else
                 {
@@ -38,7 +41,7 @@ namespace Orarend_osszerako.BusinessLogic
                     }
                     else
                     {
-                        throw new Exception("A két jelszó nem egyezik meg."); // ideiglenes
+                        throw new PasswordsNotEqualsException("The two passwords doesn't match!");
                     }
                 }
             }

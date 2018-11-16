@@ -90,7 +90,9 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="BusinessLogic\Exceptions\UsernameAlreadyExists.cs" />
     <Compile Include="BusinessLogic\LoginLogout.cs" />
+    <Compile Include="BusinessLogic\Exceptions\PasswordsNotEqualsException.cs" />
     <Compile Include="BusinessLogic\Registration.cs" />
     <Compile Include="Command\RelayCommand.cs" />
     <Compile Include="Mapper\CourseMapper.cs" />
@@ -134,6 +136,7 @@
       <DependentUpon>FinalEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="Model\UserModel.cs" />
+    <Compile Include="UI\BoundPasswordBox.cs" />
     <Compile Include="Validation\RequiredValidation.cs" />
     <Compile Include="ViewModel\LoginViewModel.cs" />
     <Compile Include="ViewModel\RegistrationViewModel.cs" />
