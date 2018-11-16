@@ -178,12 +178,17 @@ namespace Orarend_osszerako.ViewModel
 
             if (!result)
             {
-                if (_validationErrors.ContainsKey(propertyName))
-                    _validationErrors[propertyName].Clear();
+                //if (_validationErrors.ContainsKey(propertyName))
+                //    _validationErrors[propertyName].Clear();
 
-                var messages = results.Select(r => r.ErrorMessage).ToList();
-                _validationErrors.Add(propertyName, messages);
+                //var messages = results.Select(r => r.ErrorMessage).ToList();
+                //_validationErrors.Add(propertyName, messages);
 
+                if (!_validationErrors.ContainsKey(propertyName))
+                {
+                    var messages = results.Select(r => r.ErrorMessage).ToList();
+                    _validationErrors.Add(propertyName, messages);
+                }
             }
 
             return error;
