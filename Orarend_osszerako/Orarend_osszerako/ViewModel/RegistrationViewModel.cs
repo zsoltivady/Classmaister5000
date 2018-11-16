@@ -13,19 +13,11 @@ namespace Orarend_osszerako.ViewModel
 {
     public class RegistrationViewModel : DependencyObject
     {
-        //ha gebasz lenne namespacekkel, ezt kell törölni: xmlns:vm="clr-namespace:Orarend_osszerako.ViewModel", 
-        //és a datacontextet is alatta.
+        private ICommand registrationCommand { set; get; }
+
         private bool canExecute = true;
 
-        public string RegisterButtonContent
-        {
-            get
-            {
-                return "Register";
-            }
-        }
-
-        public bool CanExecute
+        public bool CanExecute //mi a rák ez??????
         {
             get
             {
@@ -42,6 +34,18 @@ namespace Orarend_osszerako.ViewModel
                 this.canExecute = value;
             }
         }
+        //public ICommand RegistrationCommand
+        //{
+        //    get { return registrationCommand; }
+        //    set
+        //    {
+        //        if (RegisterUser) ----> nem látja
+        //        {
+
+        //        }
+        //    }
+        //}
+
         
     }
 }
