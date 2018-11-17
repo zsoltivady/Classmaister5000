@@ -5,6 +5,7 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:Orarend_osszerako.View"
       xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+      xmlns:vm="clr-namespace:Orarend_osszerako.ViewModel"
       mc:Ignorable="d" 
       TextElement.Foreground="{DynamicResource MaterialDesignBody}"
         Background="{DynamicResource MaterialDesignPaper}"
@@ -16,6 +17,9 @@
     <Page.Resources>
         <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.PopupBox.xaml" />
     </Page.Resources>
+    <Page.DataContext>
+        <vm:TimeTableViewModel/>
+    </Page.DataContext>
     
             <Grid>
         <!-- Oldal szerkezete megcsinálva normálisabbra -->
@@ -53,12 +57,27 @@
                         </Button>
                     </StackPanel>
                 </materialDesign:PopupBox>
-                
-                <!-- Lecseréltem az eddigi Listbox-os változatot TreeView-ra -->
-                <TreeView MinWidth="200" FontSize="12">
-                    <TreeViewItem Header="PéldaTárgy1">
+
+                <!-- TreeView előkészítése bindolásra TimeTableViewModel-el (Work in Progress) -->
+                <TreeView x:Name="SubjectsTreeView" MinWidth="200" FontSize="12" ItemsSource="{Binding }">
+                    <!-- TimeTableViewModel Subjects lista mezőjének bindolása -->
+                    <TreeView.ItemTemplate>
+                        <HierarchicalDataTemplate ItemsSource="{Binding }">
+                            <!-- Classes bindolása -->
+                            <TextBlock Text="{Binding }" />
+                            <!-- SubjectName bindolása-->
+                            <HierarchicalDataTemplate.ItemTemplate>
+                                <DataTemplate>
+                                    <TextBlock Text="{Binding }" />
+                                    <!-- Kurzuskód bindolása -->
+                                </DataTemplate>
+                            </HierarchicalDataTemplate.ItemTemplate>
+                        </HierarchicalDataTemplate>
+                    </TreeView.ItemTemplate>
+
+                    #region Régikód
+                    <!-- <TreeViewItem Header="PéldaTárgy1">
                         <TreeViewItem Header="PéldaKurzus1 (ToolTip-el)">
-                            <!-- Lehetnének így tooltip-ben a kurzus további adatai (persze Binding-al)-->
                             <TreeViewItem.ToolTip>
                                 <StackPanel>
                                     <TextBlock>Tanár: Valaki</TextBlock>
@@ -72,7 +91,8 @@
                     <TreeViewItem Header="PéldaTárgy2">
                         <TreeViewItem Header="PéldaKurzus3" />
                         <TreeViewItem Header="PéldaKurzus4" />
-                    </TreeViewItem>
+                    </TreeViewItem> -->
+                    #endregion
                 </TreeView>
             </StackPanel>
             
