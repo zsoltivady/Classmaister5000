@@ -4,6 +4,7 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Orarend_osszerako"
+        xmlns:vm="clr-namespace:Orarend_osszerako.ViewModel" 
         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
         mc:Ignorable="d"
         TextElement.Foreground="{DynamicResource MaterialDesignBody}"
@@ -12,6 +13,9 @@
         TextElement.FontSize="14"
         FontFamily="pack://application:,,,/MaterialDesignThemes.Wpf;component/Resources/Roboto/#Roboto"
         Title="Classmaister5000" Height="500" Width="908" MinWidth="700" MinHeight="500">
+    <Window.DataContext>
+        <vm:TimeTableViewModel/>
+    </Window.DataContext>
     <Grid>
         <Grid Height="35" HorizontalAlignment="Stretch" VerticalAlignment="Top">
                 <Grid.ColumnDefinitions>
@@ -23,7 +27,7 @@
                 <Button  Grid.Column="0" x:Name="orarend" Height="37" Content="Timetable" Click="orarend_Click"/>
                 <Button  Grid.Column="1" x:Name="beallitasok" Height="37" Content="Options" Click="beallitasok_Click"/>
             <Button Grid.Column="2" x:Name="profil" Height="37" Content="Profile" Click="profil_Click"/>
-            <Button Grid.Column="3" Style="{StaticResource MaterialDesignRaisedAccentButton}" x:Name="logout" Height="37" Click="logout_Click" Padding="0" ToolTip="Logout">
+            <Button Grid.Column="3" Style="{StaticResource MaterialDesignRaisedAccentButton}" x:Name="logout" Height="37" Click="logout_Click" Command="{Binding Logout}" Padding="0" ToolTip="Logout">
                 <materialDesign:PackIcon Kind="LogoutVariant" Height="25" Width="25"/>
             </Button>
         </Grid>

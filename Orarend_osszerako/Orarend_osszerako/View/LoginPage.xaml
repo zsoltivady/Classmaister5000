@@ -4,6 +4,8 @@
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:Orarend_osszerako.View"
+      xmlns:vm="clr-namespace:Orarend_osszerako.ViewModel"
+      xmlns:ui="clr-namespace:Orarend_osszerako.UI"
       xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
@@ -14,15 +16,23 @@
         FontFamily="pack://application:,,,/MaterialDesignThemes.Wpf;component/Resources/Roboto/#Roboto"
       Title="LoginPage"
       x:Name="Login_Page">
-
+    <Page.DataContext>
+        <vm:LoginViewModel/>
+    </Page.DataContext>
     <Grid>
         <StackPanel Width="250" HorizontalAlignment="center" VerticalAlignment="center" Height="270">
             <TextBlock Text="Login" HorizontalAlignment="Center" Margin="0 0 0 20" FontSize="24"/>
             <TextBlock Text="Username" Margin="5 0 5 0"/>
-            <TextBox x:Name="userName" MinWidth="240" HorizontalAlignment="center" Margin="5 0 5 20"/>
+            <TextBox x:Name="userName" MinWidth="240" HorizontalAlignment="center" Margin="5 0 5 20">
+                <Binding Path="UserName"/>
+            </TextBox>
             <TextBlock Text="Password" Margin="5 0 5 0"/>
-            <PasswordBox x:Name="userPassword" MinWidth="240" HorizontalAlignment="center" Margin="5 0 5 20"/>
-            <Button Content="Login" Margin="5 10 5 10" Command="{Binding CloseCommand}" Click="Login_Click"/>
+            <PasswordBox x:Name="userPassword" MinWidth="240" HorizontalAlignment="center" Margin="5 0 5 20">
+                <ui:BoundPasswordBox.BoundPassword>
+                    <Binding Path="Password" UpdateSourceTrigger="PropertyChanged" Mode="TwoWay"/>
+                </ui:BoundPasswordBox.BoundPassword>
+            </PasswordBox>
+            <Button Content="Login" Margin="5 10 5 10" Command="{Binding Login}"/>
         </StackPanel>
     </Grid>
 </Page>

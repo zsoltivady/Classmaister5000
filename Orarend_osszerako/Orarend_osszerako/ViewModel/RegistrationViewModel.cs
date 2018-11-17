@@ -11,7 +11,6 @@ using Orarend_osszerako.Command;
 using System.ComponentModel;
 using System.Collections;
 using System.ComponentModel.DataAnnotations;
-using Orarend_osszerako.BusinessLogic.Exceptions;
 using Orarend_osszerako.Mapper;
 
 namespace Orarend_osszerako.ViewModel
