@@ -25,18 +25,6 @@ namespace Orarend_osszerako.View
         {
             InitializeComponent();
         }
-
-        //private void Login_Click(object sender, RoutedEventArgs e)
-        //{
         
-        //}
-
-        //                         Majd a LoginViewModel.cs-ben!!
-        //private void Login_Click(object sender, RoutedEventArgs e)
-        //{
-        //    new TimeTableWindow().Show();
-        //    Window.GetWindow(this).Close();
-        //    // TODO Itt kell csekkolni a login adatokat és validálni!!!!!
-        //}
     }
 }
