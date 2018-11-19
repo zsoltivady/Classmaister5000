@@ -57,8 +57,8 @@ namespace Orarend_osszerako
 
         private void logout_Click(object sender, RoutedEventArgs e)
         {
-            new MainWindow().Show();
-            this.Close();
+            //new MainWindow().Show();
+            //this.Close();
         }
 
         private void Main_Navigated(object sender, System.Windows.Navigation.NavigationEventArgs e)

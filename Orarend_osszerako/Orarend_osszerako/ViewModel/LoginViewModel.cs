@@ -160,8 +160,13 @@ namespace Orarend_osszerako.ViewModel
                     var userId = context.Users.First(u => u.UserName == username).Id;
                     UIRepository.Instance.CurrentClientId = userId;
                     MessageBox.Show("Login successful.");
+
+
+
+                    /*FONTOS!!!!!!!!!!!!!!!!!!!!!!!*/
                     new TimeTableWindow().Show();
-                    Application.Current.MainWindow.Close();
+                    Application.Current.Windows[0].Close();
+
                 }
                 #region komplex user objektum tárolása esetén talán működhet
                 //try
