@@ -75,24 +75,7 @@
                         </HierarchicalDataTemplate>
                     </TreeView.ItemTemplate>
 
-                    #region Régikód
-                    <!-- <TreeViewItem Header="PéldaTárgy1">
-                        <TreeViewItem Header="PéldaKurzus1 (ToolTip-el)">
-                            <TreeViewItem.ToolTip>
-                                <StackPanel>
-                                    <TextBlock>Tanár: Valaki</TextBlock>
-                                    <TextBlock>Kód: ASD</TextBlock>
-                                    <TextBlock>Ettől-eddig</TextBlock>
-                                </StackPanel>
-                            </TreeViewItem.ToolTip>
-                        </TreeViewItem>
-                        <TreeViewItem Header="PéldaKurzus2" />
-                    </TreeViewItem>
-                    <TreeViewItem Header="PéldaTárgy2">
-                        <TreeViewItem Header="PéldaKurzus3" />
-                        <TreeViewItem Header="PéldaKurzus4" />
-                    </TreeViewItem> -->
-                    #endregion
+                    
                 </TreeView>
             </StackPanel>
             
