@@ -19,7 +19,7 @@ namespace Orarend_osszerako.ViewModel
     {
         //a viewekben található textboxok tartalma ezekbe a propertykbe kerül be a bindingon keresztül
         private string _FirstName;
-        [Required(ErrorMessage = "First name is required!")] //nyilván ezek amíg a validáció és INotifyDataErrorInfo implementálva, ezek nem jelennek meg, de már bekészíthetjük őket
+        [Required(ErrorMessage = "First name is required.")] //nyilván ezek amíg a validáció és INotifyDataErrorInfo implementálva, ezek nem jelennek meg, de már bekészíthetjük őket
         public string FirstName
         {
             get { return _FirstName; }
@@ -30,7 +30,7 @@ namespace Orarend_osszerako.ViewModel
             }
         }
         private string _LastName;
-        [Required(ErrorMessage = "Last name is required!")]
+        [Required(ErrorMessage = "Last name is required.")]
         public string LastName
         {
             get { return _LastName; }
@@ -41,7 +41,7 @@ namespace Orarend_osszerako.ViewModel
             }
         }
         private string _UserName;
-        [Required(ErrorMessage = "User name is required!")]
+        [Required(ErrorMessage = "User name is required.")]
         public string UserName
         {
             get { return _UserName; }
@@ -52,7 +52,7 @@ namespace Orarend_osszerako.ViewModel
             }
         }
         private string _userPassword;
-        [Required(ErrorMessage = "Password is required!")]
+        [Required(ErrorMessage = "Password is required.")]
         public string UserPassword
         {
             get { return _userPassword; }
@@ -111,7 +111,7 @@ namespace Orarend_osszerako.ViewModel
                 Validate();
                 if (HasUserName(username))
                 {
-                    MessageBox.Show("Van már ilyen felhasználónév.");
+                    MessageBox.Show("User already exists.");
                 }
                 else if(IsValid)
                 {
@@ -121,11 +121,11 @@ namespace Orarend_osszerako.ViewModel
                         UserModel NewUser = new UserModel(FirstName, LastName, username, password);
                         context.Users.Add(UserMapper.ModelToEntity(NewUser));
                         context.SaveChanges();
-                        MessageBox.Show("Sikeres regisztáció!");
+                        MessageBox.Show("Succesfull registration.");
                     }
                     else
                     {
-                        MessageBox.Show("The two passwords doesn't match!");
+                        MessageBox.Show("The two password must be the same.");
                     }
                 }
             }
