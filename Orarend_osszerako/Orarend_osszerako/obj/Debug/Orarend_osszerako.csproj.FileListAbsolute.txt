@@ -98,6 +98,8 @@ C:\Classmaister5000\Orarend_osszerako\Orarend_osszerako\obj\Debug\View\Beallitas
 C:\Classmaister5000\Orarend_osszerako\Orarend_osszerako\obj\Debug\View\Profil.g.cs
 C:\Classmaister5000\Orarend_osszerako\Orarend_osszerako\obj\Debug\View\Beallitas.baml
 C:\Classmaister5000\Orarend_osszerako\Orarend_osszerako\obj\Debug\View\Profil.baml
+C:\Users\levi1\OneDrive\Dokumentumok\GitHub\Classmaister5000\Orarend_osszerako\Orarend_osszerako\bin\Debug\Data.mdf
+C:\Users\levi1\OneDrive\Dokumentumok\GitHub\Classmaister5000\Orarend_osszerako\Orarend_osszerako\bin\Debug\Data_log.ldf
 C:\Users\levi1\OneDrive\Dokumentumok\GitHub\Classmaister5000\Orarend_osszerako\Orarend_osszerako\bin\Debug\Orarend_osszerako.exe.config
 C:\Users\levi1\OneDrive\Dokumentumok\GitHub\Classmaister5000\Orarend_osszerako\Orarend_osszerako\bin\Debug\Orarend_osszerako.exe
 C:\Users\levi1\OneDrive\Dokumentumok\GitHub\Classmaister5000\Orarend_osszerako\Orarend_osszerako\bin\Debug\Orarend_osszerako.pdb
@@ -342,6 +344,3 @@ C:\Users\ldope94\Documents\GitHub\Classmaister5000\Orarend_osszerako\Orarend_oss
 C:\Users\ldope94\Documents\GitHub\Classmaister5000\Orarend_osszerako\Orarend_osszerako\obj\Debug\View\Profil.baml
 C:\Users\ldope94\Documents\GitHub\Classmaister5000\Orarend_osszerako\Orarend_osszerako\obj\Debug\View\RegisterPage.baml
 C:\Users\ldope94\Documents\GitHub\Classmaister5000\Orarend_osszerako\Orarend_osszerako\obj\Debug\View\TimeTableWindow.baml
-C:\Users\levi1\OneDrive\Dokumentumok\GitHub\Classmaister5000\Orarend_osszerako\Orarend_osszerako\bin\Debug\Classmaister5000.mdf
-C:\Users\levi1\OneDrive\Dokumentumok\GitHub\Classmaister5000\Orarend_osszerako\Orarend_osszerako\bin\Debug\Classmaister5000_log.ldf
-C:\Users\levi1\OneDrive\Dokumentumok\GitHub\Classmaister5000\Orarend_osszerako\Orarend_osszerako\obj\Debug\GeneratedInternalTypeHelper.g.cs

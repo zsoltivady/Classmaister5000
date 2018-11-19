@@ -153,13 +153,13 @@ namespace Orarend_osszerako.ViewModel
                 var hasUser = context.Users.Any(user => user.UserName.ToLower() == username.ToLower() && user.Password == password);
                 if (!hasUser)
                 {
-                    MessageBox.Show("Incorrect login information!");
+                    MessageBox.Show("Incorrect log in information!");
                 }
                 else
                 {
                     var userId = context.Users.First(u => u.UserName == username).Id;
                     UIRepository.Instance.CurrentClientId = userId;
-                    MessageBox.Show("Login successfull");
+                    MessageBox.Show("Login successful!");
                     new TimeTableWindow().Show();
                     Application.Current.MainWindow.Close();
                 }

@@ -12,7 +12,6 @@ using System.ComponentModel;
 using System.Collections;
 using System.ComponentModel.DataAnnotations;
 using Orarend_osszerako.Mapper;
-using Orarend_osszerako.View;
 
 namespace Orarend_osszerako.ViewModel
 {
@@ -112,7 +111,7 @@ namespace Orarend_osszerako.ViewModel
                 Validate();
                 if (HasUserName(username))
                 {
-                    MessageBox.Show("User already exists.");
+                    MessageBox.Show("Van már ilyen felhasználónév.");
                 }
                 else if(IsValid)
                 {
@@ -122,13 +121,11 @@ namespace Orarend_osszerako.ViewModel
                         UserModel NewUser = new UserModel(FirstName, LastName, username, password);
                         context.Users.Add(UserMapper.ModelToEntity(NewUser));
                         context.SaveChanges();
-                        MessageBox.Show("Registration succesfull!");
-                        LoginPage loginPage = new LoginPage();
-                        //login pagera átnavigálni??
+                        MessageBox.Show("Sikeres regisztáció!");
                     }
                     else
                     {
-                        MessageBox.Show("The two passwords must be the same!");
+                        MessageBox.Show("The two passwords doesn't match!");
                     }
                 }
             }

@@ -140,7 +140,6 @@
     <Compile Include="UI\BoundPasswordBox.cs" />
     <Compile Include="Validation\RequiredValidation.cs" />
     <Compile Include="ViewModel\LoginViewModel.cs" />
-    <Compile Include="ViewModel\OrarendViewModel.cs" />
     <Compile Include="ViewModel\RegistrationViewModel.cs" />
     <Compile Include="ViewModel\TimeTableViewModel.cs" />
     <Compile Include="View\Beallitas.xaml.cs">
