@@ -41,7 +41,7 @@ namespace Orarend_osszerako.ViewModel
             }
         }
         private string _UserName;
-        [Required(ErrorMessage = "User name is required.")]
+        [Required(ErrorMessage = "Username is required.")]
         public string UserName
         {
             get { return _UserName; }
@@ -63,7 +63,7 @@ namespace Orarend_osszerako.ViewModel
             }
         }
         private string _retryPassword;
-        [Required(ErrorMessage = "You must retry the password!")]
+        [Required(ErrorMessage = "Please confirm your password!")]
         public string RetryPassword
         {
             get { return _retryPassword; }
@@ -121,7 +121,7 @@ namespace Orarend_osszerako.ViewModel
                         UserModel NewUser = new UserModel(FirstName, LastName, username, password);
                         context.Users.Add(UserMapper.ModelToEntity(NewUser));
                         context.SaveChanges();
-                        MessageBox.Show("Succesfull registration.");
+                        MessageBox.Show("Succesful registration.");
                     }
                     else
                     {
