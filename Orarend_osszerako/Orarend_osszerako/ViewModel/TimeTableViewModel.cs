@@ -12,6 +12,7 @@ using System.Collections;
 using Orarend_osszerako.Model;
 using System.Windows.Input;
 using Orarend_osszerako.Command;
+using Orarend_osszerako.BusinessLogic;
 
 namespace Orarend_osszerako.ViewModel
 {
@@ -23,17 +24,7 @@ namespace Orarend_osszerako.ViewModel
         }
         public void UserLogout()
         {
-            using (var context = new Classmaister5000Entities())
-            {
-                var CurrentUser = context.Users.Where(u => u.Id == UIRepository.Instance.CurrentClientId).First();
-                CurrentUser.LastLogin = DateTime.Now;
-                context.Entry(CurrentUser).State = System.Data.Entity.EntityState.Modified;
-                context.SaveChanges();
-            }
-            UIRepository.Instance.CurrentClientId = 0;
-
-
-            /*FONTOS!!!!!!!!!!!!!!!!!!!!!!!*/
+            LoginLogout.UserLogout();
             new MainWindow().Show();
             Application.Current.Windows[0].Close();
         }  

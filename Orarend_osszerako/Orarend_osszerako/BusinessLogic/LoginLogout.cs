@@ -9,30 +9,44 @@ using System.Windows;
 using System.Windows.Input;
 using Orarend_osszerako.Model;
 using Orarend_osszerako.Mapper;
+using Orarend_osszerako.UI;
+using Orarend_osszerako.BusinessLogic.Exceptions;
 
 namespace Orarend_osszerako.BusinessLogic
 {
     public static class LoginLogout
     {
-        public static UserModel UserLogin(string username, string password)
+        public static bool UserLogin(string username, string password)
         {
             using (var context = new Classmaister5000Entities()) // db kapcsolat
             {
-                var user = context.Users.Where(u => u.UserName == username).First(); //bekért username keresése db-ben, ha nincs exception
-                if (user.Password == password)
-                {
-                    return UserMapper.EntityToModel(user);
-                }
+                var hasUser = context.Users.Any(user => user.UserName.ToLower() == username.ToLower());
+                if (!hasUser)
+                    throw new UserNotFoundException();
                 else
                 {
-                    return null;
+                    var user = context.Users.Where(u => u.UserName.ToLower() == username.ToLower()).First();
+                    if (user.Password != password)
+                        throw new NotCorrectPasswordException();
+                    else
+                    {
+                        UIRepository.Instance.CurrentClientId = user.Id;
+                        return true;
+                    }
                 }
             }
 
         }
-        public static void UserLogout(UserModel user)
+        public static void UserLogout()
         {
-            user = null;
+            using (var context = new Classmaister5000Entities())
+            {
+                var CurrentUser = context.Users.Where(u => u.Id == UIRepository.Instance.CurrentClientId).First();
+                CurrentUser.LastLogin = DateTime.Now;
+                context.Entry(CurrentUser).State = System.Data.Entity.EntityState.Modified;
+                context.SaveChanges();
+            }
+            UIRepository.Instance.CurrentClientId = 0;
         }
     }
 }

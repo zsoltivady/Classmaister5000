@@ -11,8 +11,7 @@ namespace Orarend_osszerako.BusinessLogic
 {
     public static class Registration
     {
-        /* egyébként kérdéses a BusinessLogic végiggondolva, és tesztelve, ugyanis odakint nem tudom elkapni az exceptiont (!), amiket ezek a metódusok dobhatnak, így a ViewModel kódja jóval nagyobbra fog nőlni, de jelenleg nem tudok más megoldást egyes hibák ellenőrzésére */
-        public static bool HasUserName(string username) //van-e ilyen nevű user a db-ben?????
+        public static bool HasUserName(string username)
         {
             using (var context = new Classmaister5000Entities())
             {
@@ -20,29 +19,25 @@ namespace Orarend_osszerako.BusinessLogic
                 return hasuser;
             }
         }
-        public static void RegisterUser(string username, string password, string RetryPassowrd,
+        public static void RegisterUser(string username, string password, string RetryPassword,
             string FirstName, string LastName)
         {
+
             using (var context = new Classmaister5000Entities())
             {
-
                 if (HasUserName(username))
                 {
-                    throw new UsernameAlreadyExists("Van már ilyen felhasználónév."); //ideiglenes megoldás
+                    throw new UsernameAlreadyExistsException();
+                }
+                else if (password == RetryPassword)
+                {
+                    UserModel NewUser = new UserModel(FirstName, LastName, username, password);
+                    context.Users.Add(UserMapper.ModelToEntity(NewUser));
+                    context.SaveChanges();
                 }
                 else
                 {
-                    
-                    if (password == RetryPassowrd)
-                    {
-                        UserModel NewUser = new UserModel(FirstName, LastName, username, password);
-                        context.Users.Add(UserMapper.ModelToEntity(NewUser));
-                        context.SaveChanges();
-                    }
-                    else
-                    {
-                        throw new PasswordsNotEqualsException("The two passwords doesn't match!");
-                    }
+                    throw new PasswordsNotEqualsException();
                 }
             }
         }

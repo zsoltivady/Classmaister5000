@@ -11,7 +11,7 @@ using Orarend_osszerako.Command;
 using System.ComponentModel;
 using System.Collections;
 using System.ComponentModel.DataAnnotations;
-using Orarend_osszerako.Mapper;
+using Orarend_osszerako.BusinessLogic.Exceptions;
 
 namespace Orarend_osszerako.ViewModel
 {
@@ -73,15 +73,6 @@ namespace Orarend_osszerako.ViewModel
                 ValidateProperty("RetryPassword", value);
             }
         }
-        
-        public event PropertyChangedEventHandler PropertyChanged; 
-        protected void NotifyPropertyChanged(String info)
-        {
-            if (PropertyChanged != null)
-            {
-                PropertyChanged(this, new PropertyChangedEventArgs(info));
-            }
-        }
         private ICommand _doRegistration;
         public ICommand DoRegistration
         {
@@ -94,41 +85,61 @@ namespace Orarend_osszerako.ViewModel
                 return _doRegistration;
             }
         }
-        public bool HasUserName(string username)
+        public void RegisterUser(string username, string password, string RetryPassword, string FirstName, string LastName)
         {
-            using (var context = new Classmaister5000Entities())
+            Validate();
+            if (IsValid)
             {
-                var hasuser = context.Users.Any(u => u.UserName.ToLower() == username.ToLower());
-                return hasuser;
+                try
+                {
+                    Registration.RegisterUser(username, password, RetryPassword, FirstName, LastName);
+                }
+                catch (UsernameAlreadyExistsException)
+                {
+                    MessageBox.Show("User already exists!");
+                }
+                catch (PasswordsNotEqualsException)
+                {
+                    MessageBox.Show("The two password must be the same.");
+                }
             }
         }
-        public void RegisterUser(string username, string password, string RetryPassowrd,
-            string FirstName, string LastName)
-        {
-            
-            using (var context = new Classmaister5000Entities())
-            {
-                Validate();
-                if (HasUserName(username))
-                {
-                    MessageBox.Show("User already exists.");
-                }
-                else if(IsValid)
-                {
+        #region old registration
+        //public bool HasUserName(string username)
+        //{
+        //    using (var context = new Classmaister5000Entities())
+        //    {
+        //        var hasuser = context.Users.Any(u => u.UserName.ToLower() == username.ToLower());
+        //        return hasuser;
+        //    }
+        //}
+        //public void RegisterUser(string username, string password, string RetryPassowrd,
+        //    string FirstName, string LastName)
+        //{
 
-                    if (password == RetryPassowrd)
-                    {
-                        UserModel NewUser = new UserModel(FirstName, LastName, username, password);
-                        context.Users.Add(UserMapper.ModelToEntity(NewUser));
-                        context.SaveChanges();
-                        MessageBox.Show("Succesful registration.");
-                    }
-                    else
-                    {
-                        MessageBox.Show("The two password must be the same.");
-                    }
-                }
-            }
-        }
+        //    using (var context = new Classmaister5000Entities())
+        //    {
+        //        Validate();
+        //        if (HasUserName(username))
+        //        {
+        //            MessageBox.Show("User already exists.");
+        //        }
+        //        else if(IsValid)
+        //        {
+
+        //            if (password == RetryPassowrd)
+        //            {
+        //                UserModel NewUser = new UserModel(FirstName, LastName, username, password);
+        //                context.Users.Add(UserMapper.ModelToEntity(NewUser));
+        //                context.SaveChanges();
+        //                MessageBox.Show("Succesful registration.");
+        //            }
+        //            else
+        //            {
+        //                MessageBox.Show("The two password must be the same.");
+        //            }
+        //        }
+        //    }
+        #endregion
     }
 }
