@@ -15,7 +15,7 @@ using Orarend_osszerako.Command;
 
 namespace Orarend_osszerako.ViewModel
 {
-    public class TimeTableViewModel //: INotifyPropertyChanged, INotifyDataErrorInfo
+    public class TimeTableViewModel : ObservableObject
     {
         public int UserId
         {

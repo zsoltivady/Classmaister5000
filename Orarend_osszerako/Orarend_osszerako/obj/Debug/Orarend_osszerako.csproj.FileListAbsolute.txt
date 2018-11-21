@@ -384,3 +384,4 @@ C:\Users\user\Documents\GitHub\Classmaister5000\Orarend_osszerako\Orarend_osszer
 C:\Users\user\Documents\GitHub\Classmaister5000\Orarend_osszerako\Orarend_osszerako\obj\Debug\Orarend_osszerako.csproj.GenerateResource.cache
 C:\Users\user\Documents\GitHub\Classmaister5000\Orarend_osszerako\Orarend_osszerako\obj\Debug\Orarend_osszerako.csproj.CoreCompileInputs.cache
 C:\Users\user\Documents\GitHub\Classmaister5000\Orarend_osszerako\Orarend_osszerako\obj\Debug\Orarend_osszerako.csproj.CopyComplete
+C:\GitHub\Classmaister5000\Orarend_osszerako\Orarend_osszerako\obj\Debug\GeneratedInternalTypeHelper.g.cs

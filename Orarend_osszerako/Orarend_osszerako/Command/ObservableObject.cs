@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace Orarend_osszerako.Command
 {
-    class ObservableObject : INotifyPropertyChanged, INotifyDataErrorInfo
+    public class ObservableObject : INotifyPropertyChanged, INotifyDataErrorInfo
     {
         public event PropertyChangedEventHandler PropertyChanged;
         protected void NotifyPropertyChanged(String info)

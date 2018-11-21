@@ -94,6 +94,7 @@
     <Compile Include="BusinessLogic\LoginLogout.cs" />
     <Compile Include="BusinessLogic\Exceptions\PasswordsNotEqualsException.cs" />
     <Compile Include="BusinessLogic\Registration.cs" />
+    <Compile Include="Command\ObservableObject.cs" />
     <Compile Include="UI\UIRepository.cs" />
     <Compile Include="Command\RelayCommand.cs" />
     <Compile Include="Mapper\CourseMapper.cs" />
