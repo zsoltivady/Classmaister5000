@@ -11,6 +11,7 @@
     <Property Name="To" Type="datetime" Nullable="false" />
     <Property Name="Day_Id" Type="int" Nullable="false" />
     <Property Name="Subject_Id" Type="int" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="50" Nullable="false" />
   </EntityType>
   <EntityType Name="Day">
     <Key>

@@ -27,6 +27,7 @@ namespace Orarend_osszerako.Mapper
             //newEntityCourse.Timetables = TimetableMapper.ModelCollectionToEntityCollection(course.Timetables);
             newEntityCourse.Day = DayMapper.ModelToEntity(course.Day);
             newEntityCourse.Subject = SubjectMapper.ModelToEntity(course.Subject);
+            newEntityCourse.Name = course.Name;
             return newEntityCourse;
         }
         /// <summary>
@@ -44,9 +45,10 @@ namespace Orarend_osszerako.Mapper
             newModelCourse.To = course.To;
             newModelCourse.Day_Id = course.Day_Id;
             newModelCourse.Subject_Id = course.Subject_Id;
+            newModelCourse.Name = course.Name;
             //newModelCourse.Timetables = TimetableMapper.EntityCollectionToModelCollection(course.Timetables);
-            newModelCourse.Day = DayMapper.EntityToModel(course.Day);
-            newModelCourse.Subject = SubjectMapper.EntityToModel(course.Subject);
+            //newModelCourse.Day = DayMapper.EntityToModel(course.Day);
+            //newModelCourse.Subject = SubjectMapper.EntityToModel(course.Subject);
             return newModelCourse;
         }
         /// <summary>
@@ -56,7 +58,7 @@ namespace Orarend_osszerako.Mapper
         /// <returns>Course típusú kollekció (entitások)</returns>
         public static ICollection<Course> ModelCollectionToEntityCollection(ICollection<CourseModel> courseCollection)
         {
-            HashSet<Course> courseModelCollection = new HashSet<Course>();
+            ICollection<Course> courseModelCollection = new HashSet<Course>();
             foreach (CourseModel item in courseCollection)
             {
                 courseModelCollection.Add(ModelToEntity(item));
@@ -70,7 +72,7 @@ namespace Orarend_osszerako.Mapper
         /// <returns>CourseModel típusú kollekció</returns>
         public static ICollection<CourseModel> EntityCollectionToModelCollection(ICollection<Course> courseCollection)
         {
-            HashSet<CourseModel> courseEntityCollection = new HashSet<CourseModel>();
+            ICollection<CourseModel> courseEntityCollection = new List<CourseModel>();
             foreach (Course item in courseCollection)
             {
                 courseEntityCollection.Add(EntityToModel(item));

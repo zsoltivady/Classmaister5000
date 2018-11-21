@@ -18,7 +18,7 @@
         <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.PopupBox.xaml" />
     </Page.Resources>
     <Page.DataContext>
-        <vm:TimeTableViewModel/>
+        <vm:OrarendViewModel/>
     </Page.DataContext>
     
             <Grid>
@@ -59,23 +59,37 @@
                 </materialDesign:PopupBox>
 
                 <!-- TreeView előkészítése bindolásra TimeTableViewModel-el (Work in Progress) -->
-                <TreeView x:Name="SubjectsTreeView" MinWidth="200" FontSize="12" ItemsSource="{Binding }">
-                    <!-- TimeTableViewModel Subjects lista mezőjének bindolása -->
+                <!--<TreeView x:Name="SubjectsTreeView" MinWidth="200" FontSize="12" ItemsSource="{Binding Subjects}">
+                     TimeTableViewModel Subjects lista mezőjének bindolása 
                     <TreeView.ItemTemplate>
-                        <HierarchicalDataTemplate ItemsSource="{Binding }">
-                            <!-- Classes bindolása -->
-                            <TextBlock Text="{Binding }" />
-                            <!-- SubjectName bindolása-->
+                        <HierarchicalDataTemplate>
+                             Classes bindolása 
+                            <TextBlock Text="{Binding SubjectName}" />
+                             SubjectName bindolása
                             <HierarchicalDataTemplate.ItemTemplate>
                                 <DataTemplate>
                                     <TextBlock Text="{Binding }" />
-                                    <!-- Kurzuskód bindolása -->
+                                     Kurzuskód bindolása 
                                 </DataTemplate>
                             </HierarchicalDataTemplate.ItemTemplate>
                         </HierarchicalDataTemplate>
                     </TreeView.ItemTemplate>
 
                     
+                </TreeView>-->
+                <TreeView x:Name="SubjectsTreeView" MinWidth="200" FontSize="12" ItemsSource="{Binding Subjects}">
+                        <TreeView.ItemTemplate>
+                        <HierarchicalDataTemplate ItemsSource="{Binding Courses}">
+                            <TextBlock Text="{Binding SubjectName}" />
+                            <HierarchicalDataTemplate.ItemTemplate>
+                                <DataTemplate>
+                                    <TextBlock Text="{Binding Name}" />
+                                </DataTemplate>
+                            </HierarchicalDataTemplate.ItemTemplate>
+                        </HierarchicalDataTemplate>
+                    </TreeView.ItemTemplate>
+
+
                 </TreeView>
             </StackPanel>
             

@@ -11,6 +11,7 @@
     <Property Name="To" Type="DateTime" Nullable="false" Precision="3" />
     <Property Name="Day_Id" Type="Int32" Nullable="false" />
     <Property Name="Subject_Id" Type="Int32" Nullable="false" />
+    <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
     <NavigationProperty Name="Timetables" Relationship="Self.FK_CourseId_Timetable_ToCourseId" FromRole="Course" ToRole="Timetable" />
     <NavigationProperty Name="Day" Relationship="Self.FK_DayId_Course_ToDay" FromRole="Course" ToRole="Day" />
     <NavigationProperty Name="Subject" Relationship="Self.FK_SubjectId_Course_ToSubject" FromRole="Course" ToRole="Subject" />

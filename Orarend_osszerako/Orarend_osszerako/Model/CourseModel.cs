@@ -8,7 +8,7 @@ namespace Orarend_osszerako.Model
 {
     public class CourseModel
     {
-        public CourseModel(SubjectModel Subject, int CourseId, string Room, string Teacher, DateTime From, DateTime To) : this()
+        public CourseModel(SubjectModel Subject, int CourseId, string Room, string Teacher, DateTime From, DateTime To, string Name) : this()
         {
             this.Subject = Subject;
             this.CourseId = CourseId;
@@ -16,6 +16,7 @@ namespace Orarend_osszerako.Model
             this.Teacher = Teacher;
             this.From = From;
             this.To = To;
+            this.Name = Name;
         }
         public CourseModel()
         {
@@ -24,6 +25,12 @@ namespace Orarend_osszerako.Model
         public virtual ICollection<TimetableModel> Timetables { get; set; }
         public virtual DayModel Day { get; set; }
         public virtual SubjectModel Subject {get;set;}
+        private string name;
+        public string Name
+        {
+            get { return name; }
+            set { this.name = value; }
+        }
         private int Id;
         public int CourseId
         {

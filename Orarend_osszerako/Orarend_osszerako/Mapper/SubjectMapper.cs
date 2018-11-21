@@ -39,7 +39,7 @@ namespace Orarend_osszerako.Mapper
             newSubject.SubjectName = subject.SubjectName;
             newSubject.IsLecture = (subject.IsLecture == 0 ? false : true);
             newSubject.User_Id = subject.User_Id;
-            //newSubject.Courses = CourseMapper.EntityCollectionToModelCollection(subject.Courses);
+            newSubject.Courses = CourseMapper.EntityCollectionToModelCollection(subject.Courses);
             newSubject.User = UserMapper.EntityToModel(subject.User);
             return newSubject;
         }
@@ -50,7 +50,7 @@ namespace Orarend_osszerako.Mapper
         /// <returns>Subject típusú kollekció (entitások)</returns>
         public static ICollection<Subject> ModelCollectionToEntityCollection(ICollection<SubjectModel> subjectCollection)
         {
-            HashSet<Subject> subjectModelCollection = new HashSet<Subject>();
+            ICollection<Subject> subjectModelCollection = new HashSet<Subject>();
             foreach (SubjectModel item in subjectCollection)
             {
                 subjectModelCollection.Add(ModelToEntity(item));
@@ -64,7 +64,7 @@ namespace Orarend_osszerako.Mapper
         /// <returns>SubjectModel típusú kollekció (entitások)</returns>
         public static ICollection<SubjectModel> EntityCollectionToModelCollection(ICollection<Subject> subjectCollection)
         {
-            HashSet<SubjectModel> subjectEntityCollection = new HashSet<SubjectModel>();
+            ICollection<SubjectModel> subjectEntityCollection = new List<SubjectModel>();
             foreach (Subject item in subjectCollection)
             {
                 subjectEntityCollection.Add(EntityToModel(item));

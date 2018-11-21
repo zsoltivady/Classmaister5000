@@ -95,22 +95,12 @@
     <Compile Include="BusinessLogic\Exceptions\PasswordsNotEqualsException.cs" />
     <Compile Include="BusinessLogic\Registration.cs" />
     <Compile Include="Command\ObservableObject.cs" />
-    <Compile Include="UI\UIRepository.cs" />
-    <Compile Include="Command\RelayCommand.cs" />
-    <Compile Include="Mapper\CourseMapper.cs" />
-    <Compile Include="Mapper\DayMapper.cs" />
-    <Compile Include="Mapper\SubjectMapper.cs" />
-    <Compile Include="Mapper\TimetableMapper.cs" />
-    <Compile Include="Mapper\UserMapper.cs" />
     <Compile Include="Model\Course.cs">
       <DependentUpon>FinalEntities.tt</DependentUpon>
     </Compile>
-    <Compile Include="Model\CourseModel.cs" />
     <Compile Include="Model\Day.cs">
       <DependentUpon>FinalEntities.tt</DependentUpon>
     </Compile>
-    <Compile Include="Model\DayEnum.cs" />
-    <Compile Include="Model\DayModel.cs" />
     <Compile Include="Model\FinalEntities.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -129,18 +119,29 @@
     <Compile Include="Model\Subject.cs">
       <DependentUpon>FinalEntities.tt</DependentUpon>
     </Compile>
-    <Compile Include="Model\SubjectModel.cs" />
     <Compile Include="Model\Timetable.cs">
       <DependentUpon>FinalEntities.tt</DependentUpon>
     </Compile>
-    <Compile Include="Model\TimetableModel.cs" />
     <Compile Include="Model\User.cs">
       <DependentUpon>FinalEntities.tt</DependentUpon>
     </Compile>
+    <Compile Include="UI\UIRepository.cs" />
+    <Compile Include="Command\RelayCommand.cs" />
+    <Compile Include="Mapper\CourseMapper.cs" />
+    <Compile Include="Mapper\DayMapper.cs" />
+    <Compile Include="Mapper\SubjectMapper.cs" />
+    <Compile Include="Mapper\TimetableMapper.cs" />
+    <Compile Include="Mapper\UserMapper.cs" />
+    <Compile Include="Model\CourseModel.cs" />
+    <Compile Include="Model\DayEnum.cs" />
+    <Compile Include="Model\DayModel.cs" />
+    <Compile Include="Model\SubjectModel.cs" />
+    <Compile Include="Model\TimetableModel.cs" />
     <Compile Include="Model\UserModel.cs" />
     <Compile Include="UI\BoundPasswordBox.cs" />
     <Compile Include="Validation\RequiredValidation.cs" />
     <Compile Include="ViewModel\LoginViewModel.cs" />
+    <Compile Include="ViewModel\OrarendViewModel.cs" />
     <Compile Include="ViewModel\RegistrationViewModel.cs" />
     <Compile Include="ViewModel\TimeTableViewModel.cs" />
     <Compile Include="View\Beallitas.xaml.cs">

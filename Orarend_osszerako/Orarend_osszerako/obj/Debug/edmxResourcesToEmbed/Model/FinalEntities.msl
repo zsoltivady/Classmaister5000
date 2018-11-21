@@ -11,6 +11,7 @@
           <ScalarProperty Name="To" ColumnName="To" />
           <ScalarProperty Name="Day_Id" ColumnName="Day_Id" />
           <ScalarProperty Name="Subject_Id" ColumnName="Subject_Id" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

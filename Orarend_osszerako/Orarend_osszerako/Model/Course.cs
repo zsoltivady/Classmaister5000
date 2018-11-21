@@ -27,6 +27,7 @@ namespace Orarend_osszerako.Model
         public System.DateTime To { get; set; }
         public int Day_Id { get; set; }
         public int Subject_Id { get; set; }
+        public string Name { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Timetable> Timetables { get; set; }
