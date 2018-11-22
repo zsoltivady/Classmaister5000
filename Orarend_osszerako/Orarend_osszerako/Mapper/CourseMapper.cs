@@ -47,7 +47,7 @@ namespace Orarend_osszerako.Mapper
             newModelCourse.Subject_Id = course.Subject_Id;
             newModelCourse.Name = course.Name;
             //newModelCourse.Timetables = TimetableMapper.EntityCollectionToModelCollection(course.Timetables);
-            //newModelCourse.Day = DayMapper.EntityToModel(course.Day);
+            newModelCourse.Day = DayMapper.EntityToModel(course.Day);
             //newModelCourse.Subject = SubjectMapper.EntityToModel(course.Subject);
             return newModelCourse;
         }

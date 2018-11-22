@@ -90,12 +90,18 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="BusinessLogic\Exceptions\CourseAlreadyExistsException.cs" />
+    <Compile Include="BusinessLogic\Exceptions\CourseCollisionException.cs" />
+    <Compile Include="BusinessLogic\Exceptions\SubjectAlreadyExistsException.cs" />
+    <Compile Include="BusinessLogic\Exceptions\SubjectNotExistsException.cs" />
+    <Compile Include="BusinessLogic\Exceptions\TeacherBusyException.cs" />
     <Compile Include="BusinessLogic\Exceptions\UsernameAlreadyExistsException.cs" />
     <Compile Include="BusinessLogic\Exceptions\UserNotFoundException.cs" />
     <Compile Include="BusinessLogic\LoginLogout.cs" />
     <Compile Include="BusinessLogic\Exceptions\PasswordsNotEqualsException.cs" />
     <Compile Include="BusinessLogic\Exceptions\NotCorrectPasswordException.cs" />
     <Compile Include="BusinessLogic\Registration.cs" />
+    <Compile Include="BusinessLogic\SubjectActions.cs" />
     <Compile Include="Command\ObservableObject.cs" />
     <Compile Include="Model\Course.cs">
       <DependentUpon>FinalEntities.tt</DependentUpon>
