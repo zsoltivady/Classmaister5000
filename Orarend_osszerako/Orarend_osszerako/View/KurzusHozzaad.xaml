@@ -5,8 +5,6 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Orarend_osszerako.View"
         mc:Ignorable="d"
-        Title="KurzusHozzaad" Height="450" Width="800" WindowStyle="None">
-    <Grid>
-        
-    </Grid>
+        Title="Add subject" Height="450" Width="800" WindowStyle="ToolWindow">
+    <Grid/>
 </Window>

@@ -20,8 +20,8 @@
     <Page.DataContext>
         <vm:OrarendViewModel/>
     </Page.DataContext>
-    
-            <Grid>
+
+    <Grid>
         <!-- Oldal szerkezete megcsinálva normálisabbra -->
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="2*"/>
@@ -46,21 +46,25 @@
                 BorderBrush="{DynamicResource PrimaryHueDarkBrush}" BorderThickness="2"> -->
         <GroupBox Header="Subjects" Margin="10">
             <ScrollViewer VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto" >
-            <StackPanel>
-                <!-- Gombok -->
-                <materialDesign:PopupBox Style="{StaticResource MaterialDesignMultiFloatingActionPopupBox}"
-                                         PlacementMode="RightAndAlignMiddles" Width="35" Height="35"
-                                         materialDesign:ShadowAssist.ShadowDepth="Depth0">
-                    <StackPanel Orientation="Horizontal">
-                        <Button ToolTip="Add new subject" ToolTipService.Placement="Right" 
-                                Width="30" Height="30" materialDesign:ShadowAssist.ShadowDepth="Depth0">
-                            <materialDesign:PackIcon Kind="PlaylistAdd" />
-                        </Button>
-                    </StackPanel>
-                </materialDesign:PopupBox>
+                <StackPanel>
+                    <!-- Gombok -->
+                    
+                    <Button
+                            Style="{StaticResource MaterialDesignFloatingActionButton}"
+                            ToolTip="Add new subject"
+                            Height="35"
+                            Width="35"
+                            materialDesign:ShadowAssist.ShadowDepth="Depth0"
+                            HorizontalAlignment="Left" Click="Button_Click"
+                        >
+                        <materialDesign:PackIcon
+                            Kind="PlaylistAdd"
+                            Height="24"
+                            Width="24" />
+                    </Button>
 
-                <!-- TreeView előkészítése bindolásra TimeTableViewModel-el (Work in Progress) -->
-                <!--<TreeView x:Name="SubjectsTreeView" MinWidth="200" FontSize="12" ItemsSource="{Binding Subjects}">
+                    <!-- TreeView előkészítése bindolásra TimeTableViewModel-el (Work in Progress) -->
+                    <!--<TreeView x:Name="SubjectsTreeView" MinWidth="200" FontSize="12" ItemsSource="{Binding Subjects}">
                      TimeTableViewModel Subjects lista mezőjének bindolása 
                     <TreeView.ItemTemplate>
                         <HierarchicalDataTemplate>
@@ -76,8 +80,8 @@
                         </HierarchicalDataTemplate>
                     </TreeView.ItemTemplate>                    
                 </TreeView>-->
-                
-                <TreeView x:Name="SubjectsTreeView" MinWidth="200" FontSize="12" ItemsSource="{Binding Subjects}">
+
+                    <TreeView x:Name="SubjectsTreeView" MinWidth="200" FontSize="12" ItemsSource="{Binding Subjects}">
                         <TreeView.ItemTemplate>
                             <HierarchicalDataTemplate ItemsSource="{Binding Courses}">
                                 <TextBlock Text="{Binding SubjectName}">
@@ -92,7 +96,7 @@
                                     <DataTemplate>
                                         <TextBlock Text="{Binding Name}" Width="80">
                                             <TextBlock.ContextMenu>
-                                                <ContextMenu FontSize="12">                                                
+                                                <ContextMenu FontSize="12">
                                                     <MenuItem Header="Delete course" />
                                                 </ContextMenu>
                                             </TextBlock.ContextMenu>
@@ -101,9 +105,9 @@
                                 </HierarchicalDataTemplate.ItemTemplate>
                             </HierarchicalDataTemplate>
                         </TreeView.ItemTemplate>
-                </TreeView>
-                
-            </StackPanel>
+                    </TreeView>
+
+                </StackPanel>
             </ScrollViewer>
         </GroupBox>
         <!--</Border>-->
