@@ -4,7 +4,30 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Orarend_osszerako.View"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        TextElement.Foreground="{DynamicResource MaterialDesignBody}"
+        Background="{DynamicResource MaterialDesignPaper}"
+        TextElement.FontWeight="Medium"
+        TextElement.FontSize="14"
+        FontFamily="pack://application:,,,/MaterialDesignThemes.Wpf;component/Resources/Roboto/#Roboto"
         mc:Ignorable="d"
-        Title="Add subject" Height="450" Width="800" WindowStyle="ToolWindow">
-    <Grid/>
+        Title="Add subject" Height="300" Width="500" WindowStyle="ToolWindow">
+    <Grid>
+        <StackPanel Width="400" Margin="0 30 0 0">
+            <!-- Név, előadás-e -->
+            <TextBox
+                materialDesign:HintAssist.Hint="Subject name"
+                Style="{StaticResource MaterialDesignFloatingHintTextBox}" />
+            <CheckBox
+                Style="{StaticResource MaterialDesignCheckBox}">
+                Előadás
+            </CheckBox>
+            <Button
+                Style="{StaticResource MaterialDesignRaisedButton}"
+                Width="100"
+                ToolTip="Resource name: MaterialDesignRaisedButton">
+                Add
+            </Button>
+        </StackPanel>
+    </Grid>
 </Window>
