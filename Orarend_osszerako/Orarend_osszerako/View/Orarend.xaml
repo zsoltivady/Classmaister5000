@@ -80,10 +80,23 @@
                 <TreeView x:Name="SubjectsTreeView" MinWidth="200" FontSize="12" ItemsSource="{Binding Subjects}">
                         <TreeView.ItemTemplate>
                             <HierarchicalDataTemplate ItemsSource="{Binding Courses}">
-                                <TextBlock Text="{Binding SubjectName}" />
+                                <TextBlock Text="{Binding SubjectName}" >
+                                    <TextBlock.ContextMenu>
+                                        <ContextMenu FontSize="12">
+                                            <MenuItem Header="Add new course" />
+                                            <MenuItem Header="Delete subject" />
+                                        </ContextMenu>
+                                    </TextBlock.ContextMenu>
+                                </TextBlock>
                                 <HierarchicalDataTemplate.ItemTemplate>
                                     <DataTemplate>
-                                        <TextBlock Text="{Binding Name}" />
+                                        <TextBlock Text="{Binding Name}">
+                                            <TextBlock.ContextMenu>
+                                                <ContextMenu FontSize="12">                                                
+                                                    <MenuItem Header="Delete course" />
+                                                </ContextMenu>
+                                            </TextBlock.ContextMenu>
+                                        </TextBlock>
                                     </DataTemplate>
                                 </HierarchicalDataTemplate.ItemTemplate>
                             </HierarchicalDataTemplate>
