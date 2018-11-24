@@ -155,6 +155,9 @@
     <Compile Include="View\Beallitas.xaml.cs">
       <DependentUpon>Beallitas.xaml</DependentUpon>
     </Compile>
+    <Compile Include="View\KurzusHozzaad.xaml.cs">
+      <DependentUpon>KurzusHozzaad.xaml</DependentUpon>
+    </Compile>
     <Compile Include="View\TargyHozzaad.xaml.cs">
       <DependentUpon>TargyHozzaad.xaml</DependentUpon>
     </Compile>
@@ -176,6 +179,10 @@
     <Page Include="View\Beallitas.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\KurzusHozzaad.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
     </Page>
     <Page Include="View\TargyHozzaad.xaml">
       <SubType>Designer</SubType>

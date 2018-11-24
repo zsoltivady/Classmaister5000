@@ -429,3 +429,7 @@ C:\2clm1124\Orarend_osszerako\Orarend_osszerako\obj\Debug\Orarend_osszerako.exe
 C:\2clm1124\Orarend_osszerako\Orarend_osszerako\obj\Debug\Orarend_osszerako.pdb
 C:\2clm1124\Orarend_osszerako\Orarend_osszerako\obj\Debug\View\TargyHozzaad.g.cs
 C:\2clm1124\Orarend_osszerako\Orarend_osszerako\obj\Debug\View\TargyHozzaad.baml
+C:\Users\ldope94\Documents\GitHub\Classmaister5000\Orarend_osszerako\Orarend_osszerako\obj\Debug\View\TargyHozzaad.g.cs
+C:\Users\ldope94\Documents\GitHub\Classmaister5000\Orarend_osszerako\Orarend_osszerako\obj\Debug\View\TargyHozzaad.baml
+C:\Users\ldope94\Documents\GitHub\Classmaister5000\Orarend_osszerako\Orarend_osszerako\obj\Debug\View\KurzusHozzaad.g.cs
+C:\Users\ldope94\Documents\GitHub\Classmaister5000\Orarend_osszerako\Orarend_osszerako\obj\Debug\View\KurzusHozzaad.baml
