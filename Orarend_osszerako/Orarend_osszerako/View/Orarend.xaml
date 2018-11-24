@@ -45,10 +45,11 @@
         <!--<Border Grid.Column="0"  Padding="2,5,0,0" Margin="10" CornerRadius="3"
                 BorderBrush="{DynamicResource PrimaryHueDarkBrush}" BorderThickness="2"> -->
         <GroupBox Header="Subjects" Margin="10">
+            <ScrollViewer VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto" >
             <StackPanel>
                 <!-- Gombok -->
                 <materialDesign:PopupBox Style="{StaticResource MaterialDesignMultiFloatingActionPopupBox}"
-                PlacementMode="RightAndAlignMiddles" Width="35" Height="35"
+                                         PlacementMode="RightAndAlignMiddles" Width="35" Height="35"
                                          materialDesign:ShadowAssist.ShadowDepth="Depth0">
                     <StackPanel Orientation="Horizontal">
                         <Button ToolTip="Add new subject" ToolTipService.Placement="Right" 
@@ -73,26 +74,24 @@
                                 </DataTemplate>
                             </HierarchicalDataTemplate.ItemTemplate>
                         </HierarchicalDataTemplate>
-                    </TreeView.ItemTemplate>
-
-                    
+                    </TreeView.ItemTemplate>                    
                 </TreeView>-->
+                
                 <TreeView x:Name="SubjectsTreeView" MinWidth="200" FontSize="12" ItemsSource="{Binding Subjects}">
                         <TreeView.ItemTemplate>
-                        <HierarchicalDataTemplate ItemsSource="{Binding Courses}">
-                            <TextBlock Text="{Binding SubjectName}" />
-                            <HierarchicalDataTemplate.ItemTemplate>
-                                <DataTemplate>
-                                    <TextBlock Text="{Binding Name}" />
-                                </DataTemplate>
-                            </HierarchicalDataTemplate.ItemTemplate>
-                        </HierarchicalDataTemplate>
-                    </TreeView.ItemTemplate>
-
-
+                            <HierarchicalDataTemplate ItemsSource="{Binding Courses}">
+                                <TextBlock Text="{Binding SubjectName}" />
+                                <HierarchicalDataTemplate.ItemTemplate>
+                                    <DataTemplate>
+                                        <TextBlock Text="{Binding Name}" />
+                                    </DataTemplate>
+                                </HierarchicalDataTemplate.ItemTemplate>
+                            </HierarchicalDataTemplate>
+                        </TreeView.ItemTemplate>
                 </TreeView>
+                
             </StackPanel>
-            
+            </ScrollViewer>
         </GroupBox>
         <!--</Border>-->
     </Grid>
