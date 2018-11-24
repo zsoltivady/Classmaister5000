@@ -11,7 +11,7 @@
         TextElement.FontWeight="Medium"
         TextElement.FontSize="14"
         FontFamily="pack://application:,,,/MaterialDesignThemes.Wpf;component/Resources/Roboto/#Roboto"
-        Title="Login" Height="550" Width="500" ResizeMode="NoResize">
+        Title="Login" Height="550" Width="500" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
     <Grid>
         <StackPanel Orientation="Horizontal" Height="35" VerticalAlignment="Top">
             <Button x:Name="signin" Height="37" Content="Sign In" Width="247"  Click="SignIn_Click" Panel.ZIndex="1"/>

@@ -12,7 +12,7 @@
         TextElement.FontWeight="Medium"
         TextElement.FontSize="14"
         FontFamily="pack://application:,,,/MaterialDesignThemes.Wpf;component/Resources/Roboto/#Roboto"
-        Title="Classmaister5000" Height="500" Width="908" MinWidth="700" MinHeight="500">
+        Title="Classmaister5000" Height="500" Width="908" MinWidth="700" MinHeight="500" WindowStartupLocation="CenterScreen">
     <Window.DataContext>
         <vm:TimeTableViewModel/>
     </Window.DataContext>

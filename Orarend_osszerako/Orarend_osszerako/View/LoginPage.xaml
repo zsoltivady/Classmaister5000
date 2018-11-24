@@ -19,6 +19,9 @@
     <Page.DataContext>
         <vm:LoginViewModel/>
     </Page.DataContext>
+    <Page.InputBindings>
+        <KeyBinding Command="{Binding Login}" Key="Return"/> <!-- enter lenyomásra megnyomja a login gombot -->
+    </Page.InputBindings>
     <Grid>
         <StackPanel Width="250" HorizontalAlignment="center" VerticalAlignment="center" Height="270">
             <TextBlock Text="Login" HorizontalAlignment="Center" Margin="0 0 0 20" FontSize="24"/>
@@ -32,7 +35,8 @@
                     <Binding Path="Password" UpdateSourceTrigger="PropertyChanged" Mode="TwoWay"/>
                 </ui:BoundPasswordBox.BoundPassword>
             </PasswordBox>
-            <Button Content="Login" Margin="5 10 5 10" Command="{Binding Login}"/>
+            <Button Content="Login" Margin="5 10 5 10" Command="{Binding Login}">
+            </Button>
         </StackPanel>
     </Grid>
 </Page>

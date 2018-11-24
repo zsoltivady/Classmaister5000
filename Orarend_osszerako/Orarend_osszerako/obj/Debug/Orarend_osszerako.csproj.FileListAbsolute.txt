@@ -427,5 +427,5 @@ C:\2clm1124\Orarend_osszerako\Orarend_osszerako\obj\Debug\Orarend_osszerako.cspr
 C:\2clm1124\Orarend_osszerako\Orarend_osszerako\obj\Debug\Orarend_osszerako.csproj.CopyComplete
 C:\2clm1124\Orarend_osszerako\Orarend_osszerako\obj\Debug\Orarend_osszerako.exe
 C:\2clm1124\Orarend_osszerako\Orarend_osszerako\obj\Debug\Orarend_osszerako.pdb
-C:\2clm1124\Orarend_osszerako\Orarend_osszerako\obj\Debug\View\KurzusHozzaad.g.cs
-C:\2clm1124\Orarend_osszerako\Orarend_osszerako\obj\Debug\View\KurzusHozzaad.baml
+C:\2clm1124\Orarend_osszerako\Orarend_osszerako\obj\Debug\View\TargyHozzaad.g.cs
+C:\2clm1124\Orarend_osszerako\Orarend_osszerako\obj\Debug\View\TargyHozzaad.baml
