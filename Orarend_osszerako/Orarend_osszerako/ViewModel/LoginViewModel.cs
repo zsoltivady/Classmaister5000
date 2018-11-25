@@ -9,7 +9,6 @@ using System.Windows;
 using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 using System.Collections;
-using Orarend_osszerako.Model;
 using System.Windows.Input;
 using Orarend_osszerako.Command;
 using Orarend_osszerako.BusinessLogic;
@@ -103,7 +102,6 @@ namespace Orarend_osszerako.ViewModel
             {
                 if (LoginLogout.UserLogin(username, password))
                 {
-                    MessageBox.Show("Login successful!");
                     new TimeTableWindow().Show();
                     Application.Current.MainWindow.Close();
                 }
