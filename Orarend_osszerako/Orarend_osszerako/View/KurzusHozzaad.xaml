@@ -12,7 +12,7 @@
         FontFamily="pack://application:,,,/MaterialDesignThemes.Wpf;component/Resources/Roboto/#Roboto"
         mc:Ignorable="d"
         xmlns:vm="clr-namespace:Orarend_osszerako.ViewModel"
-        Title="Add course" Height="300" Width="500" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
+        Title="Add course" Height="350" Width="500" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
     <Window.DataContext>
         <vm:KurzusHozzaadViewModel/>
     </Window.DataContext>
@@ -28,6 +28,7 @@
                     <ColumnDefinition></ColumnDefinition>
                 </Grid.ColumnDefinitions>
                 <Grid.RowDefinitions>
+                    <RowDefinition></RowDefinition>
                     <RowDefinition></RowDefinition>
                     <RowDefinition></RowDefinition>
                 </Grid.RowDefinitions>
@@ -62,6 +63,17 @@
                         <ComboBoxItem>15:20</ComboBoxItem>
                         <ComboBoxItem>17:10</ComboBoxItem>
                         <ComboBoxItem>19:00</ComboBoxItem>
+                    </ComboBox>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal" Grid.Column="0" Grid.Row="2" Grid.ColumnSpan="2" >
+                    <ComboBox materialDesign:HintAssist.Hint="Day" Style="{StaticResource MaterialDesignFloatingHintComboBox}" Width="195" Margin="100 5 5 5">
+                        <ComboBoxItem>Monday</ComboBoxItem>
+                        <ComboBoxItem>Tuesday</ComboBoxItem>
+                        <ComboBoxItem>Wednesday</ComboBoxItem>
+                        <ComboBoxItem>Thursday</ComboBoxItem>
+                        <ComboBoxItem>Friday</ComboBoxItem>
+                        <ComboBoxItem>Saturday</ComboBoxItem>
+                        <ComboBoxItem>Sunday</ComboBoxItem>
                     </ComboBox>
                 </StackPanel>
             </Grid>
