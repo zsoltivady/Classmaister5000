@@ -433,3 +433,7 @@ C:\Users\ldope94\Documents\GitHub\Classmaister5000\Orarend_osszerako\Orarend_oss
 C:\Users\ldope94\Documents\GitHub\Classmaister5000\Orarend_osszerako\Orarend_osszerako\obj\Debug\View\TargyHozzaad.baml
 C:\Users\ldope94\Documents\GitHub\Classmaister5000\Orarend_osszerako\Orarend_osszerako\obj\Debug\View\KurzusHozzaad.g.cs
 C:\Users\ldope94\Documents\GitHub\Classmaister5000\Orarend_osszerako\Orarend_osszerako\obj\Debug\View\KurzusHozzaad.baml
+D:\GitHub\Classmaister5000\Orarend_osszerako\Orarend_osszerako\obj\Debug\View\KurzusHozzaad.g.cs
+D:\GitHub\Classmaister5000\Orarend_osszerako\Orarend_osszerako\obj\Debug\View\TargyHozzaad.g.cs
+D:\GitHub\Classmaister5000\Orarend_osszerako\Orarend_osszerako\obj\Debug\View\KurzusHozzaad.baml
+D:\GitHub\Classmaister5000\Orarend_osszerako\Orarend_osszerako\obj\Debug\View\TargyHozzaad.baml

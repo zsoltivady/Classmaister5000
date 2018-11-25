@@ -5,6 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Orarend_osszerako.View"
         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        xmlns:vm="clr-namespace:Orarend_osszerako.ViewModel"
         TextElement.Foreground="{DynamicResource MaterialDesignBody}"
         Background="{DynamicResource MaterialDesignPaper}"
         TextElement.FontWeight="Medium"
@@ -12,6 +13,9 @@
         FontFamily="pack://application:,,,/MaterialDesignThemes.Wpf;component/Resources/Roboto/#Roboto"
         mc:Ignorable="d"
         Title="Add subject" Height="300" Width="500" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
+    <Window.DataContext>
+        <vm:TargyHozzaadViewModel/>
+    </Window.DataContext>
     <Grid>
         <StackPanel Width="300" Margin="0 30 0 0">
             <!-- Név, előadás-e -->
@@ -21,17 +25,20 @@
             </TextBlock>
             <TextBox
                 materialDesign:HintAssist.Hint="Subject name"
-                Style="{StaticResource MaterialDesignFloatingHintTextBox}" />
+                Style="{StaticResource MaterialDesignFloatingHintTextBox}">
+                <Binding Path="SubjectName"/>
+            </TextBox>
             <CheckBox
                 Style="{StaticResource MaterialDesignCheckBox}"
-                Margin="0 20">
+                Margin="0 20" IsChecked="{Binding Path=IsLecture, Mode=TwoWay}">
                 Lecture
             </CheckBox>
             <Button
                 Style="{StaticResource MaterialDesignRaisedButton}"
                 Width="100"
                 Margin="0 0"
-                Click="Button_Click">
+                Click="Button_Click"
+                Command="{Binding AddSubject}">
                 Add
             </Button>
         </StackPanel>

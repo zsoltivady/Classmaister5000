@@ -90,6 +90,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="BusinessLogic\EventAggregator.cs" />
     <Compile Include="BusinessLogic\Exceptions\CourseAlreadyExistsException.cs" />
     <Compile Include="BusinessLogic\Exceptions\CourseCollisionException.cs" />
     <Compile Include="BusinessLogic\Exceptions\SubjectAlreadyExistsException.cs" />
@@ -151,6 +152,7 @@
     <Compile Include="ViewModel\LoginViewModel.cs" />
     <Compile Include="ViewModel\OrarendViewModel.cs" />
     <Compile Include="ViewModel\RegistrationViewModel.cs" />
+    <Compile Include="ViewModel\TargyHozzaadViewModel.cs" />
     <Compile Include="ViewModel\TimeTableViewModel.cs" />
     <Compile Include="View\Beallitas.xaml.cs">
       <DependentUpon>Beallitas.xaml</DependentUpon>

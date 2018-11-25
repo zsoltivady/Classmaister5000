@@ -22,7 +22,7 @@ namespace Orarend_osszerako.Mapper
             newEntitySubject.IsLecture = (subject.IsLecture == false ? Convert.ToByte(0) : Convert.ToByte(1));
             newEntitySubject.User_Id = subject.User_Id;
             //newEntitySubject.Courses = CourseMapper.ModelCollectionToEntityCollection(subject.Courses);
-            newEntitySubject.User = UserMapper.ModelToEntity(subject.User);
+            //newEntitySubject.User = UserMapper.ModelToEntity(subject.User);
             return newEntitySubject;
         }
 
