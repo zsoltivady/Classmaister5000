@@ -90,6 +90,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="BusinessLogic\CourseActions.cs" />
     <Compile Include="BusinessLogic\EventAggregator.cs" />
     <Compile Include="BusinessLogic\Exceptions\CourseAlreadyExistsException.cs" />
     <Compile Include="BusinessLogic\Exceptions\CourseCollisionException.cs" />
@@ -149,6 +150,7 @@
     <Compile Include="Model\UserModel.cs" />
     <Compile Include="UI\BoundPasswordBox.cs" />
     <Compile Include="Validation\RequiredValidation.cs" />
+    <Compile Include="ViewModel\KurzusHozzaadViewModel.cs" />
     <Compile Include="ViewModel\LoginViewModel.cs" />
     <Compile Include="ViewModel\OrarendViewModel.cs" />
     <Compile Include="ViewModel\RegistrationViewModel.cs" />

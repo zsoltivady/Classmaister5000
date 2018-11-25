@@ -28,6 +28,10 @@ namespace Orarend_osszerako.ViewModel
         {
             get { return UIRepository.Instance.CurrentClientId; }
         }
+
+        private static OrarendViewModel _instance = new OrarendViewModel();
+        public static OrarendViewModel Instance { get { return _instance; } }
+
         private ICollection<SubjectModel> _Subjects;
         public ICollection<SubjectModel> Subjects
         {
@@ -41,6 +45,25 @@ namespace Orarend_osszerako.ViewModel
                 return _Subjects;
             }
         }
+        private ICommand _AddCourse;
+        public ICommand AddCourse
+        {
+            get
+            {
+                if (_AddCourse == null)
+                {
+                    _AddCourse = new RelayCommand(p=> true, p=>SubjectId = (Convert.ToInt32(p)));
+                }
+                new KurzusHozzaadViewModel();
+                return _AddCourse;
+            }
+        }
+        private int _SubjectId;
+        public int SubjectId
+        {
+            get { return _SubjectId; }
+            set { _SubjectId = value; }
+        }
         private ICommand _DeleteSubject;
         public ICommand DeleteSubject
         {
@@ -52,20 +75,7 @@ namespace Orarend_osszerako.ViewModel
                 }
                 return _DeleteSubject;
             }
-        }
-        //private string _deleteThisSubject;
-        //public string DeleteThisSubject
-        //{
-        //    get
-        //    {
-        //        return this._deleteThisSubject;
-        //    }
-        //    set
-        //    {
-        //        this._deleteThisSubject = value;
-        //        NotifyPropertyChanged("DeleteThisSubject");
-        //    }
-        //}
+        }   
         public void delSubject(string Name)
         {
             try
@@ -81,10 +91,10 @@ namespace Orarend_osszerako.ViewModel
             {
                 MessageBox.Show("This subject doesn't exists!");
             }
-            //catch (Exception e)
-            //{
-            //    MessageBox.Show(e.Message);
-            //}
+            catch (Exception e)
+            {
+                MessageBox.Show(e.Message);
+            }
         }
     }
 }

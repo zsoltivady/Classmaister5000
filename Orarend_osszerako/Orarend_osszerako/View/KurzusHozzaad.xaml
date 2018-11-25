@@ -11,7 +11,11 @@
         TextElement.FontSize="14"
         FontFamily="pack://application:,,,/MaterialDesignThemes.Wpf;component/Resources/Roboto/#Roboto"
         mc:Ignorable="d"
+        xmlns:vm="clr-namespace:Orarend_osszerako.ViewModel"
         Title="Add course" Height="300" Width="500" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
+    <Window.DataContext>
+        <vm:KurzusHozzaadViewModel/>
+    </Window.DataContext>
     <Grid>
         <StackPanel Width="400" Margin="0 30 0 0">
             <TextBlock HorizontalAlignment="Center" Margin="0 0 0 20"
@@ -28,14 +32,20 @@
                     <RowDefinition></RowDefinition>
                 </Grid.RowDefinitions>
                 <TextBox
-                materialDesign:HintAssist.Hint="Course code" Grid.Column="0" Grid.Row="0" Margin="5"
-                Style="{StaticResource MaterialDesignFloatingHintTextBox}" />
+                materialDesign:HintAssist.Hint="Course name" Grid.Column="0" Grid.Row="0" Margin="5"
+                Style="{StaticResource MaterialDesignFloatingHintTextBox}">
+                    <Binding Path="CourseName"/>
+                </TextBox>
                 <TextBox
                 materialDesign:HintAssist.Hint="Room" Grid.Column="0" Grid.Row="1" Margin="5"
-                Style="{StaticResource MaterialDesignFloatingHintTextBox}" />
+                Style="{StaticResource MaterialDesignFloatingHintTextBox}">
+                    <Binding Path="Room"/>
+                </TextBox>
                 <TextBox
                 materialDesign:HintAssist.Hint="Teacher" Grid.Column="1" Grid.Row="0" Margin="5"
-                Style="{StaticResource MaterialDesignFloatingHintTextBox}" />
+                Style="{StaticResource MaterialDesignFloatingHintTextBox}">
+                    <Binding Path="Teacher"/>
+                </TextBox>
                 <StackPanel Orientation="Horizontal" Grid.Column="1" Grid.Row="1" >
                     <ComboBox materialDesign:HintAssist.Hint="From" Style="{StaticResource MaterialDesignFloatingHintComboBox}" Width="90" Margin="5">
                         <ComboBoxItem>8:00</ComboBoxItem>
@@ -60,7 +70,7 @@
                 Style="{StaticResource MaterialDesignRaisedButton}"
                 Width="100"
                 Margin="0 0"
-                Click="Button_Click">
+                Click="Button_Click" Command="{Binding AddCourse}">
                 Add
             </Button>
         </StackPanel>

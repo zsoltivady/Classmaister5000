@@ -87,7 +87,8 @@
                                 <TextBlock Text="{Binding SubjectName}">
                                     <TextBlock.ContextMenu>
                                         <ContextMenu FontSize="12">
-                                            <MenuItem Header="Add new course"/>
+                                            <MenuItem Header="Add new course" Command="{Binding Path=DataContext.AddCourse, Source={x:Reference SubjectsTreeView}}"
+                                                      CommandParameter="{Binding SubjectId}" Click="MenuItem_Click"/>
                                             <MenuItem Header="Delete subject" Command="{Binding Path=DataContext.DeleteSubject, Source={x:Reference SubjectsTreeView}}" CommandParameter="{Binding SubjectName}"/>
                                         </ContextMenu>
                                     </TextBlock.ContextMenu>

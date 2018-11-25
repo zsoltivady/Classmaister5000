@@ -29,5 +29,10 @@ namespace Orarend_osszerako.View
         {
             new TargyHozzaad().Show();
         }
+
+        private void MenuItem_Click(object sender, RoutedEventArgs e)
+        {
+            new KurzusHozzaad().Show();
+        }
     }
 }

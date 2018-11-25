@@ -7,6 +7,7 @@ using Orarend_osszerako.UI;
 using Orarend_osszerako.Mapper;
 using Orarend_osszerako.Model;
 using Orarend_osszerako.BusinessLogic.Exceptions;
+using Orarend_osszerako.ViewModel;
 
 namespace Orarend_osszerako.BusinessLogic
 {
@@ -132,14 +133,38 @@ namespace Orarend_osszerako.BusinessLogic
                 return (HasCourseByTeacher(teacher, subject) && context.Courses.Any(c => c.Day_Id == day.Id && c.From.Hour == from.Hour && c.From.Minute == from.Minute && c.To.Hour == to.Hour && c.To.Minute == to.Minute));
             }
         }
-        public static bool CourseAdd(string name, string teacher, string room, DateTime from, DateTime to, int subjectId)
+        private static bool HasCourseByTeacherWithName(string name, string teacher, Day day, DateTime from, DateTime to)
         {
-
+            using (var context = new Classmaister5000Entities())
+            {
+                return context.Courses.Any(c => c.Name == name && c.Teacher == teacher && c.Day_Id == day.Id && c.From.Hour == from.Hour && c.From.Minute == from.Minute && c.To.Hour == to.Hour && c.To.Minute == to.Minute);
+            }
         }
-        public static bool CourseAdd(string name, string teacher, string room, DateTime from, DateTime to, Subject subject)
+        public static bool CourseAdd(string name, string teacher, string room, Day day, DateTime from, DateTime to)
         {
-
-        
+            if (!HasCourseByTeacherWithName(name, teacher, day, from, to))
+            {
+                using (var context = new Classmaister5000Entities())
+                {
+                    CourseModel newCourse = new CourseModel();
+                    newCourse.Name = name;
+                    newCourse.Teacher = teacher;
+                    newCourse.Room = room;
+                    newCourse.Day_Id = day.Id;
+                    newCourse.From = from;
+                    newCourse.To = to;
+                    newCourse.Subject_Id = OrarendViewModel.Instance.SubjectId;
+                    context.Courses.Add(CourseMapper.ModelToEntity(newCourse));
+                    context.SaveChanges();
+                    return true;
+                }
+            }
+            else throw new Exception();
         }
+        //public static bool CourseAdd(string name, string teacher, string room, DateTime from, DateTime to, Subject subject)
+        //{
+
+
+        //}
     }
 }
