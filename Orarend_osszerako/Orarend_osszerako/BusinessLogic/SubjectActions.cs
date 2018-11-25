@@ -44,6 +44,8 @@ namespace Orarend_osszerako.BusinessLogic
                 using (var context = new Classmaister5000Entities())
                 {
                     Subject removeThis = context.Subjects.Where(s => s.SubjectName.ToLower() == Name.ToLower()).First();
+                    ICollection<Course> removeTheseCourses = removeThis.Courses;
+                    context.Courses.RemoveRange(removeTheseCourses);
                     context.Subjects.Remove(removeThis);
                     context.SaveChanges();
                     return true;

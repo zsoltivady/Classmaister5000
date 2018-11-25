@@ -8,6 +8,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Input;
+using Orarend_osszerako.BusinessLogic.Exceptions;
+using System.Windows;
 
 namespace Orarend_osszerako.ViewModel
 {
@@ -37,6 +40,51 @@ namespace Orarend_osszerako.ViewModel
                 }
                 return _Subjects;
             }
+        }
+        private ICommand _DeleteSubject;
+        public ICommand DeleteSubject
+        {
+            get
+            {
+                if (_DeleteSubject == null)
+                {
+                    _DeleteSubject = new RelayCommand( p=>true , p=>delSubject(p.ToString()));
+                }
+                return _DeleteSubject;
+            }
+        }
+        //private string _deleteThisSubject;
+        //public string DeleteThisSubject
+        //{
+        //    get
+        //    {
+        //        return this._deleteThisSubject;
+        //    }
+        //    set
+        //    {
+        //        this._deleteThisSubject = value;
+        //        NotifyPropertyChanged("DeleteThisSubject");
+        //    }
+        //}
+        public void delSubject(string Name)
+        {
+            try
+            {
+                if (SubjectActions.SubjectRemove(Name))
+                {
+                    MessageBox.Show("Subject has been deleted successfully!");
+                    NotifyPropertyChanged("Subjects");
+                }
+                else MessageBox.Show("An unknown error has occured!");
+            }
+            catch (SubjectNotExistsException)
+            {
+                MessageBox.Show("This subject doesn't exists!");
+            }
+            //catch (Exception e)
+            //{
+            //    MessageBox.Show(e.Message);
+            //}
         }
     }
 }
