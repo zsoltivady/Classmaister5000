@@ -87,5 +87,21 @@ namespace Orarend_osszerako.ViewModel
                 MessageBox.Show(e.Message);
             }
         }
+        private ICommand _DeleteCourse;
+        public ICommand DeleteCourse
+        {
+            get
+            {
+                if (_DeleteCourse == null)
+                {
+                    _DeleteCourse = new RelayCommand(p => true, p => delCourse(Convert.ToInt32(p)));
+                }
+                return _DeleteCourse;
+            }
+        }
+        public void delCourse(int id)
+        {
+            MessageBox.Show(id.ToString());
+        }
     }
 }
