@@ -23,14 +23,12 @@ namespace Orarend_osszerako.ViewModel
         private void OnMessageReceived(string message)
         {
             if (message == "Subjects changed") NotifyPropertyChanged("Subjects");
+            if (message == "Course added") NotifyPropertyChanged("Subjects");
         }
         public int UserId
         {
             get { return UIRepository.Instance.CurrentClientId; }
         }
-
-        private static OrarendViewModel _instance = new OrarendViewModel();
-        public static OrarendViewModel Instance { get { return _instance; } }
 
         private ICollection<SubjectModel> _Subjects;
         public ICollection<SubjectModel> Subjects
@@ -39,7 +37,6 @@ namespace Orarend_osszerako.ViewModel
             {
                 using (var context = new Classmaister5000Entities())
                 {
-                    //ICollection<Subject> selected = context.Subjects.Where(s => s.User_Id == UserId).ToList();
                     _Subjects = SubjectMapper.EntityCollectionToModelCollection(context.Subjects.Where(s => s.User_Id == UserId).ToList());
                 }
                 return _Subjects;
@@ -52,17 +49,11 @@ namespace Orarend_osszerako.ViewModel
             {
                 if (_AddCourse == null)
                 {
-                    _AddCourse = new RelayCommand(p=> true, p=>SubjectId = (Convert.ToInt32(p)));
+                    _AddCourse = new RelayCommand(p=> true, p=> UIRepository.Instance.SubjectId = (Convert.ToInt32(p)));
                 }
                 new KurzusHozzaadViewModel();
                 return _AddCourse;
             }
-        }
-        private int _SubjectId;
-        public int SubjectId
-        {
-            get { return _SubjectId; }
-            set { _SubjectId = value; }
         }
         private ICommand _DeleteSubject;
         public ICommand DeleteSubject

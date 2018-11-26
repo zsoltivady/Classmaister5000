@@ -48,33 +48,16 @@
                     <Binding Path="Teacher"/>
                 </TextBox>
                 <StackPanel Orientation="Horizontal" Grid.Column="1" Grid.Row="1" >
-                    <ComboBox materialDesign:HintAssist.Hint="From" Style="{StaticResource MaterialDesignFloatingHintComboBox}" Width="90" Margin="5">
-                        <ComboBoxItem>8:00</ComboBoxItem>
-                        <ComboBoxItem>10:00</ComboBoxItem>
-                        <ComboBoxItem>11:50</ComboBoxItem>
-                        <ComboBoxItem>13:40</ComboBoxItem>
-                        <ComboBoxItem>15:30</ComboBoxItem>
-                        <ComboBoxItem>17:20</ComboBoxItem>
-                    </ComboBox>
-                    <ComboBox materialDesign:HintAssist.Hint="To" Style="{StaticResource MaterialDesignFloatingHintComboBox}" Width="90" Margin="5">
-                        <ComboBoxItem>9:40</ComboBoxItem>
-                        <ComboBoxItem>11:40</ComboBoxItem>
-                        <ComboBoxItem>13:30</ComboBoxItem>
-                        <ComboBoxItem>15:20</ComboBoxItem>
-                        <ComboBoxItem>17:10</ComboBoxItem>
-                        <ComboBoxItem>19:00</ComboBoxItem>
-                    </ComboBox>
+                    <ComboBox materialDesign:HintAssist.Hint="From" Style="{StaticResource MaterialDesignFloatingHintComboBox}" Width="90" Margin="5" ItemsSource="{Binding BeginDates}" SelectedValue="{Binding From, Mode=TwoWay}"/>
+
+
+                    <ComboBox materialDesign:HintAssist.Hint="To" Style="{StaticResource MaterialDesignFloatingHintComboBox}" Width="90" Margin="5" ItemsSource="{Binding EndDates}" SelectedValue="{Binding To, Mode=TwoWay}"/>
+
+
                 </StackPanel>
                 <StackPanel Orientation="Horizontal" Grid.Column="0" Grid.Row="2" Grid.ColumnSpan="2" >
-                    <ComboBox materialDesign:HintAssist.Hint="Day" Style="{StaticResource MaterialDesignFloatingHintComboBox}" Width="195" Margin="100 5 5 5">
-                        <ComboBoxItem>Monday</ComboBoxItem>
-                        <ComboBoxItem>Tuesday</ComboBoxItem>
-                        <ComboBoxItem>Wednesday</ComboBoxItem>
-                        <ComboBoxItem>Thursday</ComboBoxItem>
-                        <ComboBoxItem>Friday</ComboBoxItem>
-                        <ComboBoxItem>Saturday</ComboBoxItem>
-                        <ComboBoxItem>Sunday</ComboBoxItem>
-                    </ComboBox>
+                    <ComboBox materialDesign:HintAssist.Hint="Day" Style="{StaticResource MaterialDesignFloatingHintComboBox}" Width="195" Margin="100 5 5 5" ItemsSource="{Binding Days}" SelectedValue="{Binding SelectedDay, Mode=TwoWay}"/>
+
                 </StackPanel>
             </Grid>
             

@@ -6,16 +6,16 @@ using System.Threading.Tasks;
 
 namespace Orarend_osszerako.BusinessLogic.Exceptions
 {
-    class TeacherBusyExceptionException : Exception
+    class TeacherBusyException : Exception
     {
-        public TeacherBusyExceptionException()
+        public TeacherBusyException()
         {
         }
-        public TeacherBusyExceptionException(string message)
+        public TeacherBusyException(string message)
         : base(message)
         {
         }
-        public TeacherBusyExceptionException(string message, Exception inner)
+        public TeacherBusyException(string message, Exception inner)
             : base(message, inner)
         {
         }

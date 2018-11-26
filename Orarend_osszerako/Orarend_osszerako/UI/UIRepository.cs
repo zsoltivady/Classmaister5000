@@ -37,5 +37,11 @@ namespace Orarend_osszerako.UI
             get { return _currentClientId; }
             set { _currentClientId = value; }
         }
+        private int _subjectId;
+        public int SubjectId
+        {
+            get { return _subjectId; }
+            set { _subjectId = value; }
+        }
     }
 }
