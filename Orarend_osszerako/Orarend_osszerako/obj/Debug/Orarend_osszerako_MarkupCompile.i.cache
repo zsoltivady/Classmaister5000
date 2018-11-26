@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-D:\GitHub\Classmaister5000\Orarend_osszerako\Orarend_osszerako\obj\Debug\
+E:\Iskolai Projekt\Classmaister5000\Orarend_osszerako\Orarend_osszerako\obj\Debug\
 Orarend_osszerako
 none
 false
 DEBUG;TRACE
-D:\GitHub\Classmaister5000\Orarend_osszerako\Orarend_osszerako\View\App.xaml
+E:\Iskolai Projekt\Classmaister5000\Orarend_osszerako\Orarend_osszerako\View\App.xaml
 9-568920882
 4874959207
-62487017739
-21-1228419771
+62-1099779741
+21-1006571070
 View\Beallitas.xaml;View\KurzusHozzaad.xaml;View\TargyHozzaad.xaml;View\LoginPage.xaml;View\MainWindow.xaml;View\Orarend.xaml;View\Profil.xaml;View\RegisterPage.xaml;View\TimeTableWindow.xaml;
 
-True
+False
 
