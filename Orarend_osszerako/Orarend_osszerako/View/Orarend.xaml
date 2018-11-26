@@ -94,16 +94,18 @@
                                     </TextBlock.ContextMenu>
                                 </TextBlock>
                                 <HierarchicalDataTemplate.ItemTemplate>
-                                    <DataTemplate>
+                                    <HierarchicalDataTemplate ItemsSource="{Binding Courses}">
+                                    <!--<DataTemplate>-->
                                         <TextBlock Text="{Binding Name}" Width="80">
                                             <TextBlock.ContextMenu>
                                                 <ContextMenu FontSize="12">
                                                     <MenuItem Header="Delete course" Command="{Binding Path=DataContext.DeleteCourse, Source={x:Reference SubjectsTreeView}}" 
-                                                              CommandParameter="{Binding }"/>
+                                                              CommandParameter="{Binding CourseId}"/>
                                                 </ContextMenu>
                                             </TextBlock.ContextMenu>
                                         </TextBlock>
-                                    </DataTemplate>
+                                    <!--</DataTemplate>-->
+                                    </HierarchicalDataTemplate>
                                 </HierarchicalDataTemplate.ItemTemplate>
                             </HierarchicalDataTemplate>
                         </TreeView.ItemTemplate>

@@ -101,7 +101,16 @@ namespace Orarend_osszerako.ViewModel
         }
         public void delCourse(int id)
         {
-            MessageBox.Show(id.ToString());
+            try
+            {
+                CourseActions.DeleteCourse(id);
+                MessageBox.Show("The course has been successfully removed!");
+                NotifyPropertyChanged("Subjects");
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show(e.Message);
+            }
         }
     }
 }

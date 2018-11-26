@@ -159,10 +159,10 @@ namespace Orarend_osszerako.ViewModel
             {
                 MessageBox.Show("This teacher has another course at this time!");
             }
-            //catch(Exception e)
-            //{
-            //    MessageBox.Show(e.Message);
-            //}
+            catch (Exception e)
+            {
+                MessageBox.Show(e.Message);
+            }
         }
         private List<string> days = new List<string> { "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday" };
         public List<string> Days

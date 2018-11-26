@@ -182,10 +182,14 @@ namespace Orarend_osszerako.BusinessLogic
             }
             else throw new CourseAlreadyExistsException();
         }
-        //public static bool CourseAdd(string name, string teacher, string room, DateTime from, DateTime to, Subject subject)
-        //{
-
-
-        //}
+        public static void DeleteCourse(int id)
+        {
+            using (var context = new Classmaister5000Entities())
+            {
+                var deleteThis = context.Courses.Where(c => c.Id == id).First();
+                context.Courses.Remove(deleteThis);
+                context.SaveChanges();
+            }
+        }
     }
 }
