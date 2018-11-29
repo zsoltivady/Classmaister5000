@@ -13,7 +13,7 @@
         TextElement.FontWeight="Medium"
         TextElement.FontSize="14"
         FontFamily="pack://application:,,,/MaterialDesignThemes.Wpf;component/Resources/Roboto/#Roboto"
-      Title="RegisterPage">
+      Title="RegisterPage" Loaded="RegisterPage_Loaded">
     <!-- FONTOS!!!!!!!!!!!! xmlns:ui="clr-namespace:Orarend_osszerako.UI" passwordbox bindolása miatt, lásd később -->
     <Page.DataContext>
         <vm:RegistrationViewModel/>

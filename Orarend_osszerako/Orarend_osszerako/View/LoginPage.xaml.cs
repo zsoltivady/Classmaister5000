@@ -26,9 +26,14 @@ namespace Orarend_osszerako.View
             InitializeComponent();
         }
 
+        private void LoginPage_Loaded(object sender, RoutedEventArgs e)
+        {
+            userName.Focus();
+        }
+
         //private void Login_Click(object sender, RoutedEventArgs e)
         //{
-        
+
         //}
 
         //                         Majd a LoginViewModel.cs-ben!!

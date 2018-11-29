@@ -15,7 +15,7 @@
         TextElement.FontSize="14"
         FontFamily="pack://application:,,,/MaterialDesignThemes.Wpf;component/Resources/Roboto/#Roboto"
       Title="LoginPage"
-      x:Name="Login_Page">
+      x:Name="Login_Page" Loaded="LoginPage_Loaded">
     <Page.DataContext>
         <vm:LoginViewModel/>
     </Page.DataContext>

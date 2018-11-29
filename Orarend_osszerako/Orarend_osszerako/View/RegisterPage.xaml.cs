@@ -24,5 +24,10 @@ namespace Orarend_osszerako.View
         {
             InitializeComponent();
         }
+
+        private void RegisterPage_Loaded(object sender, RoutedEventArgs e)
+        {
+            firstname.Focus();
+        }
     }
 }
