@@ -19,6 +19,7 @@ namespace Orarend_osszerako.ViewModel
         public OrarendViewModel()
         {
             EventAggregator.OnMessageTransmitted += OnMessageReceived;
+            GetCoursesFromLoggedInUsers();
         }
         private CourseModel[] _MondayCourses;
         public CourseModel[] MondayCourses
