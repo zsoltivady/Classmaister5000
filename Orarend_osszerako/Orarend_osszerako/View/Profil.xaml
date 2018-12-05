@@ -3,6 +3,7 @@
       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:vm="clr-namespace:Orarend_osszerako.ViewModel"
       xmlns:local="clr-namespace:Orarend_osszerako.View"
       xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
       mc:Ignorable="d" 
@@ -13,7 +14,9 @@
         TextElement.FontSize="14"
         FontFamily="pack://application:,,,/MaterialDesignThemes.Wpf;component/Resources/Roboto/#Roboto"
       Title="Profil">
-
+    <Page.DataContext>
+        <vm:ProfilViewModel></vm:ProfilViewModel>
+    </Page.DataContext>
     <Grid Background="{DynamicResource MaterialDesignBody}">
         <materialDesign:Card
   Width="310" HorizontalAlignment="Center" VerticalAlignment="Center" Padding="10">
@@ -26,15 +29,15 @@
                 </materialDesign:ColorZone>
                 <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="0 5 0 5">
                     <Label FontWeight="Bold">Nickname:</Label>
-                    <Label>_nickname_</Label>
+                    <Label Content="{Binding Nickname, Mode=TwoWay}" ></Label>
                 </StackPanel>
                 <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="0 5 0 5">
                     <Label FontWeight="Bold">First name:</Label>
-                    <Label>_firstname_</Label>
+                    <Label Content="{Binding Firstname, Mode=TwoWay}"></Label>
                 </StackPanel>
                 <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="0 5 0 5">
                     <Label FontWeight="Bold">Last name:</Label>
-                    <Label>_lastname_</Label>
+                    <Label Content="{Binding Lastname, Mode=TwoWay}"></Label>
                 </StackPanel>
                 <Button
           Style="{StaticResource MaterialDesignRaisedButton}"

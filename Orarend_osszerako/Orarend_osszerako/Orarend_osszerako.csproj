@@ -158,6 +158,7 @@
     <Compile Include="ViewModel\KurzusHozzaadViewModel.cs" />
     <Compile Include="ViewModel\LoginViewModel.cs" />
     <Compile Include="ViewModel\OrarendViewModel.cs" />
+    <Compile Include="ViewModel\ProfilViewModel.cs" />
     <Compile Include="ViewModel\RegistrationViewModel.cs" />
     <Compile Include="ViewModel\TargyHozzaadViewModel.cs" />
     <Compile Include="ViewModel\TimeTableViewModel.cs" />
