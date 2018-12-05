@@ -18,20 +18,24 @@ namespace Orarend_osszerako.BusinessLogic
 
         public static bool AddToTimetable(int courseId)
         {
-            if (!HasCourseId(courseId))
-            {
+            //if (!HasCourseId(courseId))
+            //{
                 using (var context = new Classmaister5000Entities())
                 {
+                    int? id = context.Timetables.Max(i => (int?)i.Id) + 1;
+                    if (id == null) id = 0;
                     TimetableModel record = new TimetableModel();
                     record.UserId = GetUserId;
                     record.CourseId = courseId;
+                    record.Id = (int)id + 1;
+                    
                     context.Timetables.Add(TimetableMapper.ModelToEntity(record));
                     context.SaveChanges();
 
                 }
-            }
-            else throw new CourseIdAlreadyExistsException();
-            
+            //}
+            //else throw new CourseIdAlreadyExistsException();
+
 
             return true;
 

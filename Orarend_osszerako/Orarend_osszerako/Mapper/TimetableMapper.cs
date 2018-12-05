@@ -20,8 +20,8 @@ namespace Orarend_osszerako.Mapper
             newTimetable.Id = timetable.Id;
             newTimetable.Course_Id = timetable.CourseId;
             newTimetable.User_Id = timetable.UserId;
-            newTimetable.Course = CourseMapper.ModelToEntity(timetable.Course);
-            newTimetable.User = UserMapper.ModelToEntity(timetable.User);
+            //newTimetable.Course = CourseMapper.ModelToEntity(timetable.Course);
+            //newTimetable.User = UserMapper.ModelToEntity(timetable.User);
             return newTimetable;
         }
         /// <summary>

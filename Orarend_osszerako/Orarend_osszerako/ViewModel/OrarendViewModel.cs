@@ -20,8 +20,8 @@ namespace Orarend_osszerako.ViewModel
         {
             EventAggregator.OnMessageTransmitted += OnMessageReceived;
         }
-        private Course[] _MondayCourses;
-        public Course[] MondayCourses
+        private CourseModel[] _MondayCourses;
+        public CourseModel[] MondayCourses
         {
             get
             { return _MondayCourses; }
@@ -30,8 +30,8 @@ namespace Orarend_osszerako.ViewModel
                 _MondayCourses = value;
             }
         }
-        private Course[] _TuesdayCourses;
-        public Course[] TuesdayCourses
+        private CourseModel[] _TuesdayCourses;
+        public CourseModel[] TuesdayCourses
         {
             get
             { return _TuesdayCourses; }
@@ -40,8 +40,8 @@ namespace Orarend_osszerako.ViewModel
                 _TuesdayCourses = value;
             }
         }
-        private Course[] _WednesdayCourses;
-        public Course[] WednesdayCourses
+        private CourseModel[] _WednesdayCourses;
+        public CourseModel[] WednesdayCourses
         {
             get
             { return _WednesdayCourses; }
@@ -50,8 +50,8 @@ namespace Orarend_osszerako.ViewModel
                 _WednesdayCourses = value;
             }
         }
-        private Course[] _ThursdayCourses;
-        public Course[] ThursdayCourses
+        private CourseModel[] _ThursdayCourses;
+        public CourseModel[] ThursdayCourses
         {
             get
             { return _ThursdayCourses; }
@@ -60,8 +60,8 @@ namespace Orarend_osszerako.ViewModel
                 _ThursdayCourses = value;
             }
         }
-        private Course[] _FridayCourses;
-        public Course[] FridayCourses
+        private CourseModel[] _FridayCourses;
+        public CourseModel[] FridayCourses
         {
             get
             { return _FridayCourses; }
@@ -70,8 +70,8 @@ namespace Orarend_osszerako.ViewModel
                 _FridayCourses = value;
             }
         }
-        private Course[] _SaturdayCourses;
-        public Course[] SaturdayCourses
+        private CourseModel[] _SaturdayCourses;
+        public CourseModel[] SaturdayCourses
         {
             get
             { return _SaturdayCourses; }
@@ -80,8 +80,8 @@ namespace Orarend_osszerako.ViewModel
                 _SaturdayCourses = value;
             }
         }
-        private Course[] _SundayCourses;
-        public Course[] SundayCourses
+        private CourseModel[] _SundayCourses;
+        public CourseModel[] SundayCourses
         {
             get
             { return _SundayCourses; }
@@ -182,7 +182,7 @@ namespace Orarend_osszerako.ViewModel
                 MessageBox.Show(e.Message);
             }
         }
-        private int SelectIndex(Course Course)
+        private int SelectIndex(CourseModel Course)
         {
             int index;
             switch (Course.From.Hour) //óra kezdetének órája
@@ -212,21 +212,26 @@ namespace Orarend_osszerako.ViewModel
 
         public void GetCoursesFromLoggedInUsers()
         {
-            Course[] TempMonday = new Course[6];
-            Course[] TempTuesday = new Course[6];
-            Course[] TempWednesday = new Course[6];
-            Course[] TempThursday = new Course[6];
-            Course[] TempFriday = new Course[6];
-            Course[] TempSaturday = new Course[6];
-            Course[] TempSunday = new Course[6];
+            CourseModel[] TempMonday = new CourseModel[6];
+            CourseModel[] TempTuesday = new CourseModel[6];
+            CourseModel[] TempWednesday = new CourseModel[6];
+            CourseModel[] TempThursday = new CourseModel[6];
+            CourseModel[] TempFriday = new CourseModel[6];
+            CourseModel[] TempSaturday = new CourseModel[6];
+            CourseModel[] TempSunday = new CourseModel[6];
 
             using (var context = new Classmaister5000Entities())
             {
-                var records = context.Timetables.Where(c => c.User_Id == UIRepository.Instance.CurrentClientId).ToList();
-                List<Course> courses = new List<Course>();
-                for (int i = 0; i < records.Count; i++)
+                var records = TimetableMapper.EntityCollectionToModelCollection(context.Timetables.Where(c => c.User_Id == UIRepository.Instance.CurrentClientId).ToList());
+                List<CourseModel> courses = new List<CourseModel>();
+                //for (int i = 0; i < records.Count; i++)
+                //{
+                //    courses.Add(records[i].Course);
+                //}
+
+                foreach (var record in records)
                 {
-                    courses.Add(records[i].Course);
+                    courses.Add(record.Course);
                 }
 
                 foreach (var course in courses)
