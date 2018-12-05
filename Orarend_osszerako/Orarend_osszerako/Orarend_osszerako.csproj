@@ -97,6 +97,7 @@
     <Compile Include="BusinessLogic\EventAggregator.cs" />
     <Compile Include="BusinessLogic\Exceptions\CourseAlreadyExistsException.cs" />
     <Compile Include="BusinessLogic\Exceptions\CourseCollisionException.cs" />
+    <Compile Include="BusinessLogic\Exceptions\CourseIdAlreadyExistsException.cs" />
     <Compile Include="BusinessLogic\Exceptions\SubjectAlreadyExistsException.cs" />
     <Compile Include="BusinessLogic\Exceptions\SubjectNotExistsException.cs" />
     <Compile Include="BusinessLogic\Exceptions\TeacherBusyException.cs" />
@@ -107,6 +108,7 @@
     <Compile Include="BusinessLogic\Exceptions\NotCorrectPasswordException.cs" />
     <Compile Include="BusinessLogic\Registration.cs" />
     <Compile Include="BusinessLogic\SubjectActions.cs" />
+    <Compile Include="BusinessLogic\TimetableActions.cs" />
     <Compile Include="Command\ObservableObject.cs" />
     <Compile Include="Model\Course.cs">
       <DependentUpon>FinalEntities.tt</DependentUpon>
