@@ -266,5 +266,82 @@ namespace Orarend_osszerako.ViewModel
                 SundayCourses = TempSunday;
             }
         }
+
+        private ICommand _AddCourseToTimeTable;
+        public ICommand AddCourseToTimeTable
+        {
+            get
+            {
+                if (_AddCourseToTimeTable == null)
+                {                                  // p mindig fix, a gomb amire bindolva van a command az mit futtasson
+                    _AddCourseToTimeTable = new RelayCommand(p => true, p => AddTimeTable(Convert.ToInt32(p)));
+                }
+                return _DeleteCourse;
+            }
+        }
+
+        private void WhichCourseChanged(Course Course)
+        {
+            switch (Course.Day_Id)
+            {
+                case 1: NotifyPropertyChanged("MondayCourses"); break;
+                case 2: NotifyPropertyChanged("TuesdayCourses"); break;
+                case 3: NotifyPropertyChanged("WednesdayCourses"); break;
+                case 4: NotifyPropertyChanged("ThursdayCourses"); break;
+                case 5: NotifyPropertyChanged("FridayCourses"); break;
+                case 6: NotifyPropertyChanged("SaturdayCourses"); break;
+                case 7: NotifyPropertyChanged("SundayCourses"); break;
+                default: throw new Exception("Hiba");
+            }
+        }
+        public void AddTimeTable(int id) //p betű felül
+        {
+            try
+            {
+                using (var context = new Classmaister5000Entities())
+                {
+                    var course = context.Courses.Find(id);
+                    TimetableActions.AddToTimetable(id);
+                    GetCoursesFromLoggedInUsers();
+                    WhichCourseChanged(course);
+                    MessageBox.Show("The course has been successfully added to the timetable!");
+                }
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show(e.Message);
+            }
+        }
+
+        private ICommand _RemoveCourseFromTimeTable;
+        public ICommand RemoveCourseFromTimeTable
+        {
+            get
+            {
+                if (_RemoveCourseFromTimeTable == null)
+                {                                  // p mindig fix, a gomb amire bindolva van a command az mit futtasson
+                    _RemoveCourseFromTimeTable = new RelayCommand(p => true, p => RemoveFromTimeTable(Convert.ToInt32(p)));
+                }
+                return _RemoveCourseFromTimeTable;
+            }
+        }
+        public void RemoveFromTimeTable(int id) //p betű felül
+        {
+            try
+            {
+                using (var context = new Classmaister5000Entities())
+                {
+                    var course = context.Courses.Find(id);
+                    TimetableActions.RemoveFromTimetableByCourseId(id);
+                    GetCoursesFromLoggedInUsers();
+                    WhichCourseChanged(course);
+                    MessageBox.Show("The course has been successfully removed from the timetable!");
+                }
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show(e.Message);
+            }
+        }
     }
 }
