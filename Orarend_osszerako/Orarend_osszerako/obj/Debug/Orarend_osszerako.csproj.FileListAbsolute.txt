@@ -488,7 +488,6 @@ C:\GitHub\Classmaister5000\Orarend_osszerako\Orarend_osszerako\obj\Debug\View\Ku
 C:\GitHub\Classmaister5000\Orarend_osszerako\Orarend_osszerako\obj\Debug\View\TargyHozzaad.baml
 E:\Iskolai Projekt\Classmaister5000\Orarend_osszerako\Orarend_osszerako\bin\Debug\Classmaister5000.mdf
 E:\Iskolai Projekt\Classmaister5000\Orarend_osszerako\Orarend_osszerako\bin\Debug\Classmaister5000_log.ldf
-E:\Iskolai Projekt\Classmaister5000\Orarend_osszerako\Orarend_osszerako\obj\Debug\Orarend_osszerako.csprojAssemblyReference.cache
 E:\Iskolai Projekt\Classmaister5000\Orarend_osszerako\Orarend_osszerako\obj\Debug\View\KurzusHozzaad.g.cs
 E:\Iskolai Projekt\Classmaister5000\Orarend_osszerako\Orarend_osszerako\obj\Debug\View\TargyHozzaad.g.cs
 E:\Iskolai Projekt\Classmaister5000\Orarend_osszerako\Orarend_osszerako\obj\Debug\GeneratedInternalTypeHelper.g.cs

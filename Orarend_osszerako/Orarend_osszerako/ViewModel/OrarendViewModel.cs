@@ -276,7 +276,7 @@ namespace Orarend_osszerako.ViewModel
                 {                                  // p mindig fix, a gomb amire bindolva van a command az mit futtasson
                     _AddCourseToTimeTable = new RelayCommand(p => true, p => AddTimeTable(Convert.ToInt32(p)));
                 }
-                return _DeleteCourse;
+                return _AddCourseToTimeTable;
             }
         }
 
@@ -300,6 +300,7 @@ namespace Orarend_osszerako.ViewModel
             {
                 using (var context = new Classmaister5000Entities())
                 {
+                    context.Configuration.LazyLoadingEnabled = false;
                     var course = context.Courses.Find(id);
                     TimetableActions.AddToTimetable(id);
                     GetCoursesFromLoggedInUsers();
