@@ -117,7 +117,7 @@
                                 </StackPanel>
                                 <Grid.ContextMenu>
                                     <ContextMenu>
-                                        <MenuItem Header="Remove from timetable" FontSize="12" Command="{Binding Path=DataContext.RemoveCourseFromTimeTable, Source={x:Reference TTMondayListView}}" CommandParameter="{Binding Id}">
+                                        <MenuItem Header="Remove from timetable" FontSize="12" Command="{Binding Path=DataContext.RemoveCourseFromTimeTable, Source={x:Reference TTMondayListView}}" CommandParameter="{Binding CourseId}">
                                             <MenuItem.Style>
                                                 <Style TargetType="MenuItem">
                                                     <Style.Triggers>
@@ -202,7 +202,7 @@
                                 </StackPanel>
                                 <Grid.ContextMenu>
                                     <ContextMenu>
-                                        <MenuItem Header="Remove from timetable" FontSize="12" Command="{Binding Path=DataContext.RemoveCourseFromTimeTable, Source={x:Reference TTTuesdayListView}}" CommandParameter="{Binding Id}">
+                                        <MenuItem Header="Remove from timetable" FontSize="12" Command="{Binding Path=DataContext.RemoveCourseFromTimeTable, Source={x:Reference TTTuesdayListView}}" CommandParameter="{Binding CourseId}">
                                             <MenuItem.Style>
                                                 <Style TargetType="MenuItem">
                                                     <Style.Triggers>
@@ -287,7 +287,7 @@
                                 </StackPanel>
                                 <Grid.ContextMenu>
                                     <ContextMenu>
-                                        <MenuItem Header="Remove from timetable" FontSize="12" Command="{Binding Path=DataContext.RemoveCourseFromTimeTable, Source={x:Reference TTWednesdayListView}}" CommandParameter="{Binding Id}">
+                                        <MenuItem Header="Remove from timetable" FontSize="12" Command="{Binding Path=DataContext.RemoveCourseFromTimeTable, Source={x:Reference TTWednesdayListView}}" CommandParameter="{Binding CourseId}">
                                             <MenuItem.Style>
                                                 <Style TargetType="MenuItem">
                                                     <Style.Triggers>
@@ -372,7 +372,7 @@
                                 </StackPanel>
                                 <Grid.ContextMenu>
                                     <ContextMenu>
-                                        <MenuItem Header="Remove from timetable" FontSize="12" Command="{Binding Path=DataContext.RemoveCourseFromTimeTable, Source={x:Reference TTThursdayListView}}" CommandParameter="{Binding Id}">
+                                        <MenuItem Header="Remove from timetable" FontSize="12" Command="{Binding Path=DataContext.RemoveCourseFromTimeTable, Source={x:Reference TTThursdayListView}}" CommandParameter="{Binding CourseId}">
                                             <MenuItem.Style>
                                                 <Style TargetType="MenuItem">
                                                     <Style.Triggers>
@@ -457,7 +457,7 @@
                                 </StackPanel>
                                 <Grid.ContextMenu>
                                     <ContextMenu>
-                                        <MenuItem Header="Remove from timetable" FontSize="12" Command="{Binding Path=DataContext.RemoveCourseFromTimeTable, Source={x:Reference TTFridayListView}}" CommandParameter="{Binding Id}">
+                                        <MenuItem Header="Remove from timetable" FontSize="12" Command="{Binding Path=DataContext.RemoveCourseFromTimeTable, Source={x:Reference TTFridayListView}}" CommandParameter="{Binding CourseId}">
                                             <MenuItem.Style>
                                                 <Style TargetType="MenuItem">
                                                     <Style.Triggers>
@@ -542,7 +542,7 @@
                                 </StackPanel>
                                 <Grid.ContextMenu>
                                     <ContextMenu>
-                                        <MenuItem Header="Remove from timetable" FontSize="12" Command="{Binding Path=DataContext.RemoveCourseFromTimeTable, Source={x:Reference TTSaturdayListView}}" CommandParameter="{Binding Id}">
+                                        <MenuItem Header="Remove from timetable" FontSize="12" Command="{Binding Path=DataContext.RemoveCourseFromTimeTable, Source={x:Reference TTSaturdayListView}}" CommandParameter="{Binding CourseId}">
                                             <MenuItem.Style>
                                                 <Style TargetType="MenuItem">
                                                     <Style.Triggers>
@@ -627,7 +627,7 @@
                                 </StackPanel>
                                 <Grid.ContextMenu>
                                     <ContextMenu>
-                                        <MenuItem Header="Remove from timetable" FontSize="12" Command="{Binding Path=DataContext.RemoveCourseFromTimeTable, Source={x:Reference TTSundayListView}}" CommandParameter="{Binding Id}">
+                                        <MenuItem Header="Remove from timetable" FontSize="12" Command="{Binding Path=DataContext.RemoveCourseFromTimeTable, Source={x:Reference TTSundayListView}}" CommandParameter="{Binding CourseId}">
                                             <MenuItem.Style>
                                                 <Style TargetType="MenuItem">
                                                     <Style.Triggers>

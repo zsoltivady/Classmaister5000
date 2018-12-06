@@ -58,6 +58,7 @@ namespace Orarend_osszerako.BusinessLogic
             using (var context = new Classmaister5000Entities())
             {
                 Timetable removeThis = context.Timetables.Where(c => c.Course_Id == courseId).First();
+                context.Timetables.Remove(removeThis);
                 context.SaveChanges();
             }
 
