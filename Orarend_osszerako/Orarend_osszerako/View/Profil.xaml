@@ -29,15 +29,15 @@
                 </materialDesign:ColorZone>
                 <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="0 5 0 5">
                     <Label FontWeight="Bold">Nickname:</Label>
-                    <Label Content="{Binding Nickname, Mode=TwoWay}" ></Label>
+                    <Label Content="{Binding Nickname}" ></Label>
                 </StackPanel>
                 <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="0 5 0 5">
                     <Label FontWeight="Bold">First name:</Label>
-                    <Label Content="{Binding Firstname, Mode=TwoWay}"></Label>
+                    <Label Content="{Binding Firstname}"></Label>
                 </StackPanel>
                 <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="0 5 0 5">
                     <Label FontWeight="Bold">Last name:</Label>
-                    <Label Content="{Binding Lastname, Mode=TwoWay}"></Label>
+                    <Label Content="{Binding Lastname}"></Label>
                 </StackPanel>
                 <Button
           Style="{StaticResource MaterialDesignRaisedButton}"
@@ -45,14 +45,14 @@
                     Reset Password
                 </Button>
                 <materialDesign:ColorZone Mode="Light" VerticalAlignment="Stretch">
-                        <StackPanel>
+                    <StackPanel>
                         <Label HorizontalAlignment="Center" Margin="0 10 0 0">Please rate our App:</Label>
                         <materialDesign:RatingBar
                             Value="3"
                             x:Name="BasicRatingBar"
                             HorizontalAlignment="Center" Margin="0 0 0 5"/>
                     </StackPanel>
-                    
+
                 </materialDesign:ColorZone>
             </StackPanel>
         </materialDesign:Card>
