@@ -41,8 +41,8 @@
                 </StackPanel>
                 <Button
           Style="{StaticResource MaterialDesignRaisedButton}"
-          Margin="0 5 0 20" Width="200">
-                    Reset Password
+          Margin="0 5 0 20" Width="200" Click="Button_Click">
+                    Change Password
                 </Button>
                 <materialDesign:ColorZone Mode="Light" VerticalAlignment="Stretch">
                     <StackPanel>
@@ -50,7 +50,7 @@
                         <materialDesign:RatingBar
                             Value="3"
                             x:Name="BasicRatingBar"
-                            HorizontalAlignment="Center" Margin="0 0 0 5"/>
+                            HorizontalAlignment="Center" Margin="0 0 0 5" MouseDoubleClick="BasicRatingBar_MouseDoubleClick"/>
                     </StackPanel>
 
                 </materialDesign:ColorZone>

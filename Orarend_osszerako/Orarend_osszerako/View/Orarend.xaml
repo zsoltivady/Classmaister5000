@@ -27,7 +27,6 @@
             <ColumnDefinition Width="2*"/>
             <ColumnDefinition Width="5.5*"/>
         </Grid.ColumnDefinitions>
-
         <Grid Grid.Column="1" Name="TimeTableGrid" VerticalAlignment="Top" Margin="5 10 5 0">
             <Grid.RowDefinitions>
                 <RowDefinition Name="TTNameRow" Height="0.1*"/>
@@ -78,17 +77,57 @@
                                 </StackPanel>
                                 <TextBlock Text="{Binding Teacher}" Grid.Row="3" Grid.Column="0" TextWrapping="Wrap"/>
                                 <StackPanel Orientation="Horizontal" Grid.Row="4" Grid.Column="0" >
-                                    <TextBlock Text="{Binding From.Hour}" />
-                                    <TextBlock Text=":"/>
-                                    <TextBlock Text="{Binding From.Minute}" />
-                                    <TextBlock Text=" - "/>
-                                    <TextBlock Text="{Binding To.Hour}" />
-                                    <TextBlock Text=":"/>
-                                    <TextBlock Text="{Binding To.Minute}" />
+                                    <TextBlock Text="{Binding From.Hour}"/>
+                                    <TextBlock Text=":">
+                                        <TextBlock.Style>
+                                            <Style TargetType="TextBlock">
+                                                <Style.Triggers>
+                                                    <DataTrigger Binding="{Binding Name}" Value="{x:Null}">
+                                                        <Setter Property="Visibility" Value="Collapsed" />
+                                                    </DataTrigger>
+                                                </Style.Triggers>
+                                            </Style>
+                                        </TextBlock.Style>
+                                    </TextBlock>
+                                    <TextBlock Text="{Binding From.Minute}"/>
+                                    <TextBlock Text=" - ">
+                                        <TextBlock.Style>
+                                            <Style TargetType="TextBlock">
+                                                <Style.Triggers>
+                                                    <DataTrigger Binding="{Binding Name}" Value="{x:Null}">
+                                                        <Setter Property="Visibility" Value="Collapsed" />
+                                                    </DataTrigger>
+                                                </Style.Triggers>
+                                            </Style>
+                                        </TextBlock.Style>
+                                    </TextBlock>
+                                    <TextBlock Text="{Binding To.Hour}"/>
+                                    <TextBlock Text=":">
+                                        <TextBlock.Style>
+                                            <Style TargetType="TextBlock">
+                                                <Style.Triggers>
+                                                    <DataTrigger Binding="{Binding Name}" Value="{x:Null}">
+                                                        <Setter Property="Visibility" Value="Collapsed" />
+                                                    </DataTrigger>
+                                                </Style.Triggers>
+                                            </Style>
+                                        </TextBlock.Style>
+                                    </TextBlock>
+                                    <TextBlock Text="{Binding To.Minute}"/>
                                 </StackPanel>
                                 <Grid.ContextMenu>
                                     <ContextMenu>
-                                        <MenuItem Header="Remove from timetable" FontSize="12" Command="{Binding Path=DataContext.RemoveCourseFromTimeTable, Source={x:Reference TTMondayListView}}" CommandParameter="{Binding Id}"/>
+                                        <MenuItem Header="Remove from timetable" FontSize="12" Command="{Binding Path=DataContext.RemoveCourseFromTimeTable, Source={x:Reference TTMondayListView}}" CommandParameter="{Binding Id}">
+                                            <MenuItem.Style>
+                                                <Style TargetType="MenuItem">
+                                                    <Style.Triggers>
+                                                        <DataTrigger Binding="{Binding Name}" Value="{x:Null}">
+                                                            <Setter Property="IsEnabled" Value="False" />
+                                                        </DataTrigger>
+                                                    </Style.Triggers>
+                                                </Style>
+                                            </MenuItem.Style>
+                                        </MenuItem>
                                     </ContextMenu>
                                 </Grid.ContextMenu>
                             </Grid>
@@ -124,16 +163,481 @@
                                 <TextBlock Text="{Binding Teacher}" Grid.Row="3" Grid.Column="0" TextWrapping="Wrap"/>
                                 <StackPanel Orientation="Horizontal" Grid.Row="4" Grid.Column="0" >
                                     <TextBlock Text="{Binding From.Hour}" />
-                                    <TextBlock Text=":"/>
+                                    <TextBlock Text=":">
+                                        <TextBlock.Style>
+                                            <Style TargetType="TextBlock">
+                                                <Style.Triggers>
+                                                    <DataTrigger Binding="{Binding Name}" Value="{x:Null}">
+                                                        <Setter Property="Visibility" Value="Collapsed" />
+                                                    </DataTrigger>
+                                                </Style.Triggers>
+                                            </Style>
+                                        </TextBlock.Style>
+                                    </TextBlock>
                                     <TextBlock Text="{Binding From.Minute}" />
-                                    <TextBlock Text=" - "/>
+                                    <TextBlock Text=" - ">
+                                        <TextBlock.Style>
+                                            <Style TargetType="TextBlock">
+                                                <Style.Triggers>
+                                                    <DataTrigger Binding="{Binding Name}" Value="{x:Null}">
+                                                        <Setter Property="Visibility" Value="Collapsed" />
+                                                    </DataTrigger>
+                                                </Style.Triggers>
+                                            </Style>
+                                        </TextBlock.Style>
+                                    </TextBlock>
                                     <TextBlock Text="{Binding To.Hour}" />
-                                    <TextBlock Text=":"/>
+                                    <TextBlock Text=":">
+                                        <TextBlock.Style>
+                                            <Style TargetType="TextBlock">
+                                                <Style.Triggers>
+                                                    <DataTrigger Binding="{Binding Name}" Value="{x:Null}">
+                                                        <Setter Property="Visibility" Value="Collapsed" />
+                                                    </DataTrigger>
+                                                </Style.Triggers>
+                                            </Style>
+                                        </TextBlock.Style>
+                                    </TextBlock>
                                     <TextBlock Text="{Binding To.Minute}" />
                                 </StackPanel>
                                 <Grid.ContextMenu>
                                     <ContextMenu>
-                                        <MenuItem Header="Remove from timetable" FontSize="12" Command="{Binding Path=DataContext.RemoveCourseFromTimeTable, Source={x:Reference TTTuesdayListView}}" CommandParameter="{Binding Id}"/>
+                                        <MenuItem Header="Remove from timetable" FontSize="12" Command="{Binding Path=DataContext.RemoveCourseFromTimeTable, Source={x:Reference TTTuesdayListView}}" CommandParameter="{Binding Id}">
+                                            <MenuItem.Style>
+                                                <Style TargetType="MenuItem">
+                                                    <Style.Triggers>
+                                                        <DataTrigger Binding="{Binding Name}" Value="{x:Null}">
+                                                            <Setter Property="IsEnabled" Value="False" />
+                                                        </DataTrigger>
+                                                    </Style.Triggers>
+                                                </Style>
+                                            </MenuItem.Style>
+                                        </MenuItem>
+                                    </ContextMenu>
+                                </Grid.ContextMenu>
+                            </Grid>
+                        </Border>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+
+            <ListView Name="TTWednesdayListView" Grid.Column="2" Grid.Row="1" HorizontalContentAlignment="Stretch" 
+                      ScrollViewer.HorizontalScrollBarVisibility="Disabled" ScrollViewer.VerticalScrollBarVisibility="Disabled"
+                      ItemsSource="{Binding WednesdayCourses}">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <Border BorderBrush="{DynamicResource PrimaryHueMidBrush}" BorderThickness="1" Padding="2" Width="Auto" HorizontalAlignment="Stretch">
+                            <Grid>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition/>
+                                    <RowDefinition/>
+                                    <RowDefinition/>
+                                    <RowDefinition/>
+                                    <RowDefinition/>
+                                </Grid.RowDefinitions>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition/>
+                                </Grid.ColumnDefinitions>
+
+                                <TextBlock Text="{Binding Subject.SubjectName}" Grid.Row="0" Grid.Column="0" TextWrapping="Wrap"/>
+                                <Separator Grid.Row="1" Grid.Column="0"/>
+                                <StackPanel Orientation="Horizontal" Grid.Row="2" Grid.Column="0">
+                                    <TextBlock Text="{Binding Name}" Margin="0 0 5 0"/>
+                                    <TextBlock Text="{Binding Room}"/>
+                                </StackPanel>
+                                <TextBlock Text="{Binding Teacher}" Grid.Row="3" Grid.Column="0" TextWrapping="Wrap"/>
+                                <StackPanel Orientation="Horizontal" Grid.Row="4" Grid.Column="0" >
+                                    <TextBlock Text="{Binding From.Hour}" />
+                                    <TextBlock Text=":">
+                                        <TextBlock.Style>
+                                            <Style TargetType="TextBlock">
+                                                <Style.Triggers>
+                                                    <DataTrigger Binding="{Binding Name}" Value="{x:Null}">
+                                                        <Setter Property="Visibility" Value="Collapsed" />
+                                                    </DataTrigger>
+                                                </Style.Triggers>
+                                            </Style>
+                                        </TextBlock.Style>
+                                    </TextBlock>
+                                    <TextBlock Text="{Binding From.Minute}" />
+                                    <TextBlock Text=" - ">
+                                        <TextBlock.Style>
+                                            <Style TargetType="TextBlock">
+                                                <Style.Triggers>
+                                                    <DataTrigger Binding="{Binding Name}" Value="{x:Null}">
+                                                        <Setter Property="Visibility" Value="Collapsed" />
+                                                    </DataTrigger>
+                                                </Style.Triggers>
+                                            </Style>
+                                        </TextBlock.Style>
+                                    </TextBlock>
+                                    <TextBlock Text="{Binding To.Hour}" />
+                                    <TextBlock Text=":">
+                                        <TextBlock.Style>
+                                            <Style TargetType="TextBlock">
+                                                <Style.Triggers>
+                                                    <DataTrigger Binding="{Binding Name}" Value="{x:Null}">
+                                                        <Setter Property="Visibility" Value="Collapsed" />
+                                                    </DataTrigger>
+                                                </Style.Triggers>
+                                            </Style>
+                                        </TextBlock.Style>
+                                    </TextBlock>
+                                    <TextBlock Text="{Binding To.Minute}" />
+                                </StackPanel>
+                                <Grid.ContextMenu>
+                                    <ContextMenu>
+                                        <MenuItem Header="Remove from timetable" FontSize="12" Command="{Binding Path=DataContext.RemoveCourseFromTimeTable, Source={x:Reference TTWednesdayListView}}" CommandParameter="{Binding Id}">
+                                            <MenuItem.Style>
+                                                <Style TargetType="MenuItem">
+                                                    <Style.Triggers>
+                                                        <DataTrigger Binding="{Binding Name}" Value="{x:Null}">
+                                                            <Setter Property="IsEnabled" Value="False" />
+                                                        </DataTrigger>
+                                                    </Style.Triggers>
+                                                </Style>
+                                            </MenuItem.Style>
+                                        </MenuItem>
+                                    </ContextMenu>
+                                </Grid.ContextMenu>
+                            </Grid>
+                        </Border>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+
+            <ListView Name="TTThursdayListView" Grid.Column="3" Grid.Row="1" HorizontalContentAlignment="Stretch" 
+                      ScrollViewer.HorizontalScrollBarVisibility="Disabled" ScrollViewer.VerticalScrollBarVisibility="Disabled"
+                      ItemsSource="{Binding ThursdayCourses}">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <Border BorderBrush="{DynamicResource PrimaryHueMidBrush}" BorderThickness="1" Padding="2" Width="Auto" HorizontalAlignment="Stretch">
+                            <Grid>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition/>
+                                    <RowDefinition/>
+                                    <RowDefinition/>
+                                    <RowDefinition/>
+                                    <RowDefinition/>
+                                </Grid.RowDefinitions>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition/>
+                                </Grid.ColumnDefinitions>
+
+                                <TextBlock Text="{Binding Subject.SubjectName}" Grid.Row="0" Grid.Column="0" TextWrapping="Wrap"/>
+                                <Separator Grid.Row="1" Grid.Column="0"/>
+                                <StackPanel Orientation="Horizontal" Grid.Row="2" Grid.Column="0">
+                                    <TextBlock Text="{Binding Name}" Margin="0 0 5 0"/>
+                                    <TextBlock Text="{Binding Room}"/>
+                                </StackPanel>
+                                <TextBlock Text="{Binding Teacher}" Grid.Row="3" Grid.Column="0" TextWrapping="Wrap"/>
+                                <StackPanel Orientation="Horizontal" Grid.Row="4" Grid.Column="0" >
+                                    <TextBlock Text="{Binding From.Hour}" />
+                                    <TextBlock Text=":">
+                                        <TextBlock.Style>
+                                            <Style TargetType="TextBlock">
+                                                <Style.Triggers>
+                                                    <DataTrigger Binding="{Binding Name}" Value="{x:Null}">
+                                                        <Setter Property="Visibility" Value="Collapsed" />
+                                                    </DataTrigger>
+                                                </Style.Triggers>
+                                            </Style>
+                                        </TextBlock.Style>
+                                    </TextBlock>
+                                    <TextBlock Text="{Binding From.Minute}" />
+                                    <TextBlock Text=" - ">
+                                        <TextBlock.Style>
+                                            <Style TargetType="TextBlock">
+                                                <Style.Triggers>
+                                                    <DataTrigger Binding="{Binding Name}" Value="{x:Null}">
+                                                        <Setter Property="Visibility" Value="Collapsed" />
+                                                    </DataTrigger>
+                                                </Style.Triggers>
+                                            </Style>
+                                        </TextBlock.Style>
+                                    </TextBlock>
+                                    <TextBlock Text="{Binding To.Hour}" />
+                                    <TextBlock Text=":">
+                                        <TextBlock.Style>
+                                            <Style TargetType="TextBlock">
+                                                <Style.Triggers>
+                                                    <DataTrigger Binding="{Binding Name}" Value="{x:Null}">
+                                                        <Setter Property="Visibility" Value="Collapsed" />
+                                                    </DataTrigger>
+                                                </Style.Triggers>
+                                            </Style>
+                                        </TextBlock.Style>
+                                    </TextBlock>
+                                    <TextBlock Text="{Binding To.Minute}" />
+                                </StackPanel>
+                                <Grid.ContextMenu>
+                                    <ContextMenu>
+                                        <MenuItem Header="Remove from timetable" FontSize="12" Command="{Binding Path=DataContext.RemoveCourseFromTimeTable, Source={x:Reference TTThursdayListView}}" CommandParameter="{Binding Id}">
+                                            <MenuItem.Style>
+                                                <Style TargetType="MenuItem">
+                                                    <Style.Triggers>
+                                                        <DataTrigger Binding="{Binding Name}" Value="{x:Null}">
+                                                            <Setter Property="IsEnabled" Value="False" />
+                                                        </DataTrigger>
+                                                    </Style.Triggers>
+                                                </Style>
+                                            </MenuItem.Style>
+                                        </MenuItem>
+                                    </ContextMenu>
+                                </Grid.ContextMenu>
+                            </Grid>
+                        </Border>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+
+            <ListView Name="TTFridayListView" Grid.Column="4" Grid.Row="1" HorizontalContentAlignment="Stretch" 
+                      ScrollViewer.HorizontalScrollBarVisibility="Disabled" ScrollViewer.VerticalScrollBarVisibility="Disabled"
+                      ItemsSource="{Binding FridayCourses}">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <Border BorderBrush="{DynamicResource PrimaryHueMidBrush}" BorderThickness="1" Padding="2" Width="Auto" HorizontalAlignment="Stretch">
+                            <Grid>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition/>
+                                    <RowDefinition/>
+                                    <RowDefinition/>
+                                    <RowDefinition/>
+                                    <RowDefinition/>
+                                </Grid.RowDefinitions>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition/>
+                                </Grid.ColumnDefinitions>
+
+                                <TextBlock Text="{Binding Subject.SubjectName}" Grid.Row="0" Grid.Column="0" TextWrapping="Wrap"/>
+                                <Separator Grid.Row="1" Grid.Column="0"/>
+                                <StackPanel Orientation="Horizontal" Grid.Row="2" Grid.Column="0">
+                                    <TextBlock Text="{Binding Name}" Margin="0 0 5 0"/>
+                                    <TextBlock Text="{Binding Room}"/>
+                                </StackPanel>
+                                <TextBlock Text="{Binding Teacher}" Grid.Row="3" Grid.Column="0" TextWrapping="Wrap"/>
+                                <StackPanel Orientation="Horizontal" Grid.Row="4" Grid.Column="0" >
+                                    <TextBlock Text="{Binding From.Hour}" />
+                                    <TextBlock Text=":">
+                                        <TextBlock.Style>
+                                            <Style TargetType="TextBlock">
+                                                <Style.Triggers>
+                                                    <DataTrigger Binding="{Binding Name}" Value="{x:Null}">
+                                                        <Setter Property="Visibility" Value="Collapsed" />
+                                                    </DataTrigger>
+                                                </Style.Triggers>
+                                            </Style>
+                                        </TextBlock.Style>
+                                    </TextBlock>
+                                    <TextBlock Text="{Binding From.Minute}" />
+                                    <TextBlock Text=" - ">
+                                        <TextBlock.Style>
+                                            <Style TargetType="TextBlock">
+                                                <Style.Triggers>
+                                                    <DataTrigger Binding="{Binding Name}" Value="{x:Null}">
+                                                        <Setter Property="Visibility" Value="Collapsed" />
+                                                    </DataTrigger>
+                                                </Style.Triggers>
+                                            </Style>
+                                        </TextBlock.Style>
+                                    </TextBlock>
+                                    <TextBlock Text="{Binding To.Hour}" />
+                                    <TextBlock Text=":">
+                                        <TextBlock.Style>
+                                            <Style TargetType="TextBlock">
+                                                <Style.Triggers>
+                                                    <DataTrigger Binding="{Binding Name}" Value="{x:Null}">
+                                                        <Setter Property="Visibility" Value="Collapsed" />
+                                                    </DataTrigger>
+                                                </Style.Triggers>
+                                            </Style>
+                                        </TextBlock.Style>
+                                    </TextBlock>
+                                    <TextBlock Text="{Binding To.Minute}" />
+                                </StackPanel>
+                                <Grid.ContextMenu>
+                                    <ContextMenu>
+                                        <MenuItem Header="Remove from timetable" FontSize="12" Command="{Binding Path=DataContext.RemoveCourseFromTimeTable, Source={x:Reference TTFridayListView}}" CommandParameter="{Binding Id}">
+                                            <MenuItem.Style>
+                                                <Style TargetType="MenuItem">
+                                                    <Style.Triggers>
+                                                        <DataTrigger Binding="{Binding Name}" Value="{x:Null}">
+                                                            <Setter Property="IsEnabled" Value="False" />
+                                                        </DataTrigger>
+                                                    </Style.Triggers>
+                                                </Style>
+                                            </MenuItem.Style>
+                                        </MenuItem>
+                                    </ContextMenu>
+                                </Grid.ContextMenu>
+                            </Grid>
+                        </Border>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+
+            <ListView Name="TTSaturdayListView" Grid.Column="5" Grid.Row="1" HorizontalContentAlignment="Stretch" 
+                      ScrollViewer.HorizontalScrollBarVisibility="Disabled" ScrollViewer.VerticalScrollBarVisibility="Disabled"
+                      ItemsSource="{Binding SaturdayCourses}">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <Border BorderBrush="{DynamicResource PrimaryHueMidBrush}" BorderThickness="1" Padding="2" Width="Auto" HorizontalAlignment="Stretch">
+                            <Grid>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition/>
+                                    <RowDefinition/>
+                                    <RowDefinition/>
+                                    <RowDefinition/>
+                                    <RowDefinition/>
+                                </Grid.RowDefinitions>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition/>
+                                </Grid.ColumnDefinitions>
+
+                                <TextBlock Text="{Binding Subject.SubjectName}" Grid.Row="0" Grid.Column="0" TextWrapping="Wrap"/>
+                                <Separator Grid.Row="1" Grid.Column="0"/>
+                                <StackPanel Orientation="Horizontal" Grid.Row="2" Grid.Column="0">
+                                    <TextBlock Text="{Binding Name}" Margin="0 0 5 0"/>
+                                    <TextBlock Text="{Binding Room}"/>
+                                </StackPanel>
+                                <TextBlock Text="{Binding Teacher}" Grid.Row="3" Grid.Column="0" TextWrapping="Wrap"/>
+                                <StackPanel Orientation="Horizontal" Grid.Row="4" Grid.Column="0" >
+                                    <TextBlock Text="{Binding From.Hour}" />
+                                    <TextBlock Text=":">
+                                        <TextBlock.Style>
+                                            <Style TargetType="TextBlock">
+                                                <Style.Triggers>
+                                                    <DataTrigger Binding="{Binding Name}" Value="{x:Null}">
+                                                        <Setter Property="Visibility" Value="Collapsed" />
+                                                    </DataTrigger>
+                                                </Style.Triggers>
+                                            </Style>
+                                        </TextBlock.Style>
+                                    </TextBlock>
+                                    <TextBlock Text="{Binding From.Minute}" />
+                                    <TextBlock Text=" - ">
+                                        <TextBlock.Style>
+                                            <Style TargetType="TextBlock">
+                                                <Style.Triggers>
+                                                    <DataTrigger Binding="{Binding Name}" Value="{x:Null}">
+                                                        <Setter Property="Visibility" Value="Collapsed" />
+                                                    </DataTrigger>
+                                                </Style.Triggers>
+                                            </Style>
+                                        </TextBlock.Style>
+                                    </TextBlock>
+                                    <TextBlock Text="{Binding To.Hour}" />
+                                    <TextBlock Text=":">
+                                        <TextBlock.Style>
+                                            <Style TargetType="TextBlock">
+                                                <Style.Triggers>
+                                                    <DataTrigger Binding="{Binding Name}" Value="{x:Null}">
+                                                        <Setter Property="Visibility" Value="Collapsed" />
+                                                    </DataTrigger>
+                                                </Style.Triggers>
+                                            </Style>
+                                        </TextBlock.Style>
+                                    </TextBlock>
+                                    <TextBlock Text="{Binding To.Minute}" />
+                                </StackPanel>
+                                <Grid.ContextMenu>
+                                    <ContextMenu>
+                                        <MenuItem Header="Remove from timetable" FontSize="12" Command="{Binding Path=DataContext.RemoveCourseFromTimeTable, Source={x:Reference TTSaturdayListView}}" CommandParameter="{Binding Id}">
+                                            <MenuItem.Style>
+                                                <Style TargetType="MenuItem">
+                                                    <Style.Triggers>
+                                                        <DataTrigger Binding="{Binding Name}" Value="{x:Null}">
+                                                            <Setter Property="IsEnabled" Value="False" />
+                                                        </DataTrigger>
+                                                    </Style.Triggers>
+                                                </Style>
+                                            </MenuItem.Style>
+                                        </MenuItem>
+                                    </ContextMenu>
+                                </Grid.ContextMenu>
+                            </Grid>
+                        </Border>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+
+            <ListView Name="TTSundayListView" Grid.Column="6" Grid.Row="1" HorizontalContentAlignment="Stretch" 
+                      ScrollViewer.HorizontalScrollBarVisibility="Disabled" ScrollViewer.VerticalScrollBarVisibility="Disabled"
+                      ItemsSource="{Binding SundayCourses}">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <Border BorderBrush="{DynamicResource PrimaryHueMidBrush}" BorderThickness="1" Padding="2" Width="Auto" HorizontalAlignment="Stretch">
+                            <Grid>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition/>
+                                    <RowDefinition/>
+                                    <RowDefinition/>
+                                    <RowDefinition/>
+                                    <RowDefinition/>
+                                </Grid.RowDefinitions>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition/>
+                                </Grid.ColumnDefinitions>
+
+                                <TextBlock Text="{Binding Subject.SubjectName}" Grid.Row="0" Grid.Column="0" TextWrapping="Wrap"/>
+                                <Separator Grid.Row="1" Grid.Column="0"/>
+                                <StackPanel Orientation="Horizontal" Grid.Row="2" Grid.Column="0">
+                                    <TextBlock Text="{Binding Name}" Margin="0 0 5 0"/>
+                                    <TextBlock Text="{Binding Room}"/>
+                                </StackPanel>
+                                <TextBlock Text="{Binding Teacher}" Grid.Row="3" Grid.Column="0" TextWrapping="Wrap"/>
+                                <StackPanel Orientation="Horizontal" Grid.Row="4" Grid.Column="0" >
+                                    <TextBlock Text="{Binding From.Hour}" />
+                                    <TextBlock Text=":">
+                                        <TextBlock.Style>
+                                            <Style TargetType="TextBlock">
+                                                <Style.Triggers>
+                                                    <DataTrigger Binding="{Binding Name}" Value="{x:Null}">
+                                                        <Setter Property="Visibility" Value="Collapsed" />
+                                                    </DataTrigger>
+                                                </Style.Triggers>
+                                            </Style>
+                                        </TextBlock.Style>
+                                    </TextBlock>
+                                    <TextBlock Text="{Binding From.Minute}" />
+                                    <TextBlock Text=" - ">
+                                        <TextBlock.Style>
+                                            <Style TargetType="TextBlock">
+                                                <Style.Triggers>
+                                                    <DataTrigger Binding="{Binding Name}" Value="{x:Null}">
+                                                        <Setter Property="Visibility" Value="Collapsed" />
+                                                    </DataTrigger>
+                                                </Style.Triggers>
+                                            </Style>
+                                        </TextBlock.Style>
+                                    </TextBlock>
+                                    <TextBlock Text="{Binding To.Hour}" />
+                                    <TextBlock Text=":">
+                                        <TextBlock.Style>
+                                            <Style TargetType="TextBlock">
+                                                <Style.Triggers>
+                                                    <DataTrigger Binding="{Binding Name}" Value="{x:Null}">
+                                                        <Setter Property="Visibility" Value="Collapsed" />
+                                                    </DataTrigger>
+                                                </Style.Triggers>
+                                            </Style>
+                                        </TextBlock.Style>
+                                    </TextBlock>
+                                    <TextBlock Text="{Binding To.Minute}" />
+                                </StackPanel>
+                                <Grid.ContextMenu>
+                                    <ContextMenu>
+                                        <MenuItem Header="Remove from timetable" FontSize="12" Command="{Binding Path=DataContext.RemoveCourseFromTimeTable, Source={x:Reference TTSundayListView}}" CommandParameter="{Binding Id}">
+                                            <MenuItem.Style>
+                                                <Style TargetType="MenuItem">
+                                                    <Style.Triggers>
+                                                        <DataTrigger Binding="{Binding Name}" Value="{x:Null}">
+                                                            <Setter Property="IsEnabled" Value="False" />
+                                                        </DataTrigger>
+                                                    </Style.Triggers>
+                                                </Style>
+                                            </MenuItem.Style>
+                                        </MenuItem>
                                     </ContextMenu>
                                 </Grid.ContextMenu>
                             </Grid>
