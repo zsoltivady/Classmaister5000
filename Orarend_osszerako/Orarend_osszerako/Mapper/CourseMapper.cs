@@ -49,6 +49,11 @@ namespace Orarend_osszerako.Mapper
             //newModelCourse.Timetables = TimetableMapper.EntityCollectionToModelCollection(course.Timetables);
             newModelCourse.Day = DayMapper.EntityToModel(course.Day);
             //newModelCourse.Subject = SubjectMapper.EntityToModel(course.Subject);
+            newModelCourse.Subject = new SubjectModel();
+            newModelCourse.Subject.SubjectId = course.Subject.Id;
+            newModelCourse.Subject.SubjectName = course.Subject.SubjectName;
+            newModelCourse.Subject.IsLecture = (course.Subject.IsLecture == 0 ? false : true);
+            newModelCourse.Subject.User_Id = course.Subject.User_Id;
             return newModelCourse;
         }
         /// <summary>
