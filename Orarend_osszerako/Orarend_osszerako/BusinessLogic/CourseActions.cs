@@ -187,6 +187,7 @@ namespace Orarend_osszerako.BusinessLogic
             using (var context = new Classmaister5000Entities())
             {
                 var deleteThis = context.Courses.Where(c => c.Id == id).First();
+                TimetableActions.RemoveFromTimetableByCourseId(id);
                 context.Courses.Remove(deleteThis);
                 context.SaveChanges();
             }

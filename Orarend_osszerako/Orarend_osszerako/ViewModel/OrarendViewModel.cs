@@ -177,6 +177,14 @@ namespace Orarend_osszerako.ViewModel
                 CourseActions.DeleteCourse(id);
                 MessageBox.Show("The course has been successfully removed!");
                 NotifyPropertyChanged("Subjects");
+                GetCoursesFromLoggedInUsers();
+                NotifyPropertyChanged("MondayCourses");
+                NotifyPropertyChanged("TuesdayCourses");
+                NotifyPropertyChanged("WednesdayCourses");
+                NotifyPropertyChanged("ThursdayCourses");
+                NotifyPropertyChanged("FridayCourses");
+                NotifyPropertyChanged("SaturdayCourses");
+                NotifyPropertyChanged("SundayCourses");
             }
             catch (Exception e)
             {
