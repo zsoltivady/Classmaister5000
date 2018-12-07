@@ -57,6 +57,15 @@
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <Border BorderBrush="{DynamicResource PrimaryHueMidBrush}" BorderThickness="1" Padding="2" Width="Auto" HorizontalAlignment="Stretch">
+                            <Border.Style>
+                                <Style TargetType="Border">
+                                    <Style.Triggers>
+                                        <DataTrigger Binding="{Binding Name}" Value="{x:Null}">
+                                            <Setter Property="Visibility" Value="Hidden" />
+                                        </DataTrigger>
+                                    </Style.Triggers>
+                                </Style>
+                            </Border.Style>
                             <Grid>
                                 <Grid.RowDefinitions>
                                     <RowDefinition/>
@@ -77,43 +86,9 @@
                                 </StackPanel>
                                 <TextBlock Text="{Binding Teacher}" Grid.Row="3" Grid.Column="0" TextWrapping="Wrap"/>
                                 <StackPanel Orientation="Horizontal" Grid.Row="4" Grid.Column="0" >
-                                    <TextBlock Text="{Binding From.Hour}"/>
-                                    <TextBlock Text=":">
-                                        <TextBlock.Style>
-                                            <Style TargetType="TextBlock">
-                                                <Style.Triggers>
-                                                    <DataTrigger Binding="{Binding Name}" Value="{x:Null}">
-                                                        <Setter Property="Visibility" Value="Collapsed" />
-                                                    </DataTrigger>
-                                                </Style.Triggers>
-                                            </Style>
-                                        </TextBlock.Style>
-                                    </TextBlock>
-                                    <TextBlock Text="{Binding From.Minute}"/>
-                                    <TextBlock Text=" - ">
-                                        <TextBlock.Style>
-                                            <Style TargetType="TextBlock">
-                                                <Style.Triggers>
-                                                    <DataTrigger Binding="{Binding Name}" Value="{x:Null}">
-                                                        <Setter Property="Visibility" Value="Collapsed" />
-                                                    </DataTrigger>
-                                                </Style.Triggers>
-                                            </Style>
-                                        </TextBlock.Style>
-                                    </TextBlock>
-                                    <TextBlock Text="{Binding To.Hour}"/>
-                                    <TextBlock Text=":">
-                                        <TextBlock.Style>
-                                            <Style TargetType="TextBlock">
-                                                <Style.Triggers>
-                                                    <DataTrigger Binding="{Binding Name}" Value="{x:Null}">
-                                                        <Setter Property="Visibility" Value="Collapsed" />
-                                                    </DataTrigger>
-                                                </Style.Triggers>
-                                            </Style>
-                                        </TextBlock.Style>
-                                    </TextBlock>
-                                    <TextBlock Text="{Binding To.Minute}"/>
+                                    <TextBlock Text="{Binding From, StringFormat={}{0:HH:mm}}"/>
+                                    <TextBlock Text=" - "/>
+                                    <TextBlock Text="{Binding To, StringFormat={}{0:HH:mm}}"/>
                                 </StackPanel>
                                 <Grid.ContextMenu>
                                     <ContextMenu>
@@ -142,6 +117,15 @@
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <Border BorderBrush="{DynamicResource PrimaryHueMidBrush}" BorderThickness="1" Padding="2" Width="Auto" HorizontalAlignment="Stretch">
+                            <Border.Style>
+                                <Style TargetType="Border">
+                                    <Style.Triggers>
+                                        <DataTrigger Binding="{Binding Name}" Value="{x:Null}">
+                                            <Setter Property="Visibility" Value="Hidden" />
+                                        </DataTrigger>
+                                    </Style.Triggers>
+                                </Style>
+                            </Border.Style>
                             <Grid>
                                 <Grid.RowDefinitions>
                                     <RowDefinition/>
@@ -162,43 +146,9 @@
                                 </StackPanel>
                                 <TextBlock Text="{Binding Teacher}" Grid.Row="3" Grid.Column="0" TextWrapping="Wrap"/>
                                 <StackPanel Orientation="Horizontal" Grid.Row="4" Grid.Column="0" >
-                                    <TextBlock Text="{Binding From.Hour}" />
-                                    <TextBlock Text=":">
-                                        <TextBlock.Style>
-                                            <Style TargetType="TextBlock">
-                                                <Style.Triggers>
-                                                    <DataTrigger Binding="{Binding Name}" Value="{x:Null}">
-                                                        <Setter Property="Visibility" Value="Collapsed" />
-                                                    </DataTrigger>
-                                                </Style.Triggers>
-                                            </Style>
-                                        </TextBlock.Style>
-                                    </TextBlock>
-                                    <TextBlock Text="{Binding From.Minute}" />
-                                    <TextBlock Text=" - ">
-                                        <TextBlock.Style>
-                                            <Style TargetType="TextBlock">
-                                                <Style.Triggers>
-                                                    <DataTrigger Binding="{Binding Name}" Value="{x:Null}">
-                                                        <Setter Property="Visibility" Value="Collapsed" />
-                                                    </DataTrigger>
-                                                </Style.Triggers>
-                                            </Style>
-                                        </TextBlock.Style>
-                                    </TextBlock>
-                                    <TextBlock Text="{Binding To.Hour}" />
-                                    <TextBlock Text=":">
-                                        <TextBlock.Style>
-                                            <Style TargetType="TextBlock">
-                                                <Style.Triggers>
-                                                    <DataTrigger Binding="{Binding Name}" Value="{x:Null}">
-                                                        <Setter Property="Visibility" Value="Collapsed" />
-                                                    </DataTrigger>
-                                                </Style.Triggers>
-                                            </Style>
-                                        </TextBlock.Style>
-                                    </TextBlock>
-                                    <TextBlock Text="{Binding To.Minute}" />
+                                    <TextBlock Text="{Binding From, StringFormat={}{0:HH:mm}}"/>
+                                    <TextBlock Text=" - "/>
+                                    <TextBlock Text="{Binding To, StringFormat={}{0:HH:mm}}"/>
                                 </StackPanel>
                                 <Grid.ContextMenu>
                                     <ContextMenu>
@@ -227,6 +177,15 @@
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <Border BorderBrush="{DynamicResource PrimaryHueMidBrush}" BorderThickness="1" Padding="2" Width="Auto" HorizontalAlignment="Stretch">
+                            <Border.Style>
+                                <Style TargetType="Border">
+                                    <Style.Triggers>
+                                        <DataTrigger Binding="{Binding Name}" Value="{x:Null}">
+                                            <Setter Property="Visibility" Value="Hidden" />
+                                        </DataTrigger>
+                                    </Style.Triggers>
+                                </Style>
+                            </Border.Style>
                             <Grid>
                                 <Grid.RowDefinitions>
                                     <RowDefinition/>
@@ -247,43 +206,9 @@
                                 </StackPanel>
                                 <TextBlock Text="{Binding Teacher}" Grid.Row="3" Grid.Column="0" TextWrapping="Wrap"/>
                                 <StackPanel Orientation="Horizontal" Grid.Row="4" Grid.Column="0" >
-                                    <TextBlock Text="{Binding From.Hour}" />
-                                    <TextBlock Text=":">
-                                        <TextBlock.Style>
-                                            <Style TargetType="TextBlock">
-                                                <Style.Triggers>
-                                                    <DataTrigger Binding="{Binding Name}" Value="{x:Null}">
-                                                        <Setter Property="Visibility" Value="Collapsed" />
-                                                    </DataTrigger>
-                                                </Style.Triggers>
-                                            </Style>
-                                        </TextBlock.Style>
-                                    </TextBlock>
-                                    <TextBlock Text="{Binding From.Minute}" />
-                                    <TextBlock Text=" - ">
-                                        <TextBlock.Style>
-                                            <Style TargetType="TextBlock">
-                                                <Style.Triggers>
-                                                    <DataTrigger Binding="{Binding Name}" Value="{x:Null}">
-                                                        <Setter Property="Visibility" Value="Collapsed" />
-                                                    </DataTrigger>
-                                                </Style.Triggers>
-                                            </Style>
-                                        </TextBlock.Style>
-                                    </TextBlock>
-                                    <TextBlock Text="{Binding To.Hour}" />
-                                    <TextBlock Text=":">
-                                        <TextBlock.Style>
-                                            <Style TargetType="TextBlock">
-                                                <Style.Triggers>
-                                                    <DataTrigger Binding="{Binding Name}" Value="{x:Null}">
-                                                        <Setter Property="Visibility" Value="Collapsed" />
-                                                    </DataTrigger>
-                                                </Style.Triggers>
-                                            </Style>
-                                        </TextBlock.Style>
-                                    </TextBlock>
-                                    <TextBlock Text="{Binding To.Minute}" />
+                                    <TextBlock Text="{Binding From, StringFormat={}{0:HH:mm}}"/>
+                                    <TextBlock Text=" - "/>
+                                    <TextBlock Text="{Binding To, StringFormat={}{0:HH:mm}}"/>
                                 </StackPanel>
                                 <Grid.ContextMenu>
                                     <ContextMenu>
@@ -312,6 +237,15 @@
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <Border BorderBrush="{DynamicResource PrimaryHueMidBrush}" BorderThickness="1" Padding="2" Width="Auto" HorizontalAlignment="Stretch">
+                            <Border.Style>
+                                <Style TargetType="Border">
+                                    <Style.Triggers>
+                                        <DataTrigger Binding="{Binding Name}" Value="{x:Null}">
+                                            <Setter Property="Visibility" Value="Hidden" />
+                                        </DataTrigger>
+                                    </Style.Triggers>
+                                </Style>
+                            </Border.Style>
                             <Grid>
                                 <Grid.RowDefinitions>
                                     <RowDefinition/>
@@ -332,43 +266,9 @@
                                 </StackPanel>
                                 <TextBlock Text="{Binding Teacher}" Grid.Row="3" Grid.Column="0" TextWrapping="Wrap"/>
                                 <StackPanel Orientation="Horizontal" Grid.Row="4" Grid.Column="0" >
-                                    <TextBlock Text="{Binding From.Hour}" />
-                                    <TextBlock Text=":">
-                                        <TextBlock.Style>
-                                            <Style TargetType="TextBlock">
-                                                <Style.Triggers>
-                                                    <DataTrigger Binding="{Binding Name}" Value="{x:Null}">
-                                                        <Setter Property="Visibility" Value="Collapsed" />
-                                                    </DataTrigger>
-                                                </Style.Triggers>
-                                            </Style>
-                                        </TextBlock.Style>
-                                    </TextBlock>
-                                    <TextBlock Text="{Binding From.Minute}" />
-                                    <TextBlock Text=" - ">
-                                        <TextBlock.Style>
-                                            <Style TargetType="TextBlock">
-                                                <Style.Triggers>
-                                                    <DataTrigger Binding="{Binding Name}" Value="{x:Null}">
-                                                        <Setter Property="Visibility" Value="Collapsed" />
-                                                    </DataTrigger>
-                                                </Style.Triggers>
-                                            </Style>
-                                        </TextBlock.Style>
-                                    </TextBlock>
-                                    <TextBlock Text="{Binding To.Hour}" />
-                                    <TextBlock Text=":">
-                                        <TextBlock.Style>
-                                            <Style TargetType="TextBlock">
-                                                <Style.Triggers>
-                                                    <DataTrigger Binding="{Binding Name}" Value="{x:Null}">
-                                                        <Setter Property="Visibility" Value="Collapsed" />
-                                                    </DataTrigger>
-                                                </Style.Triggers>
-                                            </Style>
-                                        </TextBlock.Style>
-                                    </TextBlock>
-                                    <TextBlock Text="{Binding To.Minute}" />
+                                    <TextBlock Text="{Binding From, StringFormat={}{0:HH:mm}}"/>
+                                    <TextBlock Text=" - "/>
+                                    <TextBlock Text="{Binding To, StringFormat={}{0:HH:mm}}"/>
                                 </StackPanel>
                                 <Grid.ContextMenu>
                                     <ContextMenu>
@@ -397,6 +297,15 @@
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <Border BorderBrush="{DynamicResource PrimaryHueMidBrush}" BorderThickness="1" Padding="2" Width="Auto" HorizontalAlignment="Stretch">
+                            <Border.Style>
+                                <Style TargetType="Border">
+                                    <Style.Triggers>
+                                        <DataTrigger Binding="{Binding Name}" Value="{x:Null}">
+                                            <Setter Property="Visibility" Value="Hidden" />
+                                        </DataTrigger>
+                                    </Style.Triggers>
+                                </Style>
+                            </Border.Style>
                             <Grid>
                                 <Grid.RowDefinitions>
                                     <RowDefinition/>
@@ -417,43 +326,9 @@
                                 </StackPanel>
                                 <TextBlock Text="{Binding Teacher}" Grid.Row="3" Grid.Column="0" TextWrapping="Wrap"/>
                                 <StackPanel Orientation="Horizontal" Grid.Row="4" Grid.Column="0" >
-                                    <TextBlock Text="{Binding From.Hour}" />
-                                    <TextBlock Text=":">
-                                        <TextBlock.Style>
-                                            <Style TargetType="TextBlock">
-                                                <Style.Triggers>
-                                                    <DataTrigger Binding="{Binding Name}" Value="{x:Null}">
-                                                        <Setter Property="Visibility" Value="Collapsed" />
-                                                    </DataTrigger>
-                                                </Style.Triggers>
-                                            </Style>
-                                        </TextBlock.Style>
-                                    </TextBlock>
-                                    <TextBlock Text="{Binding From.Minute}" />
-                                    <TextBlock Text=" - ">
-                                        <TextBlock.Style>
-                                            <Style TargetType="TextBlock">
-                                                <Style.Triggers>
-                                                    <DataTrigger Binding="{Binding Name}" Value="{x:Null}">
-                                                        <Setter Property="Visibility" Value="Collapsed" />
-                                                    </DataTrigger>
-                                                </Style.Triggers>
-                                            </Style>
-                                        </TextBlock.Style>
-                                    </TextBlock>
-                                    <TextBlock Text="{Binding To.Hour}" />
-                                    <TextBlock Text=":">
-                                        <TextBlock.Style>
-                                            <Style TargetType="TextBlock">
-                                                <Style.Triggers>
-                                                    <DataTrigger Binding="{Binding Name}" Value="{x:Null}">
-                                                        <Setter Property="Visibility" Value="Collapsed" />
-                                                    </DataTrigger>
-                                                </Style.Triggers>
-                                            </Style>
-                                        </TextBlock.Style>
-                                    </TextBlock>
-                                    <TextBlock Text="{Binding To.Minute}" />
+                                    <TextBlock Text="{Binding From, StringFormat={}{0:HH:mm}}"/>
+                                    <TextBlock Text=" - "/>
+                                    <TextBlock Text="{Binding To, StringFormat={}{0:HH:mm}}"/>
                                 </StackPanel>
                                 <Grid.ContextMenu>
                                     <ContextMenu>
@@ -482,6 +357,15 @@
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <Border BorderBrush="{DynamicResource PrimaryHueMidBrush}" BorderThickness="1" Padding="2" Width="Auto" HorizontalAlignment="Stretch">
+                            <Border.Style>
+                                <Style TargetType="Border">
+                                    <Style.Triggers>
+                                        <DataTrigger Binding="{Binding Name}" Value="{x:Null}">
+                                            <Setter Property="Visibility" Value="Hidden" />
+                                        </DataTrigger>
+                                    </Style.Triggers>
+                                </Style>
+                            </Border.Style>
                             <Grid>
                                 <Grid.RowDefinitions>
                                     <RowDefinition/>
@@ -502,43 +386,9 @@
                                 </StackPanel>
                                 <TextBlock Text="{Binding Teacher}" Grid.Row="3" Grid.Column="0" TextWrapping="Wrap"/>
                                 <StackPanel Orientation="Horizontal" Grid.Row="4" Grid.Column="0" >
-                                    <TextBlock Text="{Binding From.Hour}" />
-                                    <TextBlock Text=":">
-                                        <TextBlock.Style>
-                                            <Style TargetType="TextBlock">
-                                                <Style.Triggers>
-                                                    <DataTrigger Binding="{Binding Name}" Value="{x:Null}">
-                                                        <Setter Property="Visibility" Value="Collapsed" />
-                                                    </DataTrigger>
-                                                </Style.Triggers>
-                                            </Style>
-                                        </TextBlock.Style>
-                                    </TextBlock>
-                                    <TextBlock Text="{Binding From.Minute}" />
-                                    <TextBlock Text=" - ">
-                                        <TextBlock.Style>
-                                            <Style TargetType="TextBlock">
-                                                <Style.Triggers>
-                                                    <DataTrigger Binding="{Binding Name}" Value="{x:Null}">
-                                                        <Setter Property="Visibility" Value="Collapsed" />
-                                                    </DataTrigger>
-                                                </Style.Triggers>
-                                            </Style>
-                                        </TextBlock.Style>
-                                    </TextBlock>
-                                    <TextBlock Text="{Binding To.Hour}" />
-                                    <TextBlock Text=":">
-                                        <TextBlock.Style>
-                                            <Style TargetType="TextBlock">
-                                                <Style.Triggers>
-                                                    <DataTrigger Binding="{Binding Name}" Value="{x:Null}">
-                                                        <Setter Property="Visibility" Value="Collapsed" />
-                                                    </DataTrigger>
-                                                </Style.Triggers>
-                                            </Style>
-                                        </TextBlock.Style>
-                                    </TextBlock>
-                                    <TextBlock Text="{Binding To.Minute}" />
+                                    <TextBlock Text="{Binding From, StringFormat={}{0:HH:mm}}"/>
+                                    <TextBlock Text=" - "/>
+                                    <TextBlock Text="{Binding To, StringFormat={}{0:HH:mm}}"/>
                                 </StackPanel>
                                 <Grid.ContextMenu>
                                     <ContextMenu>
@@ -567,6 +417,15 @@
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <Border BorderBrush="{DynamicResource PrimaryHueMidBrush}" BorderThickness="1" Padding="2" Width="Auto" HorizontalAlignment="Stretch">
+                            <Border.Style>
+                                <Style TargetType="Border">
+                                    <Style.Triggers>
+                                        <DataTrigger Binding="{Binding Name}" Value="{x:Null}">
+                                            <Setter Property="Visibility" Value="Hidden" />
+                                        </DataTrigger>
+                                    </Style.Triggers>
+                                </Style>
+                            </Border.Style>
                             <Grid>
                                 <Grid.RowDefinitions>
                                     <RowDefinition/>
@@ -587,43 +446,9 @@
                                 </StackPanel>
                                 <TextBlock Text="{Binding Teacher}" Grid.Row="3" Grid.Column="0" TextWrapping="Wrap"/>
                                 <StackPanel Orientation="Horizontal" Grid.Row="4" Grid.Column="0" >
-                                    <TextBlock Text="{Binding From.Hour}" />
-                                    <TextBlock Text=":">
-                                        <TextBlock.Style>
-                                            <Style TargetType="TextBlock">
-                                                <Style.Triggers>
-                                                    <DataTrigger Binding="{Binding Name}" Value="{x:Null}">
-                                                        <Setter Property="Visibility" Value="Collapsed" />
-                                                    </DataTrigger>
-                                                </Style.Triggers>
-                                            </Style>
-                                        </TextBlock.Style>
-                                    </TextBlock>
-                                    <TextBlock Text="{Binding From.Minute}" />
-                                    <TextBlock Text=" - ">
-                                        <TextBlock.Style>
-                                            <Style TargetType="TextBlock">
-                                                <Style.Triggers>
-                                                    <DataTrigger Binding="{Binding Name}" Value="{x:Null}">
-                                                        <Setter Property="Visibility" Value="Collapsed" />
-                                                    </DataTrigger>
-                                                </Style.Triggers>
-                                            </Style>
-                                        </TextBlock.Style>
-                                    </TextBlock>
-                                    <TextBlock Text="{Binding To.Hour}" />
-                                    <TextBlock Text=":">
-                                        <TextBlock.Style>
-                                            <Style TargetType="TextBlock">
-                                                <Style.Triggers>
-                                                    <DataTrigger Binding="{Binding Name}" Value="{x:Null}">
-                                                        <Setter Property="Visibility" Value="Collapsed" />
-                                                    </DataTrigger>
-                                                </Style.Triggers>
-                                            </Style>
-                                        </TextBlock.Style>
-                                    </TextBlock>
-                                    <TextBlock Text="{Binding To.Minute}" />
+                                    <TextBlock Text="{Binding From, StringFormat={}{0:HH:mm}}"/>
+                                    <TextBlock Text=" - "/>
+                                    <TextBlock Text="{Binding To, StringFormat={}{0:HH:mm}}"/>
                                 </StackPanel>
                                 <Grid.ContextMenu>
                                     <ContextMenu>
@@ -707,6 +532,18 @@
                                                     <!-- Ebbe órarendhez adó command -->
                                                 </ContextMenu>
                                             </TextBlock.ContextMenu>
+                                            <TextBlock.ToolTip>
+                                                <StackPanel>
+                                                    <TextBlock Text="{Binding Teacher, StringFormat=Teacher: {0}}"/>
+                                                    <TextBlock Text="{Binding Room, StringFormat=Room: {0}}"/>
+                                                    <TextBlock Text="{Binding Day.Day1, StringFormat=Day: {0}}"/>
+                                                    <StackPanel Orientation="Horizontal">
+                                                        <TextBlock Text="{Binding From, StringFormat=Time: {0:HH:mm}}"/>
+                                                        <TextBlock Text=" - "/>
+                                                        <TextBlock Text="{Binding To, StringFormat={}{0:HH:mm}}"/>
+                                                    </StackPanel>
+                                                </StackPanel>
+                                            </TextBlock.ToolTip>
                                         </TextBlock>
                                         <!--</DataTemplate>-->
                                     </HierarchicalDataTemplate>
