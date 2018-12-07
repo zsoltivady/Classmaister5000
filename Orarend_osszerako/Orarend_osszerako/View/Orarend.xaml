@@ -525,9 +525,9 @@
                                         <TextBlock Text="{Binding Name}" Width="80">
                                             <TextBlock.ContextMenu>
                                                 <ContextMenu FontSize="12">
-                                                    <MenuItem Header="Delete course" Command="{Binding Path=DataContext.DeleteCourse, Source={x:Reference SubjectsTreeView}}" 
-                                                              CommandParameter="{Binding CourseId}"/>
                                                     <MenuItem Header="Add to timetable" Command="{Binding Path=DataContext.AddCourseToTimeTable, Source={x:Reference SubjectsTreeView}}"
+                                                              CommandParameter="{Binding CourseId}"/>
+                                                    <MenuItem Header="Delete course" Command="{Binding Path=DataContext.DeleteCourse, Source={x:Reference SubjectsTreeView}}" 
                                                               CommandParameter="{Binding CourseId}"/>
                                                     <!-- Ebbe órarendhez adó command -->
                                                 </ContextMenu>
