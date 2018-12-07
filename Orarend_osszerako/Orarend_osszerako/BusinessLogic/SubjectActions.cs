@@ -45,6 +45,10 @@ namespace Orarend_osszerako.BusinessLogic
                 {
                     Subject removeThis = context.Subjects.Where(s => s.SubjectName.ToLower() == Name.ToLower()).First();
                     ICollection<Course> removeTheseCourses = removeThis.Courses;
+                    foreach (var item in removeTheseCourses)
+                    {
+                        TimetableActions.RemoveFromTimetableByCourseId(item.Id);
+                    }
                     context.Courses.RemoveRange(removeTheseCourses);
                     context.Subjects.Remove(removeThis);
                     context.SaveChanges();

@@ -146,6 +146,14 @@ namespace Orarend_osszerako.ViewModel
                 {
                     MessageBox.Show("Subject has been deleted successfully!");
                     NotifyPropertyChanged("Subjects");
+                    GetCoursesFromLoggedInUsers();
+                    NotifyPropertyChanged("MondayCourses");
+                    NotifyPropertyChanged("TuesdayCourses");
+                    NotifyPropertyChanged("WednesdayCourses");
+                    NotifyPropertyChanged("ThursdayCourses");
+                    NotifyPropertyChanged("FridayCourses");
+                    NotifyPropertyChanged("SaturdayCourses");
+                    NotifyPropertyChanged("SundayCourses");
                 }
                 else MessageBox.Show("An unknown error has occured!");
             }
