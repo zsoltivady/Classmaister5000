@@ -1,15 +1,10 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Orarend_osszerako.Command;
 using Orarend_osszerako.BusinessLogic;
 using System.ComponentModel.DataAnnotations;
 using System.Windows.Input;
 using Orarend_osszerako.BusinessLogic.Exceptions;
 using System.Windows;
-using Orarend_osszerako.UI;
 
 namespace Orarend_osszerako.ViewModel
 {

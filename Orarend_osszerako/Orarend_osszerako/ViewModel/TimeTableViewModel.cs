@@ -1,15 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Orarend_osszerako.Mapper;
-using Orarend_osszerako.UI;
+﻿using Orarend_osszerako.UI;
 using System.Windows;
-using System.ComponentModel;
-using System.ComponentModel.DataAnnotations;
-using System.Collections;
-using Orarend_osszerako.Model;
 using System.Windows.Input;
 using Orarend_osszerako.Command;
 using Orarend_osszerako.BusinessLogic;

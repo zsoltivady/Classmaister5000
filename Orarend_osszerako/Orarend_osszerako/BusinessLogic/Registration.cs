@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Linq;
 using Orarend_osszerako.Mapper;
 using Orarend_osszerako.Model;
 using Orarend_osszerako.BusinessLogic.Exceptions;

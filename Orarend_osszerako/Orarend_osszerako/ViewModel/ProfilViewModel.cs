@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using Orarend_osszerako.Command;
-using System.Threading.Tasks;
+﻿using Orarend_osszerako.Command;
 using Orarend_osszerako.Model;
 using Orarend_osszerako.UI;
 
