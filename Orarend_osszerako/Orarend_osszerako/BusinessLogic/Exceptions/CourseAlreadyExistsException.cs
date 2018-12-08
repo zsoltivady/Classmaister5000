@@ -18,6 +18,7 @@ namespace Orarend_osszerako.BusinessLogic.Exceptions
         public CourseAlreadyExistsException(string message, Exception inner)
             : base(message, inner)
         {
+            
         }
-    }
+    } 
 }

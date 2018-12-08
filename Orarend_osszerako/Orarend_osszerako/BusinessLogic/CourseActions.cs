@@ -147,37 +147,42 @@ namespace Orarend_osszerako.BusinessLogic
                 return context.Courses.Any(c => c.Day_Id == dayId && c.Teacher == teacher && c.From.Hour == from.Hour && c.From.Minute == from.Minute && c.To.Hour == to.Hour && c.To.Minute == to.Minute);
             }
         }
+
+        
+        
         public static bool CourseAdd(string name, string teacher, string room, int dayId, DateTime from, DateTime to, int subjectId)
         {
-
+            
             if (!HasCourse(name, subjectId))
             {
-                if (!IsTeacherBusy(teacher, dayId, from, to))
-                {
-                    using (var context = new Classmaister5000Entities())
+
+                    if (!IsTeacherBusy(teacher, dayId, from, to))
                     {
-                        //CourseModel newCourse = new CourseModel();
-                        //newCourse.Name = name;
-                        //newCourse.Teacher = teacher;
-                        //newCourse.Room = room;
-                        //newCourse.Day_Id = dayId;
-                        //newCourse.From = from;
-                        //newCourse.To = to;
-                        //newCourse.Subject_Id = subjectId;
-                        //context.Courses.Add(CourseMapper.ModelToEntity(newCourse));
-                        Course newCourse = new Course();
-                        newCourse.Day_Id = dayId;
-                        newCourse.Room = room;
-                        newCourse.Teacher = teacher;
-                        newCourse.Name = name;
-                        newCourse.Subject_Id = subjectId;
-                        newCourse.From = from;
-                        newCourse.To = to;
-                        context.Courses.Add(newCourse);
-                        context.SaveChanges();
-                        return true;
+                        using (var context = new Classmaister5000Entities())
+                        {
+                            //CourseModel newCourse = new CourseModel();
+                            //newCourse.Name = name;
+                            //newCourse.Teacher = teacher;
+                            //newCourse.Room = room;
+                            //newCourse.Day_Id = dayId;
+                            //newCourse.From = from;
+                            //newCourse.To = to;
+                            //newCourse.Subject_Id = subjectId;
+                            //context.Courses.Add(CourseMapper.ModelToEntity(newCourse));
+                            Course newCourse = new Course();
+                            newCourse.Day_Id = dayId;
+                            newCourse.Room = room;
+                            newCourse.Teacher = teacher;
+                            newCourse.Name = name;
+                            newCourse.Subject_Id = subjectId;
+                            newCourse.From = from;
+                            newCourse.To = to;
+                            context.Courses.Add(newCourse);
+                            context.SaveChanges();
+                            return true;
+                        }
                     }
-                }
+                
                 else throw new TeacherBusyException();
             }
             else throw new CourseAlreadyExistsException();

@@ -18,6 +18,7 @@ namespace Orarend_osszerako.BusinessLogic.Exceptions
         public SubjectNotExistsException(string message, Exception inner)
             : base(message, inner)
         {
+            
         }
     }
 }
