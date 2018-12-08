@@ -1,4 +1,5 @@
-﻿using System.Windows;
+﻿using System;
+using System.Windows;
 using System.Windows.Controls;
 
 namespace Orarend_osszerako.View
@@ -16,6 +17,11 @@ namespace Orarend_osszerako.View
         private void RegisterPage_Loaded(object sender, RoutedEventArgs e)
         {
             firstname.Focus();
+        }
+
+        internal static void Navigate(LoginPage p)
+        {
+            throw new NotImplementedException();
         }
     }
 }

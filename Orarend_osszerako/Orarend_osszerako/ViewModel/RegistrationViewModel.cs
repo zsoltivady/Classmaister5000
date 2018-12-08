@@ -4,6 +4,7 @@ using Orarend_osszerako.BusinessLogic;
 using Orarend_osszerako.Command;
 using System.ComponentModel.DataAnnotations;
 using Orarend_osszerako.BusinessLogic.Exceptions;
+using Orarend_osszerako.View;
 
 namespace Orarend_osszerako.ViewModel
 {
@@ -85,6 +86,7 @@ namespace Orarend_osszerako.ViewModel
                 try
                 {
                     Registration.RegisterUser(username, password, RetryPassword, FirstName, LastName);
+                    MessageBox.Show("Succesful registration.");
                 }
                 catch (UsernameAlreadyExistsException ex)
                 {

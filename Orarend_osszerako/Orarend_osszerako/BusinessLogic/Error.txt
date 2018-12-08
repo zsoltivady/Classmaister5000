@@ -5,3 +5,17 @@ Orarend_osszerako.BusinessLogic.Exceptions.UserNotFoundException
 Message : A program „Orarend_osszerako.BusinessLogic.Exceptions.UserNotFoundException” típusú kivételt váltott ki.
 StackTrace :    a következő helyen: Orarend_osszerako.BusinessLogic.LoginLogout.UserLogin(String username, String password) hely: C:\Users\Levente\Documents\GitHub\Classmaister5000\Orarend_osszerako\Orarend_osszerako\BusinessLogic\LoginLogout.cs, sor: 17
    a következő helyen: Orarend_osszerako.ViewModel.LoginViewModel.UserLogin(String username, String password) hely: C:\Users\Levente\Documents\GitHub\Classmaister5000\Orarend_osszerako\Orarend_osszerako\ViewModel\LoginViewModel.cs, sor: 39
+-----------------------------------------------------------------------------
+Date : 2018.12.08. 17:36:42
+
+Orarend_osszerako.BusinessLogic.Exceptions.UserNotFoundException
+Message : A program „Orarend_osszerako.BusinessLogic.Exceptions.UserNotFoundException” típusú kivételt váltott ki.
+StackTrace :    a következő helyen: Orarend_osszerako.BusinessLogic.LoginLogout.UserLogin(String username, String password) hely: C:\Users\Levente\Documents\GitHub\Classmaister5000\Orarend_osszerako\Orarend_osszerako\BusinessLogic\LoginLogout.cs, sor: 17
+   a következő helyen: Orarend_osszerako.ViewModel.LoginViewModel.UserLogin(String username, String password) hely: C:\Users\Levente\Documents\GitHub\Classmaister5000\Orarend_osszerako\Orarend_osszerako\ViewModel\LoginViewModel.cs, sor: 39
+-----------------------------------------------------------------------------
+Date : 2018.12.08. 17:36:45
+
+Orarend_osszerako.BusinessLogic.Exceptions.UserNotFoundException
+Message : A program „Orarend_osszerako.BusinessLogic.Exceptions.UserNotFoundException” típusú kivételt váltott ki.
+StackTrace :    a következő helyen: Orarend_osszerako.BusinessLogic.LoginLogout.UserLogin(String username, String password) hely: C:\Users\Levente\Documents\GitHub\Classmaister5000\Orarend_osszerako\Orarend_osszerako\BusinessLogic\LoginLogout.cs, sor: 17
+   a következő helyen: Orarend_osszerako.ViewModel.LoginViewModel.UserLogin(String username, String password) hely: C:\Users\Levente\Documents\GitHub\Classmaister5000\Orarend_osszerako\Orarend_osszerako\ViewModel\LoginViewModel.cs, sor: 39

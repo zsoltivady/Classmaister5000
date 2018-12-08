@@ -1,4 +1,5 @@
 ﻿using Orarend_osszerako.View;
+using System;
 using System.Windows;
 
 namespace Orarend_osszerako
@@ -32,5 +33,6 @@ namespace Orarend_osszerako
             signup.Style = Primary;
             signin.Style = Secondary;
         }
+
     }
 }
