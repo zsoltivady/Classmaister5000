@@ -155,7 +155,8 @@ namespace Orarend_osszerako.BusinessLogic
             
             if (!HasCourse(name, subjectId))
             {
-
+                if (from.Hour < to.Hour)
+                {
                     if (!IsTeacherBusy(teacher, dayId, from, to))
                     {
                         using (var context = new Classmaister5000Entities())
@@ -182,8 +183,9 @@ namespace Orarend_osszerako.BusinessLogic
                             return true;
                         }
                     }
-                
-                else throw new TeacherBusyException();
+                    else throw new TeacherBusyException();
+                }
+                else throw new InvalidTimeException();
             }
             else throw new CourseAlreadyExistsException();
         }

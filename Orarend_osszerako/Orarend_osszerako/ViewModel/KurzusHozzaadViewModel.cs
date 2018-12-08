@@ -159,6 +159,10 @@ namespace Orarend_osszerako.ViewModel
             {
                 MessageBox.Show("This teacher has another course at this time!");
             }
+            catch (InvalidTimeException)
+            {
+                MessageBox.Show("The start time of the Course cannot be greater than the end time of the Course.");
+            }
             catch (Exception e)
             {
                 MessageBox.Show(e.Message);
