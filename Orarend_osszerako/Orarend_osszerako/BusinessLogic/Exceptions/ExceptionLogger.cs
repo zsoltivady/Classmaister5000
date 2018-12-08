@@ -12,7 +12,7 @@ namespace Orarend_osszerako.BusinessLogic.Exceptions
         public static void LogException(Exception ex)
         {
             
-            string filePath = @"/Orarend_osszerako/BusinessLogic/Error.txt";
+            string filePath = @"../../BusinessLogic/Error.txt";
 
             if (!File.Exists(filePath))
             {

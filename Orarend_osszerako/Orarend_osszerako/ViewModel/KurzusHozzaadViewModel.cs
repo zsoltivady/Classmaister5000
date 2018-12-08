@@ -146,20 +146,24 @@ namespace Orarend_osszerako.ViewModel
                 }
                 else MessageBox.Show("An unknown error as occoured!");
             }   
-            catch(CourseAlreadyExistsException)
+            catch(CourseAlreadyExistsException ex)
             {
+                ExceptionLogger.LogException(ex);
                 MessageBox.Show("A course with this name on this subject already exists!");
             }
-            catch(TeacherBusyException)
+            catch(TeacherBusyException ex)
             {
+                ExceptionLogger.LogException(ex);
                 MessageBox.Show("This teacher has another course at this time!");
             }
-            catch (InvalidTimeException)
+            catch (InvalidTimeException ex)
             {
+                ExceptionLogger.LogException(ex);
                 MessageBox.Show("The start time of the Course cannot be greater than the end time of the Course.");
             }
             catch (Exception e)
             {
+                ExceptionLogger.LogException(e);
                 MessageBox.Show(e.Message);
             }
         }

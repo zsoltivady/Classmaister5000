@@ -14,7 +14,7 @@ namespace Orarend_osszerako.BusinessLogic.Exceptions
         public PasswordsNotEqualsException(string message, Exception inner)
             : base(message, inner)
         {
-            
+            ExceptionLogger.LogException(inner);
         }
     }
 }

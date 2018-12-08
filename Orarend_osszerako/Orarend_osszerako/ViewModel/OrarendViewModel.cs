@@ -155,12 +155,14 @@ namespace Orarend_osszerako.ViewModel
                 }
                 else MessageBox.Show("An unknown error has occured!");
             }
-            catch (SubjectNotExistsException)
+            catch (SubjectNotExistsException ex)
             {
+                ExceptionLogger.LogException(ex);
                 MessageBox.Show("This subject doesn't exists!");
             }
             catch (Exception e)
             {
+                ExceptionLogger.LogException(e);
                 MessageBox.Show(e.Message);
             }
         }
@@ -194,6 +196,7 @@ namespace Orarend_osszerako.ViewModel
             }
             catch (Exception e)
             {
+                ExceptionLogger.LogException(e);
                 MessageBox.Show(e.Message);
             }
         }
@@ -330,6 +333,7 @@ namespace Orarend_osszerako.ViewModel
             }
             catch (Exception e)
             {
+                ExceptionLogger.LogException(e);
                 MessageBox.Show(e.Message);
             }
         }
@@ -361,6 +365,7 @@ namespace Orarend_osszerako.ViewModel
             }
             catch (Exception e)
             {
+                ExceptionLogger.LogException(e);
                 MessageBox.Show(e.Message);
             }
         }

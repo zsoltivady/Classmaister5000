@@ -60,12 +60,14 @@ namespace Orarend_osszerako.ViewModel
                     }
                     else MessageBox.Show("An unknown error has occoured");
                 }
-                catch (SubjectAlreadyExistsException)
+                catch (SubjectAlreadyExistsException ex)
                 {
+                    ExceptionLogger.LogException(ex);
                     MessageBox.Show("A subject with this name already exists!");
                 }
                 catch (Exception e)
                 {
+                    ExceptionLogger.LogException(e);
                     MessageBox.Show(e.Message);
                 }
             }

@@ -4,6 +4,7 @@ using System.Windows.Input;
 using Orarend_osszerako.Command;
 using Orarend_osszerako.BusinessLogic;
 using Orarend_osszerako.BusinessLogic.Exceptions;
+using System;
 
 namespace Orarend_osszerako.ViewModel
 {
@@ -41,12 +42,14 @@ namespace Orarend_osszerako.ViewModel
                     Application.Current.MainWindow.Close();
                 }
             }
-            catch (UserNotFoundException)
+            catch (UserNotFoundException ex)
             {
+                ExceptionLogger.LogException(ex);
                 MessageBox.Show("Username does not exist!");
             }
-            catch (NotCorrectPasswordException)
+            catch (NotCorrectPasswordException ex)
             {
+                ExceptionLogger.LogException(ex);
                 MessageBox.Show("Incorrect password!");
             }
         }
@@ -62,9 +65,9 @@ namespace Orarend_osszerako.ViewModel
                     {
                         _Login = new RelayCommand(p => true, p => this.UserLogin(UserName, Password));
                     }
-                    catch
+                    catch (Exception ex)
                     {
-
+                        ExceptionLogger.LogException(ex);
                     }
                 }
                 return _Login;

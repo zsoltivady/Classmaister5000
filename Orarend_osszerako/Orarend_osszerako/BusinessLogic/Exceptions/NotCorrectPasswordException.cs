@@ -14,6 +14,7 @@ namespace Orarend_osszerako.BusinessLogic.Exceptions
         public NotCorrectPasswordException(string message, Exception inner)
             : base(message, inner)
         {
+            
         }
     }
 }
