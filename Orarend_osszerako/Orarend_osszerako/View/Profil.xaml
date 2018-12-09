@@ -41,7 +41,7 @@
                 </StackPanel>
                 <Button
           Style="{StaticResource MaterialDesignRaisedButton}"
-          Margin="0 5 0 20" Width="200" Click="Button_Click">
+          Margin="0 5 0 20" Width="200" Command="{Binding OpenChangePassword}">
                     Change Password
                 </Button>
                 <materialDesign:ColorZone Mode="Light" VerticalAlignment="Stretch">

@@ -1,6 +1,8 @@
 ﻿using Orarend_osszerako.Command;
 using Orarend_osszerako.Model;
 using Orarend_osszerako.UI;
+using Orarend_osszerako.View;
+using System.Windows.Input;
 
 namespace Orarend_osszerako.ViewModel
 {
@@ -56,6 +58,18 @@ namespace Orarend_osszerako.ViewModel
                     }
                 }
                 return _Lastname;
+            }
+        }
+        private ICommand _OpenChangePassword;
+        public ICommand OpenChangePassword
+        {
+            get
+            {
+                if (_OpenChangePassword == null)
+                {
+                    _OpenChangePassword = new RelayCommand(p => true, p => new JelszoValtoztat().Show());
+                }
+                return _OpenChangePassword;
             }
         }
     }

@@ -4,6 +4,7 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Orarend_osszerako.View"
+        xmlns:vm="clr-namespace:Orarend_osszerako.ViewModel"
         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
         TextElement.Foreground="{DynamicResource MaterialDesignBody}"
         Background="{DynamicResource MaterialDesignPaper}"
@@ -11,8 +12,10 @@
         TextElement.FontSize="14"
         FontFamily="pack://application:,,,/MaterialDesignThemes.Wpf;component/Resources/Roboto/#Roboto"
         mc:Ignorable="d"
-        xmlns:vm="clr-namespace:Orarend_osszerako.ViewModel"
         Title="Change password" Height="350" Width="500" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
+    <Window.DataContext>
+        <vm:JelszoValtoztatViewModel/>
+    </Window.DataContext>
     <Grid>
         <StackPanel>
             <TextBlock HorizontalAlignment="Center" Margin="0 30 0 20"
@@ -29,19 +32,21 @@
                 
                 <TextBox materialDesign:HintAssist.Hint="Current password" Grid.Row="0" Margin="10 0 10 10"
                 Style="{StaticResource MaterialDesignFloatingHintTextBox}">
+                    <Binding Path="OldPassword"/>
                 </TextBox>
                 
                 <TextBox materialDesign:HintAssist.Hint="New password" Grid.Row="1" Margin="10 0 10 10"
                 Style="{StaticResource MaterialDesignFloatingHintTextBox}">
+                    <Binding Path="NewPassword"/>
                 </TextBox>
                 
                 <TextBox materialDesign:HintAssist.Hint="Confirm new password" Grid.Row="2" Margin="10 0 10 10"
                 Style="{StaticResource MaterialDesignFloatingHintTextBox}">
+                    <Binding Path="RetryPassword"/>
                 </TextBox>
-                
+
                 <Button Style="{StaticResource MaterialDesignRaisedButton}" Grid.Row="3" Margin="0 20 0 0"
-                Width="150"
-                Click="" Command="">
+                Width="150" Command="{Binding ChangePassword}">
                     Change password
                 </Button>
             </Grid>

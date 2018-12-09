@@ -14,11 +14,6 @@ namespace Orarend_osszerako.View
             InitializeComponent();
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
-        {
-            System.Diagnostics.Process.Start("https://www.youtube.com/watch?v=dQw4w9WgXcQ");
-        }
-
         private void BasicRatingBar_MouseDoubleClick(object sender, MouseButtonEventArgs e)
         {
             System.Diagnostics.Process.Start("https://www.youtube.com/watch?v=Sagg08DrO5U");

@@ -19,3 +19,10 @@ Orarend_osszerako.BusinessLogic.Exceptions.UserNotFoundException
 Message : A program „Orarend_osszerako.BusinessLogic.Exceptions.UserNotFoundException” típusú kivételt váltott ki.
 StackTrace :    a következő helyen: Orarend_osszerako.BusinessLogic.LoginLogout.UserLogin(String username, String password) hely: C:\Users\Levente\Documents\GitHub\Classmaister5000\Orarend_osszerako\Orarend_osszerako\BusinessLogic\LoginLogout.cs, sor: 17
    a következő helyen: Orarend_osszerako.ViewModel.LoginViewModel.UserLogin(String username, String password) hely: C:\Users\Levente\Documents\GitHub\Classmaister5000\Orarend_osszerako\Orarend_osszerako\ViewModel\LoginViewModel.cs, sor: 39
+-----------------------------------------------------------------------------
+Date : 18/12/09 20:26:33
+
+Orarend_osszerako.BusinessLogic.Exceptions.UserNotFoundException
+Message : Exception of type 'Orarend_osszerako.BusinessLogic.Exceptions.UserNotFoundException' was thrown.
+StackTrace :    at Orarend_osszerako.BusinessLogic.LoginLogout.UserLogin(String username, String password) in C:\GitHub\Classmaister5000\Orarend_osszerako\Orarend_osszerako\BusinessLogic\LoginLogout.cs:line 17
+   at Orarend_osszerako.ViewModel.LoginViewModel.UserLogin(String username, String password) in C:\GitHub\Classmaister5000\Orarend_osszerako\Orarend_osszerako\ViewModel\LoginViewModel.cs:line 39
