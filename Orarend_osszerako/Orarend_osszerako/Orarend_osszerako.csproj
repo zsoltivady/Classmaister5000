@@ -157,6 +157,7 @@
     <Compile Include="Model\UserModel.cs" />
     <Compile Include="UI\BoundPasswordBox.cs" />
     <Compile Include="Validation\RequiredValidation.cs" />
+    <Compile Include="ViewModel\JelszoValtoztatViewModel.cs" />
     <Compile Include="ViewModel\KurzusHozzaadViewModel.cs" />
     <Compile Include="ViewModel\LoginViewModel.cs" />
     <Compile Include="ViewModel\OrarendViewModel.cs" />

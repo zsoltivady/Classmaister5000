@@ -553,3 +553,6 @@ C:\Users\Levente\Documents\GitHub\Classmaister5000\Orarend_osszerako\Orarend_oss
 C:\Users\Levente\Documents\GitHub\Classmaister5000\Orarend_osszerako\Orarend_osszerako\obj\Debug\GeneratedInternalTypeHelper.g.cs
 C:\Users\Levente\Documents\GitHub\Classmaister5000\Orarend_osszerako\Orarend_osszerako\obj\Debug\View\KurzusHozzaad.baml
 C:\Users\Levente\Documents\GitHub\Classmaister5000\Orarend_osszerako\Orarend_osszerako\obj\Debug\View\TargyHozzaad.baml
+E:\Iskolai Projekt\Classmaister5000\Orarend_osszerako\Orarend_osszerako\obj\Debug\Orarend_osszerako.csprojAssemblyReference.cache
+E:\Iskolai Projekt\Classmaister5000\Orarend_osszerako\Orarend_osszerako\obj\Debug\View\JelszoValtoztat.g.cs
+E:\Iskolai Projekt\Classmaister5000\Orarend_osszerako\Orarend_osszerako\obj\Debug\View\JelszoValtoztat.baml
