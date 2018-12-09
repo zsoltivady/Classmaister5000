@@ -167,6 +167,9 @@
     <Compile Include="View\Beallitas.xaml.cs">
       <DependentUpon>Beallitas.xaml</DependentUpon>
     </Compile>
+    <Compile Include="View\JelszoValtoztat.xaml.cs">
+      <DependentUpon>JelszoValtoztat.xaml</DependentUpon>
+    </Compile>
     <Compile Include="View\KurzusHozzaad.xaml.cs">
       <DependentUpon>KurzusHozzaad.xaml</DependentUpon>
     </Compile>
@@ -189,6 +192,10 @@
       <DependentUpon>TimeTableWindow.xaml</DependentUpon>
     </Compile>
     <Page Include="View\Beallitas.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\JelszoValtoztat.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

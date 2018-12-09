@@ -1,0 +1,50 @@
+﻿<Window x:Class="Orarend_osszerako.View.JelszoValtoztat"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Orarend_osszerako.View"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        TextElement.Foreground="{DynamicResource MaterialDesignBody}"
+        Background="{DynamicResource MaterialDesignPaper}"
+        TextElement.FontWeight="Medium"
+        TextElement.FontSize="14"
+        FontFamily="pack://application:,,,/MaterialDesignThemes.Wpf;component/Resources/Roboto/#Roboto"
+        mc:Ignorable="d"
+        xmlns:vm="clr-namespace:Orarend_osszerako.ViewModel"
+        Title="Change password" Height="350" Width="500" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
+    <Grid>
+        <StackPanel>
+            <TextBlock HorizontalAlignment="Center" Margin="0 30 0 20"
+                Style="{StaticResource MaterialDesignHeadlineTextBlock}">               
+                Change Password
+            </TextBlock>
+            <Grid Width="300">
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                
+                <TextBox materialDesign:HintAssist.Hint="Current password" Grid.Row="0" Margin="10 0 10 10"
+                Style="{StaticResource MaterialDesignFloatingHintTextBox}">
+                </TextBox>
+                
+                <TextBox materialDesign:HintAssist.Hint="New password" Grid.Row="1" Margin="10 0 10 10"
+                Style="{StaticResource MaterialDesignFloatingHintTextBox}">
+                </TextBox>
+                
+                <TextBox materialDesign:HintAssist.Hint="Confirm new password" Grid.Row="2" Margin="10 0 10 10"
+                Style="{StaticResource MaterialDesignFloatingHintTextBox}">
+                </TextBox>
+                
+                <Button Style="{StaticResource MaterialDesignRaisedButton}" Grid.Row="3" Margin="0 20 0 0"
+                Width="150"
+                Click="" Command="">
+                    Change password
+                </Button>
+            </Grid>
+        </StackPanel>
+    </Grid>
+</Window>
