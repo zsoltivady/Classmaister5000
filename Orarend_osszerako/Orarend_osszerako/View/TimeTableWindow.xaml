@@ -25,7 +25,7 @@
                 <ColumnDefinition Width="45" />
             </Grid.ColumnDefinitions>
             <Button  Grid.Column="0" x:Name="orarend" Height="37" Content="Timetable" Click="orarend_Click"/>
-            <Button  Grid.Column="1" x:Name="beallitasok" Height="37" Content="Options" Click="beallitasok_Click"/>
+            <Button  Grid.Column="1" x:Name="beallitasok" Height="37" Content="Generate Timetable" Click="beallitasok_Click"/>
             <Button Grid.Column="2" x:Name="profil" Height="37" Content="Profile" Click="profil_Click"/>
             <Button Grid.Column="3" Style="{StaticResource MaterialDesignRaisedAccentButton}" x:Name="logout" Height="37" Click="logout_Click" Command="{Binding Logout}" Padding="0" ToolTip="Logout">
                 <materialDesign:PackIcon Kind="LogoutVariant" Height="25" Width="25"/>
