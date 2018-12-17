@@ -289,7 +289,6 @@ C:\Users\mauxl\Documents\GitHub\Classmaister5000\Orarend_osszerako\Orarend_ossze
 C:\Users\mauxl\Documents\GitHub\Classmaister5000\Orarend_osszerako\Orarend_osszerako\bin\Debug\EntityFramework.SqlServer.xml
 C:\Users\mauxl\Documents\GitHub\Classmaister5000\Orarend_osszerako\Orarend_osszerako\bin\Debug\MaterialDesignThemes.Wpf.pdb
 C:\Users\mauxl\Documents\GitHub\Classmaister5000\Orarend_osszerako\Orarend_osszerako\bin\Debug\MaterialDesignThemes.Wpf.xml
-C:\Users\mauxl\Documents\GitHub\Classmaister5000\Orarend_osszerako\Orarend_osszerako\obj\Debug\Orarend_osszerako.csprojResolveAssemblyReference.cache
 C:\Users\mauxl\Documents\GitHub\Classmaister5000\Orarend_osszerako\Orarend_osszerako\obj\Debug\View\Beallitas.g.cs
 C:\Users\mauxl\Documents\GitHub\Classmaister5000\Orarend_osszerako\Orarend_osszerako\obj\Debug\View\LoginPage.g.cs
 C:\Users\mauxl\Documents\GitHub\Classmaister5000\Orarend_osszerako\Orarend_osszerako\obj\Debug\View\MainWindow.g.cs
@@ -556,3 +555,9 @@ C:\Users\Levente\Documents\GitHub\Classmaister5000\Orarend_osszerako\Orarend_oss
 E:\Iskolai Projekt\Classmaister5000\Orarend_osszerako\Orarend_osszerako\obj\Debug\Orarend_osszerako.csprojAssemblyReference.cache
 E:\Iskolai Projekt\Classmaister5000\Orarend_osszerako\Orarend_osszerako\obj\Debug\View\JelszoValtoztat.g.cs
 E:\Iskolai Projekt\Classmaister5000\Orarend_osszerako\Orarend_osszerako\obj\Debug\View\JelszoValtoztat.baml
+C:\Users\mauxl\Documents\GitHub\Classmaister5000\Orarend_osszerako\Orarend_osszerako\obj\Debug\Orarend_osszerako.csprojAssemblyReference.cache
+C:\Users\mauxl\Documents\GitHub\Classmaister5000\Orarend_osszerako\Orarend_osszerako\obj\Debug\View\JelszoValtoztat.g.cs
+C:\Users\mauxl\Documents\GitHub\Classmaister5000\Orarend_osszerako\Orarend_osszerako\bin\Debug\Microsoft.Analytics.UnitTest.dll
+C:\Users\mauxl\Documents\GitHub\Classmaister5000\Orarend_osszerako\Orarend_osszerako\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
+C:\Users\mauxl\Documents\GitHub\Classmaister5000\Orarend_osszerako\Orarend_osszerako\bin\Debug\Microsoft.Analytics.Interfaces.dll
+C:\Users\mauxl\Documents\GitHub\Classmaister5000\Orarend_osszerako\Orarend_osszerako\obj\Debug\View\JelszoValtoztat.baml
