@@ -23,7 +23,5 @@ namespace UnitTests
             Assert.AreEqual(day.Id, result.Id);            
         }
 
-        
-
     }
 }
