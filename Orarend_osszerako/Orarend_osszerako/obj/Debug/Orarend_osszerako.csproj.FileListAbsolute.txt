@@ -566,3 +566,8 @@ C:\Users\Levente\Documents\GitHub\Classmaister5000\Orarend_osszerako\Orarend_oss
 C:\Users\Levente\Documents\GitHub\Classmaister5000\Orarend_osszerako\Orarend_osszerako\bin\Debug\Microsoft.Analytics.Interfaces.dll
 C:\Users\Levente\Documents\GitHub\Classmaister5000\Orarend_osszerako\Orarend_osszerako\obj\Debug\View\JelszoValtoztat.g.cs
 C:\Users\Levente\Documents\GitHub\Classmaister5000\Orarend_osszerako\Orarend_osszerako\obj\Debug\View\JelszoValtoztat.baml
+C:\Users\ldope94\Documents\GitHub\Classmaister5000\Orarend_osszerako\Orarend_osszerako\bin\Debug\Microsoft.Analytics.UnitTest.dll
+C:\Users\ldope94\Documents\GitHub\Classmaister5000\Orarend_osszerako\Orarend_osszerako\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
+C:\Users\ldope94\Documents\GitHub\Classmaister5000\Orarend_osszerako\Orarend_osszerako\bin\Debug\Microsoft.Analytics.Interfaces.dll
+C:\Users\ldope94\Documents\GitHub\Classmaister5000\Orarend_osszerako\Orarend_osszerako\obj\Debug\View\JelszoValtoztat.g.cs
+C:\Users\ldope94\Documents\GitHub\Classmaister5000\Orarend_osszerako\Orarend_osszerako\obj\Debug\View\JelszoValtoztat.baml
