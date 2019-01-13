@@ -200,7 +200,7 @@ namespace Orarend_osszerako.ViewModel
                 MessageBox.Show(e.Message);
             }
         }
-        private int SelectIndex(CourseModel Course)
+        public int SelectIndex(CourseModel Course)
         {
             int index;
             switch (Course.From.Hour) //óra kezdetének órája
